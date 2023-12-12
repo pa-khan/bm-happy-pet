@@ -22,30 +22,65 @@ block content
 				.directions__item
 					.directions__item-info
 						.directions__item-name
-							.directions__item-title
+							.directions__item-title Груминг салон
 							.directions__item-name-label
-						.directions__item-text
-						a.directions__item-btn.btn.--secondary.--md(href="")
+						.directions__item-text Идеальный бутик для питомца на Петровской стороне: профессиональный уход, стильная одежда и многое другое
+						a.directions__item-btn.btn.--secondary.--md(href="") #[span Записать питомца]
 					.directions__item-img
 						img(src="" alt="")
 
 				.directions__item
 					.directions__item-info
 						.directions__item-name
-							.directions__item-title
-							.directions__item-name-label
-						.directions__item-text
-						.directions__item-text
-					a.directions__item-btn.btn.--primary.--md(href="")
+							.directions__item-title Записать питомца
+							.directions__item-name-label СКИДКА ПРИ ЗАПИСИ
+						.directions__item-text Обучим профессии грумера с возможностью пройти стажировку и работать в нашем салоне
+					a.directions__item-btn.btn.--primary.--md(href="") Забронировать курс
 						img(src="" alt="")
 
 	.we
 		.case
 			.we__wrap
-				.we__title
+				.we__title #[strong Мы ]— эксперты в уходе за домашними питомцами из Санкт-Петербурга
 				.we__content
-					.we__text
-					.we__btn.--outline-primary
+					.we__text Развиваем индустрию груминга с 2011 года 1000 счастливых питомцев ежемесячно,более 500 довольных учеников академии.
+					.we__btn.btn.--primary-outline.--md О нас
+
+		.modal.--fullscreen#modal-about
+			.modal__inner
+				.modal__content
+					.about
+						.about__data
+							.about__left
+								.about__count
+									.about__count-current 01
+									.about__count-sep /
+									.about__count-total
+							.about__right
+								.about__title #[img(src="" alt="")] #[span О нас]
+								.about__desc Груминг центр Happy Pet— более 12 лет с любовью и заботой ухаживает за питомцами, преображая их.
+								.about__text
+									p Известный в Петербурге центр для животных HappyPet – комплексный бутик, в котором гармонично сочетаются груминг салон и академия, где профессионально обучают специалистов по уходу за домашними животными, магазин с первоклассными товарами для груминга и роскошный отель для домашних любимцев.
+									p Запишитесь сегодня и откройте для себя комплексный уход за домашними животными под одной крышей
+						.about__slider
+							.about__list
+								.about__item
+									.about__img
+										img(src="", alt="")
+									.about__name
+								.about__item
+									.about__img
+										img(src="", alt="")
+									.about__name
+								.about__item
+									.about__img
+										img(src="", alt="")
+									.about__name
+								.about__item
+									.about__img
+										img(src="", alt="")
+									.about__name
+			.modal__overlay
 
 	.shares
 		.case
@@ -53,10 +88,18 @@ block content
 				.shares__slider-wrap.swiper-wrapper
 					.shares__slider-item.shares__item.swiper-slide
 						img(src="")
+					.shares__slider-item.shares__item.swiper-slide
+						img(src="")
+					.shares__slider-item.shares__item.swiper-slide
+						img(src="")
+					.shares__slider-item.shares__item.swiper-slide
+						img(src="")
+					.shares__slider-item.shares__item.swiper-slide
+						img(src="")
 			.shares__controls
-				.shares__control
+				.shares__control.control.--prev
 					img(src="" alt="")
-				.shares__control
+				.shares__control.control.--next
 					img(src="" alt="")
 
 	.pros
@@ -64,19 +107,41 @@ block content
 			.pros__list
 				.pros__item
 					img(src="" alt="")
+				.pros__item
+					img(src="" alt="")
+				.pros__item
+					img(src="" alt="")
+				.pros__item
+					img(src="" alt="")
+				.pros__item
+					img(src="" alt="")
+				.pros__item
+					img(src="" alt="")
+				.pros__item
+					img(src="" alt="")
+				.pros__item
+					img(src="" alt="")
 
 	.gallery
 		.case
 			.gallery__head
-				.gallery__title.h2
+				.gallery__title.h2 Наши #[strong  пушистые гости]
 				.gallery__controls
-					.gallery__control
+					.gallery__control.control.--prev
 						img(src="" alt="")
-					.gallery__control
+					.gallery__control.control.--next
 						img(src="" alt="")
 			.gallery__body
 				.gallery__slider.swiper
 					.gallery__slider-wrap.swiper-wrapper
+						.gallery__slider-item.gallery__item.swiper-slide
+							img(src="" alt="")
+						.gallery__slider-item.gallery__item.swiper-slide
+							img(src="" alt="")
+						.gallery__slider-item.gallery__item.swiper-slide
+							img(src="" alt="")
+						.gallery__slider-item.gallery__item.swiper-slide
+							img(src="" alt="")
 						.gallery__slider-item.gallery__item.swiper-slide
 							img(src="" alt="")
 
@@ -86,81 +151,82 @@ block content
 	.shop
 		.case
 			.shop__head
-				.shop__title.h2
+				.shop__title.h2 Магазин #[strong  товаров для груминга]
 				.shop__desc
+					p Откройте для себя полный ассортимент товаров, представленных в салоне Happy Pet.С нетерпением ждём вас в магазине по адресу: #[strong CПБ, ул Глухая Зеленина 6]
 			.shop__body
 				.shop__list
 					.shop__item
-						.shop__item-title
+						.shop__item-title Косметика
 						.shop__item-img
 							img(src="" alt="")
 					.shop__item
-						.shop__item-title
+						.shop__item-title Инструменты по уходу и аксессуары
 						.shop__item-img
 							img(src="" alt="")
 					.shop__item
-						.shop__item-title
+						.shop__item-title Машинки для стрижки животных
 						.shop__item-img
 							img(src="" alt="")
 					.shop__item
-						.shop__item-title
+						.shop__item-title Лакомства
 						.shop__item-img
 							img(src="" alt="")
 					.shop__item
-						.shop__item-title
+						.shop__item-title Ножницы
 						.shop__item-img
 							img(src="" alt="")
 					.shop__item
-						.shop__item-title
+						.shop__item-title Ножи для машинок
 						.shop__item-img
 							img(src="" alt="")
 					.shop__item
-						.shop__item-title
+						.shop__item-title Одежда для грумеров
 						.shop__item-img
 							img(src="" alt="")
 					.shop__item
-						.shop__item-title
+						.shop__item-title Косметика Iv San Bernard
 						.shop__item-img
 							img(src="" alt="")
 					.shop__item
-						.shop__item-title
+						.shop__item-title Одежда и обувь <br>для питомца
 						.shop__item-img
 							img(src="" alt="")
 			.shop__foot 
-				.shop__btn.btn.--secondary.--sm
+				.shop__btn.btn.--secondary.--md Бесплатная консультация
 
 	.hotel
 		.case
 			.hotel__inner
 				.hotel__content
-					.hotel__title.h2
-					.hotel__text
+					.hotel__title.h2 Зоогостиница для собак и кошек
+					.hotel__text Собираетесь в путешествие, но не знаете с кем оставить питомца? Ваше идеальное решение — гостиница для домашних животных.
 					.hotel__props 
 						.hotel__prop
 							.hotel__prop-icon
 								img(src="" alt="")
-							.hotel__prop-title
+							.hotel__prop-title Питание и прогулки
 						.hotel__prop
 							.hotel__prop-icon
 								img(src="" alt="")
-							.hotel__prop-title
+							.hotel__prop-title Комфортабельное проживание
 						.hotel__prop
 							.hotel__prop-icon
 								img(src="" alt="")
-							.hotel__prop-title
+							.hotel__prop-title Дезинфекция
 						.hotel__prop
 							.hotel__prop-icon
 								img(src="" alt="")
-							.hotel__prop-title
+							.hotel__prop-title Услуги груминга
 						.hotel__prop
 							.hotel__prop-icon
 								img(src="" alt="")
-							.hotel__prop-title
+							.hotel__prop-title Постоянная отчётность
 						.hotel__prop
 							.hotel__prop-icon
 								img(src="" alt="")
-							.hotel__prop-title
-					.hotel__btn.btn.--primary.--md
+							.hotel__prop-title Фото-видео с питомцем
+					.hotel__btn.btn.--primary.--md Отправить заявку
 				.hotel__imgs
 					.hotel__img-decoration
 						img(src="" alt="")
@@ -170,22 +236,24 @@ block content
 	.economy
 		.case
 			.economy__head
-				.economy__title.h2 
+				.economy__title.h2 Экономьте с нашими <br>#[strong  спецпредложениями]
 			.economy__body
 				.economy__list 
 					.economy__item.disc-first
-						.disc-first__title
+						.disc-first__title Скидка 10% на первое посещение груминг салона
 							.disc-first__outline
 								img(src="", alt="")
 						.disc-first__org
+							img(src="", alt="")
 						.disc-first__img
 							img(src="", alt="")
-						.disc-first__desc
+						.disc-first__desc Условия акций уточняйте по телефону и в салоне Hаppy Pet
 
 					.economy__item.disc-puppy
 						.disc-puppy__title
 							.disc-puppy__title-outline
 								img(src="", alt="")
+							.disc-puppy__title-value Щенкам до 6 месяцев скидка 10%
 						.disc-puppy__dog
 							.disc-puppy__dog-img
 								img(src="", alt="")
@@ -202,90 +270,101 @@ block content
 
 	.faq
 		.case
-			.faq__title.h2 #[strong ]
+			.faq__title.h2 Отвечает <br>#[strong  на часто задаваемые вопросы]
 			.faq__list
 				.faq__item
 					.faq__head
-						.faq__count
-						.faq__text
+						.faq__count 01
+						.faq__name Что такое груминг?
 						.faq__toggle
 					.faq__body
+						.faq__text Комплекс процедур по уходу за шерстью, кожей, когтями, ушами и глазами питомца. Может выполняться как в гигиенических целях, так и для улучшения внешнего вида домашнего животного .
 				.faq__item
 					.faq__head
-						.faq__count
-						.faq__text
+						.faq__count 02
+						.faq__name В каком возрасте лучше всего начинать стричь питомца?
 						.faq__toggle
 					.faq__body
+						.faq__text Чем раньше ваш домашний любимец начнёт посещать грумера, тем легче будет ему и владельцу при дальнейших визитах. Рекомендуем приучать питомца к грумингу с 3-х месяцев.
 				.faq__item
 					.faq__head
-						.faq__count
-						.faq__text
+						.faq__count 03
+						.faq__name Какие требования у вас к питомцам?
 						.faq__toggle
 					.faq__body
+						.faq__text Основным условие:  животное здорово, прекрасно себя чувствует и привито (не менее двух недель).
 				.faq__item
 					.faq__head
-						.faq__count
-						.faq__text
+						.faq__count 04
+						.faq__name У меня несколько животных. Могу ли я привести их одновременно?
 						.faq__toggle
 					.faq__body
+						.faq__text Несомненно. Одновременно услуги оказывают несколько грумеров, поэтому мы с лёгкостью подберём для вас удобный вариант.
 				.faq__item
 					.faq__head
-						.faq__count
-						.faq__text
+						.faq__count 05
+						.faq__name Какую косметику вы применяете в работе?
 						.faq__toggle
 					.faq__body
+						.faq__text В работе используем только качественную профессиональную груминг косметику. Мы являемся амбассадорами топовой Итальянской косметики #[strong Iv San Bernard.]
 				.faq__item
 					.faq__head
-						.faq__count
-						.faq__text
+						.faq__count 06
+						.faq__name Переживаю за своего питомца и хочу присутствовать на процедурах, это возможно?
 						.faq__toggle
 					.faq__body
+						.faq__text Мы разделяем ваши переживания, да это возможно по предварительной записи. В случае с кошками присутствие хозяина обязательно, так же возможен вариант оплаты ассистента грумера.
 				.faq__item
 					.faq__head
-						.faq__count
-						.faq__text
+						.faq__count 07
+						.faq__name Хочу записать питомца в ваш салон, но не могу определиться со стрижкой. Что делать?
 						.faq__toggle
 					.faq__body
+						.faq__text Наши мастера с удовольствием помогут с выбором. Принимая во внимание уникальные особенности вашего питомца, мы предложим вам несколько вариантов на выбор.
 				.faq__item
 					.faq__head
-						.faq__count
-						.faq__text
+						.faq__count 08
+						.faq__name Что такое экспресс-линька?
 						.faq__toggle
 					.faq__body
+						.faq__text Это удаление старой, ненужной шерсти, с помощью вычёсывания отмерших волосков специальными инструментами. Чтобы освободить волосяные луковицы от излишков и дать рост новой здоровой шерсти, а так же избавиться от разбросанной шерсти по дому. #[strong Ухоженный питомец-довольный хозяин!]
 
 	.ca
 		.case
 			.ca__wrap
 				.ca__content
-					.ca__title.h2 #[strong ]
-					.ca__text
+					.ca__title.h2
+						p Шёрстку — #[strong помоем,]
+						p Зубки — #[i почистим,]
+						p Коготки — #[u подстрижём]
+					.ca__text Все виды услуг для красоты вашего пушистого любимца
 					.ca__address
-						p
-						p #[strong ]
-						p #[strong ]
+						p г. Санкт-Петербург,м.Чкаловская, ул Глухая Зеленина 6
+						p #[strong Вход с улицы: Груминг салон]
+						p #[strong Вход со двора: Академия груминга, зоогостиница]
 
 				.ca__form
 					.ca__field.field.--primary.--md
-						.field__title
-						input.field__area(type="text")
+						.field__title Ваше имя
+						input.field__area(type="text" placeholder="Имя")
 					.ca__field.field.--primary.--md.--phone
-						.field__title
-						input.field__area(type="tel")
-					button.ca__btn.btn.--secondary.--md
+						.field__title Телефон
+						input.field__area(type="tel" placeholder="+7 (_ _ _) _ _ _-_ _-_ _")
+					button.ca__btn.btn.--secondary.--md Отправить
 					.ca__policy.check
 						input.check__input(type="checkbox")
 						.check__box
 							img(src="", alt="")
-						.check__text #[a(href="") ]
+						.check__text Оставляя заявку вы соглашаетесь с #[a(href="" target="_blank")  политикой конфиденциальности]
 
 	.reviews
 		.case
 			.reviews__head
-				.reviews__title.h2 #[strong ]
+				.reviews__title.h2 #[strong Честные отзывы] <br>гостей салона
 				.reviews__controls 
-					.reviews__control
+					.reviews__control.contro.--prev
 						img(src="", alt="")
-					.reviews__control
+					.reviews__control.contro.--next
 						img(src="", alt="")
 			.reviews__body
 				.reviews__slider.swiper
@@ -295,117 +374,121 @@ block content
 								img(src="", alt="")
 							.reviews__content
 								.reviews__text
-								.reviews__name
-								.reviews__desc
+									p Благодарю всех волшебниц, превративших вчера мою Хлою в редкостную шëлковую красавицу! Особенно Ирину, нашего постоянного совершенно чудесного мастера! Восхищаются Хлоей все, кто видит! Стрижëмся мы здесь уже почти два года! Хлоя обожает этот салон, бежит сюда со всех лап, улыбается после стрижки!
+								.reviews__name Елена Осипова
+								.reviews__desc и её любимица Хлоя
 						.reviews__item.swiper-slide
 							.reviews__img
 								img(src="", alt="")
 							.reviews__content
 								.reviews__text
-								.reviews__name
-								.reviews__desc
+									p Отличный салон. Шикарные мастера. Для меня до сих пор загадка как им удаётся сушить его феном, ведь дома он при одном виде фена убегает в другую комнату 😂🙈 Спасибо огромное Хэппи пэт за моего теперь красавчика) без вас мы бы не были такими красивыми, ведь вымыть, высушить и вычесать самостоятельно Аусси не так то и просто 🙈
+								.reviews__name Александра Родионова
+								.reviews__desc и её ухоженная Аусси
 						.reviews__item.swiper-slide
 							.reviews__img
 								img(src="", alt="")
 							.reviews__content
 								.reviews__text
-								.reviews__name
-								.reviews__desc
-				.reviews__more #[a(href="") ]
+									p Постоянно хожу в этот салон со своим пёсиком. Шпиц Юки). Очень хорошие мастера. Мой малыш всегда вычесан, аккуратно подстрижен, коготочки подстижены, лапки, ушки. Просто чудо:) Главное он сам с удовольствием ходит на груминг. Сегодня забрала настоящего медвежонка. Так здорово подстригли! Спасибо🙏💕
+								.reviews__name Ольга
+								.reviews__desc и её прекрасный Шпиц Юки
+				.reviews__more #[a(href="" target="_blank") Читать больше отзывов]
 
 	.contacts
 		.case
-			.contacts__title.h2
+			.contacts__title.h2 Контакты
 
 		.contacts__addresses
 			.case
 				.contacts__addresses-list
 					.contacts__address
-						.contacts__address-title
-						.contacts__address-value
+						.contacts__address-title Груминг салон
+						.contacts__address-value CПБ, ул Глухая Зеленина 6 <br>вход с улицы
 					.contacts__address
-						.contacts__address-title
-						.contacts__address-value
+						.contacts__address-title Академия груминга
+						.contacts__address-value CПБ, ул Глухая Зеленина 6 <br>вход со двора
 
-		.contacts__map
+		.contacts__map(data-placemarks="[]")
 				
 
 	.page404
 		.case
 			.page404__title
-				p
+				p 4
 				img(src="", alt="")
-				p
-			.page404__desc
-			.page404__btn.btn.--primary.--md
+				p 4
+			.page404__desc Упс! Такой страницы не существует
+			a.page404__btn.btn.--primary.--md(href="/") Перейти на главную
 
 
 	.groom
 		.groom__item.gr-care
 			.gr-care__title
 				img(src="", alt="")
-				p
+				p Уход
 				img(src="", alt="")
-				p
+				p наполненный
 				img(src="", alt="")
-				p
+				p любовью
+			.gr-care__btn ЗАПИСАТЬСЯ НА ГРУМИНГ
 		.groom__item.gr-salon
-			.gr-salon__title
+			.gr-salon__title ГРУМИНГ САЛОН
 			.gr-salon__list
-				.gr-salon__item #[var  ]
-				.gr-salon__item #[var  ]
-				.gr-salon__item #[var  ] #[i ]
+				.gr-salon__item БОЛЕЕ <br>#[var 12 ] <br>ЛЕТ <br>ОПЫТА
+				.gr-salon__item БОЛЕЕ #[var 220 ] <br> ОТЗЫВОВ <br>КЛИЕНТОВ
+				.gr-salon__item БОЛЕЕ #[var 1000 ] <br> СЧАСТЛИВЫХ <br>ПИТОМЦЕВ <br> #[i ЕЖЕМЕСЯЧНО]
 		.groom__item.gr-shop
-			.gr-shop__title
+			.gr-shop__title Магазин <br>товаров <br>для груминга
 			.gr-shop__tags
-				.gr-shop__tag.--pink
-				.gr-shop__tag.--outline
-				.gr-shop__tag.--white
-				.gr-shop__tag.--pink
+				.gr-shop__tag.--pink Инструменты
+				.gr-shop__tag.--outline Косметика
+				.gr-shop__tag.--white Лакомства
+				.gr-shop__tag.--pink Машинки для стрижки
 
-				.gr-shop__tag.--white
-				.gr-shop__tag.--outline
-				.gr-shop__tag.--white
+				.gr-shop__tag.--white Одежда и обувь для питомцев
+				.gr-shop__tag.--outline Ножи для машинок
+				.gr-shop__tag.--white Аксессуары
 
-				.gr-shop__tag.--outline
-				.gr-shop__tag.--pink
+				.gr-shop__tag.--outline Косметика Iv San Bernard
+				.gr-shop__tag.--pink Одежда для грумеров
 
-			.gr-shop__address
+			.gr-shop__address Адрес <br>CПБ,м.Чкаловская, ул Глухая Зеленина 6
 
 		.groom__item.gr-logo
-			.gr-logo__title
+			.gr-logo__title ГРУМИНГ ЦЕНТР
 			.gr-logo__img
 				img(src="", alt="")
 
 		.groom__item.gr-hotel
-			.gr-hotel__title
-			.gr-hotel__desc
+			.gr-hotel__title ЗООГОСТИНИЦА
+			.gr-hotel__desc Не удивляйтесь, что ваш питомец отдохнёт лучше вас!
 			.gr-hotel__img
 				img(src="", alt="")
 
 		.groom__item.gr-services
-			.gr-services__title
+			.gr-services__title Все виды услуг для красоты вашего пушистого друга
 			.gr-services__tags
-				.gr-services__tag
-				.gr-services__tag
-				.gr-services__tag
+				.gr-services__tag Комплексный уход
+				.gr-services__tag Гигиена
+				.gr-services__tag Купание и сушка
 			.gr-services__img
 				img(src="", alt="")
 		
 	.about
 		.case
-			.about__title.h2
+			.about__title.h2 О нас
 
 		.about__wrap
 			.about__img
 				img(src="", alt="")
 			.about__content
-				.about__label
+				.about__label НАШИ ЦЕННОСТИ
 				.about__tags
-					.about__tag
-					.about__tag
-					.about__tag
-				.about__title #[strong ]
+					.about__tag ЗАБОТА
+					.about__tag ОТВЕТСТВЕННОСТЬ
+					.about__tag МАСТЕРСТВО
+				.about__title #[strong Дарим профессиональный уход,] развиваем индустрию груминга с 2011 года
 
 	.photos
 		.photos__list
@@ -422,141 +505,139 @@ block content
 			.photos__item
 				img(src="", alt="")
 		.case
-				.photos__more.btn.--primary-outline.--md
+				.photos__more.btn.--primary-outline.--md Полюбоваться ещё
 
 	.after
 		.case
-			.after__title.h2 #[strong ]
+			.after__title.h2 Преобразим #[strong ваших пушистиков]
 			.after__list
 				.after__item
-					.after__item-title
+					.after__item-title ПОСЛЕ
 					.after__item-img 
 						img(src="", alt="")
 				.after__item
-					.after__item-title
+					.after__item-title ПОСЛЕ
 					.after__item-img 
 						img(src="", alt="")
 				.after__item
-					.after__item-title
+					.after__item-title ПОСЛЕ
 					.after__item-img 
 						img(src="", alt="")
 				.after__item
-					.after__item-title
+					.after__item-title ПОСЛЕ
 					.after__item-img 
 						img(src="", alt="")
 				.after__item
-					.after__item-title
+					.after__item-title ПОСЛЕ
 					.after__item-img 
 						img(src="", alt="")
 				.after__item
-					.after__item-title
+					.after__item-title ПОСЛЕ
 					.after__item-img 
 						img(src="", alt="")
-			.after__more.btn.--primary-outline.--md
+			.after__more.btn.--primary-outline.--md Полюбоваться ещё
 
 	.team
 		.case
 			.team__tags
-				.team__tag
+				.team__tag БАЛУЕМ
+				.team__tag ПРЕОБРАЖАЕМ
+				.team__tag ОБОЖАЕМ
 
-			.team__title.h2 #[strong ]
+			.team__title.h2 #[strong Команда грумером] <br>с заботой о питомце
 			.team__row
 				.team__employee.employee
 					.employee__head
 						.employee__img
 							img(src="", alt="")
-						.employee__desc
+						.employee__desc Опыт 3 года
 					.employee__body
-						.employee__name
-						.employee__text
+						.employee__name Елена Рыбина
+						.employee__text За безупречное качество и эффективность в работе
 						.employee__tags
-							.employee__tag
-							.employee__tag
+							.employee__tag Грумер
+							.employee__tag Топ-мастер
 						.employee__pet
 							img(src="", alt="")
-							p
+							p Владелица КХС
 				.team__employee.employee
 					.employee__head
 						.employee__img
 							img(src="", alt="")
-						.employee__desc
+						.employee__desc Опыт более года
 					.employee__body
-						.employee__name
-						.employee__text
+						.employee__name Андрей Лямин
+						.employee__text Сконцентрирован на работе, с трепетом о питомце
 						.employee__tags
-							.employee__tag
-							.employee__tag
+							.employee__tag Грумер
 						.employee__pet
 							img(src="", alt="")
-							p
+							p Владелиц кота
 
 				.team__text
-					h3
-					p
+					h3 Забота
+					p Мы внимательны к питомцам и их хозяевам. Используем исключительно высококачественную, тщательно протестированную и сертифицированную косметику, а также стерильные инструменты, уделяя при этом пристальное внимание деталям.
 
 			.team__row
 				.team__text
-					h3
-					p
+					h3 Отвественность
+					p Принимаем взвешенные решения, учитывая потребности каждого пушистика. Готовы к нестандартным ситуациям. Доверить своего питомца нашим грумерам — передать ответственность в надёжные руки.
 				.team__employee.employee
 					.employee__head
 						.employee__img
 							img(src="", alt="")
-						.employee__desc
+						.employee__desc Опыт более года
 					.employee__body
-						.employee__name
-						.employee__text
+						.employee__name Олеся Буртылева
+						.employee__text Ответственный и активный специалист. <br>В тренде современного груминга
 						.employee__tags
-							.employee__tag
-							.employee__tag
+							.employee__tag Грумер
 						.employee__pet
 							img(src="", alt="")
-							p
+							p Владелица британца
 				.team__employee.employee
 					.employee__head
 						.employee__img
 							img(src="", alt="")
-						.employee__desc
+						.employee__desc Опыт более года
 					.employee__body
-						.employee__name
-						.employee__text
+						.employee__name Екатерина Мирошникова
+						.employee__text Внимательна к пожеланиям каждого гостя. Слышит предпочтения клиента
 						.employee__tags
-							.employee__tag
-							.employee__tag
+							.employee__tag Грумер
 						.employee__pet
 							img(src="", alt="")
-							p
+							p Владелица йорка
 
 			.team__row
 				.team__employee.employee
 					.employee__head
 						.employee__img
 							img(src="", alt="")
-						.employee__desc
+						.employee__desc Опыт более года
 					.employee__body
-						.employee__name
-						.employee__text
+						.employee__name Юлия Шаркова
+						.employee__text Энергична, сконцентрирована на процессе работы
 						.employee__tags
-							.employee__tag
-							.employee__tag
+							.employee__tag Грумер
 						.employee__pet
 							img(src="", alt="")
-							p
+							p Владелица таксы
 				.team__text
-					h3
-					p
+					h3 Мастерство
+					p Наши грумеры знают все тонкости по уходу за питомцами, увлечены своей профессией и постоянно развиваются как специалисты
 				.team__join
-					.team__join-title
-					.team__join-btn.btn.--primary.--md
+					.team__join-title Стать частью команды
+					.team__join-btn.btn.--primary.--md Откликнуться
 					.team__join-img
 						img(src="", alt="")
 	.services
 		.case
-			.services__tag
-			.services__title.h2 #[strong ]
+			.services__tag УСЛУГИ ГРУМИНГ САЛОНА
+			.services__title.h2 #[strong Доступные цены]  и более <br>300 постоянных клиентов
 			.services__list
 				.services__item.--violet.--left
-					.services__name
+					.services__name Груминг кошек
 					.services__more
 					.services__img
 						img(src="", alt="")
@@ -565,51 +646,601 @@ block content
 							.modal__content
 								.service
 									.service__head
-										.service__title #[span ]
+										.service__title #[span Груминг кошек]
 										.service__img
 											img(src="", alt="")
 									.service__body
-										.service__text
+										.service__text Уход за кошками включает в себя комплекс процедур: вычес (экспресс линька), обезжиривание шерсти, мытьё и сушка с дополнительным вычесом. Груминг кошек придаёт домашнему любимцу не только безупречный внешний вид, но и полезен для здоровья. #[br]В Happy Pet понимают, что каждая кошка уникальна, к каждому питомцу применяется индивидуальный подход.
 										.service__pricelist
-											.pricelist__title
+											.pricelist__title Стоимость
 											.pricelist__list
 												.pricelist__item
 													.pricelist__head
-														.pricelist__title
+														.pricelist__title Комплекс 
 														.pricelist__toggle
 															img(src="", alt="")
-														.pricelist__value
+														.pricelist__value от 2300 ₽
 													.pricelist__body
 														.pricelist__text
+															p Подробнее:  #[br]
+															p Гигиена, мытьё и стрижка ножницами #[br]#[strong Внимание!] Разбор колтунов - это дополнительная услуга - оплачивается отдельно.
+															p Подробнее: 
+															p Гигиена, мытьё и стрижка ножницами #[br]#[strong Внимание!] Разбор колтунов - это дополнительная услуга - оплачивается отдельно.
+
+												.pricelist__item
+													.pricelist__head
+														.pricelist__title Стрижка под машинку
+														.pricelist__toggle
+															img(src="", alt="")
+														.pricelist__value от 2500₽
+													.pricelist__body
+														.pricelist__text
+															p Подробнее:  #[br]
+															p Гигиена, мытьё и стрижка ножницами #[br]#[strong Внимание!] Разбор колтунов - это дополнительная услуга - оплачивается отдельно.
+														.pricelist__img
+															img(src="", alt="")
+
+												.pricelist__item
+													.pricelist__head
+														.pricelist__title Вычес без мытья
+														.pricelist__toggle
+															img(src="", alt="")
+														.pricelist__value от 1500₽
+													.pricelist__body
+														.pricelist__text
+															p Подробнее:  #[br]
+															p Гигиена, мытьё и стрижка ножницами #[br]#[strong Внимание!] Разбор колтунов - это дополнительная услуга - оплачивается отдельно.
+														.pricelist__img
+															img(src="", alt="")
+
+												.pricelist__item
+													.pricelist__head
+														.pricelist__title Экспресс-линька
+														.pricelist__toggle
+															img(src="", alt="")
+														.pricelist__value от 2300 ₽
+													.pricelist__body
+														.pricelist__text
+															p Подробнее:  #[br]
+															p Гигиена, мытьё и стрижка ножницами #[br]#[strong Внимание!] Разбор колтунов - это дополнительная услуга - оплачивается отдельно.
+														.pricelist__img
+															img(src="", alt="")
+
+												.pricelist__item
+													.pricelist__head
+														.pricelist__title Стрижка когтей
+														.pricelist__toggle
+															img(src="", alt="")
+														.pricelist__value 300₽
+													.pricelist__body
+														.pricelist__text
+															p Подробнее:  #[br]
+															p Гигиена, мытьё и стрижка ножницами #[br]#[strong Внимание!] Разбор колтунов - это дополнительная услуга - оплачивается отдельно.
 														.pricelist__img
 															img(src="", alt="")
 						.modal__overlay
 
 				.services__item.--orange.--left
-					.services__name
+					.services__name Груминг собак
 					.services__more
 					.services__img
 						img(src="", alt="")
+					.services__modal.modal.--fullscreen#modal-service-1
+						.modal__inner
+							.modal__content
+								.service
+									.service__head
+										.service__title #[span Груминг собак]
+										.service__img
+											img(src="", alt="")
+									.service__body
+										.service__text
+											p Груминг собак включает комплекс процедур, который выполняется в гигиенических и эстетических целях. #[br]Наши мастера рады предложить разнообразные услуги по уходу за вашими питомцами. Начиная от стрижки (гигиеническая, стрижка под машинку, стандартная для породы, модельная стрижка), до экспресс-линьки. #[br]Работаем со всеми породами и всеми типами шерсти.
+										.service__pricelist
+											.pricelist__title Стоимость
+											.pricelist__list
+												.pricelist__item
+													.pricelist__head
+														.pricelist__title Бадлингтон-терьер
+														.pricelist__toggle
+															img(src="", alt="")
+														.pricelist__value от 2300 ₽
+													.pricelist__body
+														.pricelist__text
+															p Подробнее:  #[br]
+															p Гигиена (стрижка когтей, чистка ушей, мытье, сушка) 2300 ₽
+															p Комплекс: гигиена + стрижка под машинку 2800 ₽
+															p Комплекс: гигиена + породная стрижка 3300 ₽
+														.pricelist__img
+															img(src="", alt="")
+												.pricelist__item
+													.pricelist__head
+														.pricelist__title Бишон Фризе
+														.pricelist__toggle
+															img(src="", alt="")
+														.pricelist__value от 2200 ₽
+													.pricelist__body
+														.pricelist__text
+															p Подробнее:  #[br]
+															p Гигиена, мытьё и стрижка ножницами #[br]#[strong Внимание!] Разбор колтунов - это дополнительная услуга - оплачивается отдельно.
+														.pricelist__img
+															img(src="", alt="")
+												.pricelist__item
+													.pricelist__head
+														.pricelist__title Болонка Мальтийская
+														.pricelist__toggle
+															img(src="", alt="")
+														.pricelist__value от 1400 ₽
+													.pricelist__body
+														.pricelist__text
+															p Подробнее:  #[br]
+															p Гигиена, мытьё и стрижка ножницами #[br]#[strong Внимание!] Разбор колтунов - это дополнительная услуга - оплачивается отдельно.
+														.pricelist__img
+															img(src="", alt="")
+												.pricelist__item
+													.pricelist__head
+														.pricelist__title Болонка Русская Цветная
+														.pricelist__toggle
+															img(src="", alt="")
+														.pricelist__value от 1700 ₽
+													.pricelist__body
+														.pricelist__text
+															p Подробнее:  #[br]
+															p Гигиена, мытьё и стрижка ножницами #[br]#[strong Внимание!] Разбор колтунов - это дополнительная услуга - оплачивается отдельно.
+														.pricelist__img
+															img(src="", alt="")
+												.pricelist__item
+													.pricelist__head
+														.pricelist__title Борзая
+														.pricelist__toggle
+															img(src="", alt="")
+														.pricelist__value от 4000 ₽
+													.pricelist__body
+														.pricelist__text
+															p Подробнее:  #[br]
+															p Гигиена, мытьё и стрижка ножницами #[br]#[strong Внимание!] Разбор колтунов - это дополнительная услуга - оплачивается отдельно.
+														.pricelist__img
+															img(src="", alt="")
+												.pricelist__item
+													.pricelist__head
+														.pricelist__title Вельш Терьер
+														.pricelist__toggle
+															img(src="", alt="")
+														.pricelist__value от 2100 ₽
+													.pricelist__body
+														.pricelist__text
+															p Подробнее:  #[br]
+															p Гигиена, мытьё и стрижка ножницами #[br]#[strong Внимание!] Разбор колтунов - это дополнительная услуга - оплачивается отдельно.
+														.pricelist__img
+															img(src="", alt="")
+												.pricelist__item
+													.pricelist__head
+														.pricelist__title Вест Хайленд уайт терьер
+														.pricelist__toggle
+															img(src="", alt="")
+														.pricelist__value от 1900 ₽
+													.pricelist__body
+														.pricelist__text
+															p Подробнее:  #[br]
+															p Гигиена, мытьё и стрижка ножницами #[br]#[strong Внимание!] Разбор колтунов - это дополнительная услуга - оплачивается отдельно.
+														.pricelist__img
+															img(src="", alt="")
+												.pricelist__item
+													.pricelist__head
+														.pricelist__title Гриффон Бельгийский
+														.pricelist__toggle
+															img(src="", alt="")
+														.pricelist__value от 1700 ₽
+													.pricelist__body
+														.pricelist__text
+															p Подробнее:  #[br]
+															p Гигиена, мытьё и стрижка ножницами #[br]#[strong Внимание!] Разбор колтунов - это дополнительная услуга - оплачивается отдельно.
+														.pricelist__img
+															img(src="", alt="")
+												.pricelist__item
+													.pricelist__head
+														.pricelist__title Джек-Рассел Терьер
+														.pricelist__toggle
+															img(src="", alt="")
+														.pricelist__value от 2000 ₽
+													.pricelist__body
+														.pricelist__text
+															p Подробнее:  #[br]
+															p Гигиена, мытьё и стрижка ножницами #[br]#[strong Внимание!] Разбор колтунов - это дополнительная услуга - оплачивается отдельно.
+														.pricelist__img
+															img(src="", alt="")
+												.pricelist__item
+													.pricelist__head
+														.pricelist__title Золотистый Ретривер
+														.pricelist__toggle
+															img(src="", alt="")
+														.pricelist__value от 2800 ₽
+													.pricelist__body
+														.pricelist__text
+															p Подробнее:  #[br]
+															p Гигиена, мытьё и стрижка ножницами #[br]#[strong Внимание!] Разбор колтунов - это дополнительная услуга - оплачивается отдельно.
+														.pricelist__img
+															img(src="", alt="")
+												.pricelist__item
+													.pricelist__head
+														.pricelist__title Ирландский Терьер
+														.pricelist__toggle
+															img(src="", alt="")
+														.pricelist__value от 1900 ₽
+													.pricelist__body
+														.pricelist__text
+															p Подробнее:  #[br]
+															p Гигиена, мытьё и стрижка ножницами #[br]#[strong Внимание!] Разбор колтунов - это дополнительная услуга - оплачивается отдельно.
+														.pricelist__img
+															img(src="", alt="")
+												
 				.services__item.--sky.--left
-					.services__name
+					.services__name  SPA и озонотерапия
 					.services__more
 					.services__img
 						img(src="", alt="")
+					.services__modal.modal.--fullscreen#modal-service-2
+						.modal__inner
+							.modal__content
+								.service
+									.service__head
+										.service__title #[span SPA и озонотерапия]
+										.service__img
+											img(src="", alt="")
+									.service__body
+										.service__text
+											p #[strong Spa-процедуры и озонотерапия] для домашних животных популярные услуги, которые помогают поддержать здоровье и сохранить красоту шерсти питомца. 
+											p #[strong Spa для собак] — комплекс процедур для глубокого очищения шерсти и кожи домашнего любимца. Каждая собака, вне зависимости от породы, размера, возраста и характера, станет игривей после качественного ухода.
+											p #[strong Озонотерапия] приятная, расслабляющая процедура, которая успокаивает животных и совмещает в себе: гидромассаж и обогащение озоном. Эффективная процедура: озон уничтожает болезнетворные бактерии и грибки, идеально подойдёт для лечения алопеции. 
+										.service__pricelist
+											.pricelist__title Стоимость
+											.pricelist__list
+												.pricelist__item
+													.pricelist__head
+														.pricelist__title Восстанавливающая маска для шерсти
+														.pricelist__toggle
+															img(src="", alt="")
+														.pricelist__value от 500 ₽
+													.pricelist__body
+														.pricelist__text
+															p Подробнее:  #[br]
+															p Собака до 10 кг - 500 руб. Собака от 10 кг - 700 руб.
+														.pricelist__img
+															img(src="", alt="")
+
+												.pricelist__item
+													.pricelist__head
+														.pricelist__title Питательная маска для шерсти
+														.pricelist__toggle
+															img(src="", alt="")
+														.pricelist__value от 500 ₽
+													.pricelist__body
+														.pricelist__text
+															p Подробнее:  #[br]
+															p Собака до 10 кг - 500 руб. Собака от 10 кг - 700 руб.
+														.pricelist__img
+															img(src="", alt="")
+
+												.pricelist__item
+													.pricelist__head
+														.pricelist__title Озоновая ванна
+														.pricelist__toggle
+															img(src="", alt="")
+														.pricelist__value от 800 ₽
+													.pricelist__body
+														.pricelist__text
+															p Подробнее:  #[br]
+															p Гигиена, мытьё и стрижка ножницами #[br]#[strong Внимание!] Разбор колтунов - это дополнительная услуга - оплачивается отдельно.
+														.pricelist__img
+															img(src="", alt="")
+
 				.services__item.--sand.--right
-					.services__name
+					.services__name Прочие услуги
 					.services__more
 					.services__img
 						img(src="", alt="")
+					.services__modal.modal.--fullscreen#modal-service-3
+						.modal__inner
+							.modal__content
+								.service
+									.service__head
+										.service__title #[span Прочие услуги]
+										.service__img
+											img(src="", alt="")
+									.service__body
+										.service__text
+											p Ощутите премиальный уход за домашними животными в груминг салоне Happy Pet, где комфорт и стиль вашего питомца являются нашими главным приоритетом.
+											p Наша команда экспертов позаботится о том, чтобы ваш пушистый друг чувствовал себя прекрасно.
+										.service__pricelist
+											.pricelist__title Стоимость
+											.pricelist__list
+												.pricelist__item
+													.pricelist__head
+														.pricelist__title Озоновая ванна
+														.pricelist__toggle
+															img(src="", alt="")
+														.pricelist__value от 800 ₽
+													.pricelist__body
+														.pricelist__text
+															p Подробнее:  #[br]
+															p Гигиена, мытьё и стрижка ножницами #[br]#[strong Внимание!] Разбор колтунов - это дополнительная услуга - оплачивается отдельно.
+														.pricelist__img
+															img(src="", alt="")
+												.pricelist__item
+													.pricelist__head
+														.pricelist__title Восстанавливающая маска для шерсти
+														.pricelist__toggle
+															img(src="", alt="")
+														.pricelist__value от 500 ₽
+													.pricelist__body
+														.pricelist__text
+															p Подробнее:  #[br]
+															p Гигиена, мытьё и стрижка ножницами #[br]#[strong Внимание!] Разбор колтунов - это дополнительная услуга - оплачивается отдельно.
+														.pricelist__img
+															img(src="", alt="")
+												.pricelist__item
+													.pricelist__head
+														.pricelist__title Питательная маска для шерсти
+														.pricelist__toggle
+															img(src="", alt="")
+														.pricelist__value от 500 ₽
+													.pricelist__body
+														.pricelist__text
+															p Подробнее:  #[br]
+															p Гигиена, мытьё и стрижка ножницами #[br]#[strong Внимание!] Разбор колтунов - это дополнительная услуга - оплачивается отдельно.
+														.pricelist__img
+															img(src="", alt="")
+												.pricelist__item
+													.pricelist__head
+														.pricelist__title Удаление колтунов у собак и кошек
+														.pricelist__toggle
+															img(src="", alt="")
+														.pricelist__value от 500 ₽
+													.pricelist__body
+														.pricelist__text
+															p Подробнее:  #[br]
+															p Гигиена, мытьё и стрижка ножницами #[br]#[strong Внимание!] Разбор колтунов - это дополнительная услуга - оплачивается отдельно.
+														.pricelist__img
+															img(src="", alt="")
+												.pricelist__item
+													.pricelist__head
+														.pricelist__title Стрижка когтей у собак и кошек
+														.pricelist__toggle
+															img(src="", alt="")
+														.pricelist__value от 400 ₽
+													.pricelist__body
+														.pricelist__text
+															p Подробнее:  #[br]
+															p Гигиена, мытьё и стрижка ножницами #[br]#[strong Внимание!] Разбор колтунов - это дополнительная услуга - оплачивается отдельно.
+														.pricelist__img
+															img(src="", alt="")
+												.pricelist__item
+													.pricelist__head
+														.pricelist__title Чистка ушей
+														.pricelist__toggle
+															img(src="", alt="")
+														.pricelist__value от 300 ₽
+													.pricelist__body
+														.pricelist__text
+															p Подробнее:  #[br]
+															p Гигиена, мытьё и стрижка ножницами #[br]#[strong Внимание!] Разбор колтунов - это дополнительная услуга - оплачивается отдельно.
+														.pricelist__img
+															img(src="", alt="")
+												.pricelist__item
+													.pricelist__head
+														.pricelist__title Чистка зубов (механическая)
+														.pricelist__toggle
+															img(src="", alt="")
+														.pricelist__value от 500 ₽
+													.pricelist__body
+														.pricelist__text
+															p Подробнее:  #[br]
+															p Гигиена, мытьё и стрижка ножницами #[br]#[strong Внимание!] Разбор колтунов - это дополнительная услуга - оплачивается отдельно.
+														.pricelist__img
+															img(src="", alt="")
+												.pricelist__item
+													.pricelist__head
+														.pricelist__title Чистка параанальных желез
+														.pricelist__toggle
+															img(src="", alt="")
+														.pricelist__value от 400 ₽
+													.pricelist__body
+														.pricelist__text
+															p Подробнее:  #[br]
+															p Гигиена, мытьё и стрижка ножницами #[br]#[strong Внимание!] Разбор колтунов - это дополнительная услуга - оплачивается отдельно.
+														.pricelist__img
+															img(src="", alt="")
+												.pricelist__item
+													.pricelist__head
+														.pricelist__title Окрашивание 1 элемента
+														.pricelist__toggle
+															img(src="", alt="")
+														.pricelist__value от 700 ₽
+													.pricelist__body
+														.pricelist__text
+															p Подробнее:  #[br]
+															p Гигиена, мытьё и стрижка ножницами #[br]#[strong Внимание!] Разбор колтунов - это дополнительная услуга - оплачивается отдельно.
+														.pricelist__img
+															img(src="", alt="")
+												.pricelist__item
+													.pricelist__head
+														.pricelist__title Блеск-Тату
+														.pricelist__toggle
+															img(src="", alt="")
+														.pricelist__value от 300 ₽
+													.pricelist__body
+														.pricelist__text
+															p Подробнее:  #[br]
+															p Гигиена, мытьё и стрижка ножницами #[br]#[strong Внимание!] Разбор колтунов - это дополнительная услуга - оплачивается отдельно.
+														.pricelist__img
+															img(src="", alt="")
+												.pricelist__item
+													.pricelist__head
+														.pricelist__title Стрижка 1 элемента
+														.pricelist__toggle
+															img(src="", alt="")
+														.pricelist__value 500 ₽
+													.pricelist__body
+														.pricelist__text
+															p Подробнее:  #[br]
+															p Гигиена, мытьё и стрижка ножницами #[br]#[strong Внимание!] Разбор колтунов - это дополнительная услуга - оплачивается отдельно.
+														.pricelist__img
+															img(src="", alt="")
+												.pricelist__item
+													.pricelist__head
+														.pricelist__title Вычес колтунов
+														.pricelist__toggle
+															img(src="", alt="")
+														.pricelist__value от 300 ₽
+													.pricelist__body
+														.pricelist__text
+															p Подробнее:  #[br]
+															p Гигиена, мытьё и стрижка ножницами #[br]#[strong Внимание!] Разбор колтунов - это дополнительная услуга - оплачивается отдельно.
+														.pricelist__img
+															img(src="", alt="")
+												
 				.services__item.--blue.--right
-					.services__name
+					.services__name Зоогостиница
 					.services__more
 					.services__img
 						img(src="", alt="")
+					.services__modal.modal.--fullscreen#modal-service-4
+						.modal__inner
+							.modal__content
+								.service
+									.service__head
+										.service__title #[span Зоогостиница]
+										.service__img
+											img(src="", alt="")
+									.service__body
+										.service__text Собираетесь в путешествие, но не знаете с кем оставить питомца? Ваше идеальное решение — гостиница для домашних животных. Для нас важно, что бы ваши питомцы были в безопасности и чувствовали себя комфортно находясь у нас в гостях.Наша зоогостиница соответствует всем стандартам качества: без клеток, других питомцев. Животным предоставляется первоклассный уход, они находятся под постоянным наблюдением доброжелательного и ответственного персонала.
+										.service__tags
+											.service__tag
+												.service__tags-icon
+													img(src="", alt="")
+												.service__tags-value Питание и прогулки
+											.service__tag
+												.service__tags-icon
+													img(src="", alt="")
+												.service__tags-value Комфортабельное проживание
+											.service__tag
+												.service__tags-icon
+													img(src="", alt="")
+												.service__tags-value Дезинфекция 
+											.service__tag
+												.service__tags-icon
+													img(src="", alt="")
+												.service__tags-value Услуги груминга
+											.service__tag
+												.service__tags-icon
+													img(src="", alt="")
+												.service__tags-value Постоянная отчётность
+											.service__tag
+												.service__tags-icon
+													img(src="", alt="")
+												.service__tags-value Фото-видео с питомцем
+										.service__pricelist
+											.pricelist__title Стоимость
+											.pricelist__list
+												.pricelist__item
+													.pricelist__head
+														.pricelist__title Кошки
+														.pricelist__toggle
+															img(src="", alt="")
+														.pricelist__value 400 ₽ сутки
+													.pricelist__body
+														.pricelist__text
+															p Подробнее:  #[br]
+															p Гигиена, мытьё и стрижка ножницами #[br]#[strong Внимание!] Разбор колтунов - это дополнительная услуга - оплачивается отдельно.
+														.pricelist__img
+															img(src="", alt="")
+
+												.pricelist__item
+													.pricelist__head
+														.pricelist__title Собаки мелкие до 5 кг
+														.pricelist__toggle
+															img(src="", alt="")
+														.pricelist__value 500 ₽ сутки
+													.pricelist__body
+														.pricelist__text
+															p Подробнее:  #[br]
+															p Гигиена, мытьё и стрижка ножницами #[br]#[strong Внимание!] Разбор колтунов - это дополнительная услуга - оплачивается отдельно.
+														.pricelist__img
+															img(src="", alt="")
+
+												.pricelist__item
+													.pricelist__head
+														.pricelist__title Собаки средние до 10 кг
+														.pricelist__toggle
+															img(src="", alt="")
+														.pricelist__value 800 ₽ сутки
+													.pricelist__body
+														.pricelist__text
+															p Подробнее:  #[br]
+															p Гигиена, мытьё и стрижка ножницами #[br]#[strong Внимание!] Разбор колтунов - это дополнительная услуга - оплачивается отдельно.
+														.pricelist__img
+															img(src="", alt="")
+
+												.pricelist__item
+													.pricelist__head
+														.pricelist__title Собаки крупные
+														.pricelist__toggle
+															img(src="", alt="")
+														.pricelist__value по договорённости
+													.pricelist__body
+														.pricelist__text
+															p Подробнее:  #[br]
+															p Гигиена, мытьё и стрижка ножницами #[br]#[strong Внимание!] Разбор колтунов - это дополнительная услуга - оплачивается отдельно.
+														.pricelist__img
+															img(src="", alt="")
+										.service__alert В стоимость проживания не входит питание и наполнитель, корм и наполнитель предоставляет владелец или оплачивает его стоимость отдельно.
+										.service__pricelist
+											.pricelist__title Стоимость
+											.pricelist__list
+												.pricelist__item
+													.pricelist__head
+														.pricelist__title Проживание более 10 дней
+														.pricelist__toggle
+															img(src="", alt="")
+														.pricelist__value 10% от стоимости
+													.pricelist__body
+														.pricelist__text
+															p Подробнее:  #[br]
+															p Гигиена, мытьё и стрижка ножницами #[br]#[strong Внимание!] Разбор колтунов - это дополнительная услуга - оплачивается отдельно.
+														.pricelist__img
+															img(src="", alt="")
+												.pricelist__item
+													.pricelist__head
+														.pricelist__title Содержание более 60 дней
+														.pricelist__toggle
+															img(src="", alt="")
+														.pricelist__value договорная
+													.pricelist__body
+														.pricelist__text
+															p Подробнее:  #[br]
+															p Гигиена, мытьё и стрижка ножницами #[br]#[strong Внимание!] Разбор колтунов - это дополнительная услуга - оплачивается отдельно.
+														.pricelist__img
+															img(src="", alt="")
+												.pricelist__item
+													.pricelist__head
+														.pricelist__title Более двух питомцев одного хозяина
+														.pricelist__toggle
+															img(src="", alt="")
+														.pricelist__value договорная
+													.pricelist__body
+														.pricelist__text
+															p Подробнее:  #[br]
+															p Гигиена, мытьё и стрижка ножницами #[br]#[strong Внимание!] Разбор колтунов - это дополнительная услуга - оплачивается отдельно.
+														.pricelist__img
+															img(src="", alt="")
+										.service__alert 
+											p Трансфер по городу — 500-1000 ₽
+											p Фото и видео отчет по договоренности
 						
 
 	.certs
 		.case
-			.certs__title #[strong ]
+			.certs__title #[strong Подарочные #[br]сертификаты]  <br>в Happy Pet
 			.certs__list
 				.certs__item.--pearch
 					.certs__icon
@@ -617,9 +1248,13 @@ block content
 					.certs__img
 						img(src="", alt="")
 					.certs__inner
-						.certs__tag
+						.certs__tag Номинал
 						.certs__text
-							p
+							p В наличии подарочные сертификаты 
+							p 1 500₽
+							p 3 000₽
+							p 5 000₽
+							p 10 000₽
 				.certs__symbol
 				.certs__item.--pink
 					.certs__icon
@@ -627,9 +1262,9 @@ block content
 					.certs__img
 						img(src="", alt="")
 					.certs__inner
-						.certs__tag
+						.certs__tag Срок реализации
 						.certs__text
-							p
+							p Сертификат действителен #[br]6 месяцев со дня покупки
 				.certs__symbol
 				.certs__item.--sand
 					.certs__icon
@@ -637,13 +1272,13 @@ block content
 					.certs__img
 						img(src="", alt="")
 					.certs__inner
-						.certs__tag
+						.certs__tag Действует
 						.certs__text
-							p
+							p Сертификат распространяется #[br]на услуги груминг салона #[br]HAPPY PET
 
 	.ozone
 		.case
-			.ozone__title.h2 #[h2 ]
+			.ozone__title.h2 #[h2  Укрепите здоровье #[br]питомца] с озоновыми #[br]ваннами
 			.ozone__wrap
 				.ozone__img
 					img(src="", alt="")
@@ -651,7 +1286,8 @@ block content
 					.ozone__logo
 						img(src="", alt="")
 					.ozone__text
-					a.ozone__btn.btn.--primary.--md
+						p Озоновые ванны улучшают общее состояние здоровья питомца и помогают: выводить токсины из организма, ускоряют заживление ран за счёт увеличения снабжения тканей кислородом, улучшают состояние кожи, кровообращение, уменьшая зуд и успокаивают раздражения.
+					a.ozone__btn.btn.--primary.--md Записаться
 				.ozone__img
 					img(src="", alt="")
 
@@ -659,32 +1295,32 @@ block content
 		.ambassador__img
 			img(src="", alt="")
 		.ambassador__content
-			 .ambassador__tag
+			.ambassador__tag ЛУЧШЕЕ ДЛЯ НАШИХ ПРЕКРАСНЫХ ПОСЕТИТЕЛЕЙ
 			.ambassador__text
-			    p
-				p #[i ]
+				p Мы являемся амбассадором бренда #[strong Iv San Bernard], топовой европейской косметики для собак и кошек, и у нас всегда есть доступ к самым свежим новинкам.
+				p #[i Будьте в тренде с Iv San Bernard]
 
 	.service
 		.case
-			.service__title #[strong ]
-			.service__desc
+			.service__title Наша отличительная черта: #[br]#[strong безупречный сервис #[br]и искренняя забота о клиентах]
+			.service__desc Ощутите непревзойдённый комфорт в Happy Pet
 			.service__list
 				.service__item
 					.service__img
 						img(src="", alt="")	
 					.service__content
-						.service__tag
+						.service__tag АКЦИЯ БОДРОЕ УТРО
 						.service__text
-							p
-							p #[i ]
+							p Посещай салон в утренние часы и получай кофе,чай с собой в подарок
+							p #[i В будние до 13:00]
 				.service__item
 					.service__img
 						img(src="", alt="")	
 					.service__content
-						.service__tag
+						.service__tag ВЫЕЗД ГРУМЕРА НА ДОМ
 						.service__text
-							p
-						.service__desc
+							p Нет времени на посещение салона? Питомец испытывает стресс из-за груминга в другом месте? Профессиональный груминг на дому – идеальное решение! 
+						.service__desc Выезд мастера оплачивается дополнительно
 							
 	.academy
 		.academy__item.ac-book
@@ -694,17 +1330,17 @@ block content
 				img(src="", alt="")
 			.ac-book__img
 				img(src="", alt="")
-			.ac-book__title
+			.ac-book__btn ЗАБРОНИРОВАТЬ КУРС
 		.academy__item.ac-info
-			.ac-info__title
-			.ac-info__desc
+			.ac-info__title АКАДЕМИЯ ГРУМИНГА
+			.ac-info__desc Обучим профессии грумера за 5 дней с возможностью прохождения стажировки и трудоустройства
 			.acc-info__list
-				.acc-info__item #[var  ]
-				.acc-info__item #[var  ]
-				.acc-info__item #[var  ] #[i ]
+				.acc-info__item БОЛЕЕ #[br]#[var 2000] ДОВОЛЬНЫХ #[br]СТУДЕНТОВ 
+				.acc-info__item БОЛЕЕ #[var  12] ЛЕТ #[br]ОПЫТА
+				.acc-info__item БОЛЕЕ #[var  7] УДОБНЫХ#[br]#[i ФОРМ ОБУЧЕНИЯ]
 		.academy__item.ac-courses
-			.ac-courses__title
-			.ac-courses__desc
+			.ac-courses__title КУРСЫ ДЛЯ ГРУМЕРОВ
+			.ac-courses__desc Разнообразный выбор #[br]обучающих программ
 			.ac-courses__imgs
 				.ac-courses__img
 					img(src="", alt="")
@@ -714,111 +1350,109 @@ block content
 					img(src="", alt="")
 
 		.academy__item.ac-pay
-			.ac-pay__desc
-			.ac-pay__title
-			.ac-pay__banks
+			.ac-pay__desc Удобная рассрочка от банка
+			.ac-pay__title УЧИСЬ СЕЙЧАС — ПЛАТИ ПОТОМ!
+			.ac-pay__parners БОЛЕЕ 10 БАНКОВ ПАРТНЁРОВ
 			.ac-pay__img
 				img(src="", alt="")
 		.academy__item.ac-mc
-			.ac-mc__title
+			.ac-mc__title МАСТЕР-КЛАССЫ ОТ ПРОФЕССИОНАЛОВ
 			.ac-mc__img
 				img(src="", alt="")
 
 	.courses
 		.case
 			.courses__head
-				.courses__title.h2 #[strong ]
-				.courses__text
+				.courses__title.h2 #[strong Большой выбор #[br]обучающих программ ] в академии
+				.courses__text Программа обучения подходит не только новичкам, желающих освоить профессию грумера, но и опытным мастерам, которые хотят повысить квалификацию. Выбирайте свой формат: курсы, мастер-классы, программы для повышение квалификации, пробные уроки по грумингу.
 			.courses__body
 				.courses__list
 					a.courses__item.--pink(href="")
 						.courses__more
 							img(src="", alt="")
-						.courses__name
+						.courses__name Курсы
 						.courses__img
 							img(src="", alt="")
 					a.courses__item.--sky(href="")
 						.courses__more
 							img(src="", alt="")
-						.courses__name
+						.courses__name Мастер-классы
 						.courses__img
 							img(src="", alt="")
 
 	.courses-shares
 		.case
-			.courses-shares__title.h2 #[strong ]
-			.courses-shares__subtitle
+			.courses-shares__title.h2 #[strong Выгодные акции] #[br]для вас
+			.courses-shares__subtitle Открываем запись на сентябрь по самым низким ценам
 			.courses-shares__wrap
 				.courses-shares__slider.swiper
 					.courses-shares__slider-list.swiper-wrapper
 						.courses-shares__slider-item.co-share.swiper-slide
-							.co-share__label
-							.co-share__title
+							.co-share__label Скидка на все группы
+							.co-share__title до #[br]9#[br] сентября
 							.co-share__list
 								.co-share__item
 									.co-share__text
 										ul
-											li
-											li
-											li
+											li Интенсив 
+											li Вечернее обучение
+											li группа «Выходного дня»
 									.co-share__prices
 										.co-share__price.co-share-price
-											.co-share-price__label
-											.co-share-price__new
-											.co-share-price__old
+											.co-share-price__label 60 ЧАСОВ
+											.co-share-price__new 20 000₽
+											.co-share-price__old 30 000₽
 										.co-share__price.co-share-price
-											.co-share-price__label
-											.co-share-price__new
-											.co-share-price__old
+											.co-share-price__label 120 ЧАСОВ
+											.co-share-price__new 40 000₽
+											.co-share-price__old 50 000₽
 								.co-share__item
 									.co-share__text
 										ul
-											li
-											li
-											li
+											li Экспресс-обучение
 									.co-share__prices
 										.co-share__price.co-share-price
-											.co-share-price__label
-											.co-share-price__new
-											.co-share-price__old
+											.co-share-price__label 60 ЧАСОВ
+											.co-share-price__new 25 000₽
+											.co-share-price__old 30 000₽
 										.co-share__price.co-share-price
-											.co-share-price__label
-											.co-share-price__new
-											.co-share-price__old
+											.co-share-price__label 120 ЧАСОВ
+											.co-share-price__new 40 000₽
+											.co-share-price__old 50 000₽
 								.co-share__item
 									.co-share__text
 										ul
-											li
-											li
-											li
+											li Утреннее обучение
+											li Вечернее обучение
+											li группа «2 через 2»
 									.co-share__prices
 										.co-share__price.co-share-price
-											.co-share-price__label
-											.co-share-price__new
-											.co-share-price__old
+											.co-share-price__label 60 ЧАСОВ
+											.co-share-price__new 27 000₽
+											.co-share-price__old 30 000₽
 										.co-share__price.co-share-price
-											.co-share-price__label
-											.co-share-price__new
-											.co-share-price__old
+											.co-share-price__label 120 ЧАСОВ
+											.co-share-price__new 45 000₽
+											.co-share-price__old 50 000₽
 								
 							.co-share__text.co-share__desc
 								ul
-									li #[strong ]
-									li
-									li
-									li
+									li #[strong Бесплатная стажировка] неограниченное количество времени.
+									li *Акция действует при оплате переводом или наличными и внесении предоплаты до 9 сентября (включительно)
+									li Предоплата за обучение 50%, остаток на первом занятии в академии
+									li Заключение договора возможно дистанционно
 				.courses-shares__controls
 					.courses-shares__control.control.--prev
 					.courses-shares__control.control.--next
 
 			.courses-shares__btns
-				.courses-shares__btn.btn.--secondary.--md #[span ] #[img(src="" alt="")]
-				.courses-shares__btn.btn.--primary.--md #[span ] #[img(src="" alt="")]
+				.courses-shares__btn.btn.--secondary.--md #[span Записаться на курс] #[img(src="" alt="")]
+				.courses-shares__btn.btn.--primary.--md #[span Оформить рассрочку] #[img(src="" alt="")]
 
 	.academy-info
 		.case
 			.academy-info__head
-				.academy-info__title.h2 #[strong ] 
+				.academy-info__title.h2 Об #[strong академии] 
 				.academy-info__controls
 					.academy-info__control.control.--prev
 						img(src="", alt="")
@@ -839,15 +1473,15 @@ block content
 								img(src="", alt="")
 					.academy-info__texts
 						.academy-info__text
-							p
+							p С 2011 года Академия груминга Happy Pet развивает груминг индустрию, подготавливая специалистов высшего уровня. Школа сертифицирована и имеет государственную образовательную лицензию.
 						.academy-info__text
-							p
+							p После обучения мы выдаем: сертификат установленного образца, международный сертификат, диплом государственного образца. Выбирая нашу школу, вы получаете огромное количество преимуществ!
 
 	.why-edu
 		.case
 			.why-edu__wrap
 				.why-edu__left
-					.why-edu__title
+					.why-edu__title Почему #[strong стоит #[br]идти учиться] #[strong ] #[br]в Happy Pet
 					.why-edu__controls
 						.why-edu__control.control.--prev
 							img(src="", alt="")
@@ -860,131 +1494,132 @@ block content
 								.why-edu__img
 									img(src="", alt="")
 								.why-edu__content
-									.why-edu__name
+									.why-edu__name 90% практики
 									.why-edu__text
-										p
+										p В обучении 10% выделяем на теорию, остальное время полностью уделяем практике!
+										p Школа предоставляет бесплатно моделей разных пород для практической части.
 							.why-edu__item.swiper-slide
 								.why-edu__img
 									img(src="", alt="")
 								.why-edu__content
-									.why-edu__name
+									.why-edu__name Неограниченная стажировка
 									.why-edu__text
-										p
+										p После обучения дарим НЕОГРАНИЧЕННОЕ количество часов для стажировки! Просто свяжитесь с администратором и выберете подходящий день.
 							.why-edu__item.swiper-slide
 								.why-edu__img
 									img(src="", alt="")
 								.why-edu__content
-									.why-edu__name
+									.why-edu__name Удобное расположение
 									.why-edu__text
-										p
+										p Мы находимся в Санкт-Петербурге, в центре города (Петроградский район) в 10 минутах ходьбы от метро Чкаловская.
 							.why-edu__item.swiper-slide
 								.why-edu__img
 									img(src="", alt="")
 								.why-edu__content
-									.why-edu__name
+									.why-edu__name Обучение #[br]у профи
 									.why-edu__text
-										p
+										p С 2011 года обучаем грумингу. В Академии работают преподаватели с многолетним опытом и авторскими методиками обучения. Победители международных конкурсов.
 							.why-edu__item.swiper-slide
 								.why-edu__img
 									img(src="", alt="")
 								.why-edu__content
-									.why-edu__name
+									.why-edu__name Быстрый старт в профессию
 									.why-edu__text
-										p
+										p Насыщенное обучение, помогает оперативно освоить направление груминга. «Экспресс»–группа» позволяет обучиться за 5–7 дней и начать работать.
 							.why-edu__item.swiper-slide
 								.why-edu__img
 									img(src="", alt="")
 								.why-edu__content
-									.why-edu__name
+									.why-edu__name Помощь #[br]в приёме #[br]на работу
 									.why-edu__text
-										p
+										p Мы поддерживаем наших учеников и помогаем с трудоустройством, после прохождения курса.
 							.why-edu__item.swiper-slide
 								.why-edu__img
 									img(src="", alt="")
 								.why-edu__content
-									.why-edu__name
+									.why-edu__name Удобная рассрочка
 									.why-edu__text
-										p
+										p Сотрудничаем с более 10 банками. Рассрочка от 6 недель до 24 месяцев, возможно без первого взноса. Небольшой процент, зависит от первоначального взноса и срока.
 							.why-edu__item.swiper-slide
 								.why-edu__img
 									img(src="", alt="")
 								.why-edu__content
-									.why-edu__name
+									.why-edu__name Проживание иногородним
 									.why-edu__text
-										p
+										p Иногородним студентам наши отели-партнёры предоставляют скидку до 20% на проживание и подарки в период обучения!
 							.why-edu__item.swiper-slide
 								.why-edu__img
 									img(src="", alt="")
 								.why-edu__content
-									.why-edu__name
+									.why-edu__name Повышение квалификации
 									.why-edu__text
-										p
+										p Предлагаем курсы по повышению квалификации, мастер-классы, чтобы вы могли совершенствовать своё мастерство.
 							.why-edu__item.swiper-slide
 								.why-edu__img
 									img(src="", alt="")
 								.why-edu__content
-									.why-edu__name
+									.why-edu__name Помощь #[br]в подборе #[br]инструментов
 									.why-edu__text
-										p
+										p Happy Pet открыл магазин для грумеров,где вы найдёте специализированные инструменты для работы, а мы поможем с выбором.
 							.why-edu__item.swiper-slide
 								.why-edu__img
 									img(src="", alt="")
 								.why-edu__content
-									.why-edu__name
+									.why-edu__name Бесплатное оборудование
 									.why-edu__text
-										p
+										p Во время обучения академия предоставляет косметику, материалы и расходники, качественные инструменты (машинки, ножницы, фены),фирменный фартук.
 							.why-edu__item.swiper-slide
 								.why-edu__img
 									img(src="", alt="")
 								.why-edu__content
-									.why-edu__name
+									.why-edu__name Персональные скидки
 									.why-edu__text
-										p
+										p Академия груминга ежемесячно обновляет систему лояльности, чтобы вы могли обучаться с выгодой.
 
 	.teachers
 		.case
 			.teachers__head
-				.teachers__title #[strong ]
+				.teachers__title #[strong Профессиональные #[br]преподаватели ] #[br]академии груминга
 				.teachers__text
-					p
+					p Погрузитесь в искусство груминга под руководством опытных наставников, которые имеют #[storng многолетний опыт работы и авторские методы обучения грумингу.] Присоединяйтесь к академии груминга и #[strong учитесь у лучших] в этой области.
 			.teachers__body
 				.teachers__list
 					.teachers__item.teacher
 						.teacher__img
 							img(src="", alt="")
 						.teacher__content
-							.teacher__name
+							.teacher__name Новохатская Ирина
 							.teacher__text
-								p
-							.teacher__btn.btn.--secondary.--md #[span ] #[img(src="", alt="")]
+								p Ирина — #[strong ведущий специалист школы и профессиональный грумер] #[br]В профессии более 12 лет. Призёр многочисленных междунородных конкурсов России, мастер по пуделям, опытный преподаватель, методолог и автор обучающих программ.Преподаватель курсов #[i «Утро»], #[i «Интенсив»], #[i «2/2»], а также программ и мастер классов повышения квалификации.
+							.teacher__btn.btn.--secondary.--md #[span Записаться к Ирине] #[img(src="", alt="")]
 
 					.teachers__item.teacher
 						.teacher__img
 							img(src="", alt="")
 						.teacher__content
-							.teacher__name
+							.teacher__name Демьянова Кристина
 							.teacher__text
-								p
-							.teacher__btn.btn.--secondary.--md #[span ] #[img(src="", alt="")]
+								p Кристина — #[strong профессиональный грумер] #[br]Путь в груминг начался с моего щенка вест-хайленд-уайт-терьера. Подготовка питомца к выставкам требовали тщательного изучения и самоотдачи. В итоге сменила офисный гардероб на костюм грумера, шаг, о котором я не жалею! Мне нравится общение с питомцами и их владельцами, наслаждаюсь результатами и ценю эмоциональную обратную связь. #[br]Преподаватель курса #[i «Экспресс-обучение»], а так же мастер в тримминге.
+							.teacher__btn.btn.--secondary.--md #[span Записаться к Кристине] #[img(src="", alt="")]
 
 					.teachers__item.teacher
 						.teacher__img
 							img(src="", alt="")
 						.teacher__content
-							.teacher__name
+							.teacher__name Пивоварова Аделаида
 							.teacher__text
-								p
-							.teacher__btn.btn.--secondary.--md #[span ] #[img(src="", alt="")]
+								p Аделаида — #[strong преподаватель в школе и грумер в HAPPYPET] #[br]Педагог с большим опытом, грумер-универсал, специалист по работе с пуделями и мастер по бишонам.Я не только научу вас стрижке и триммингу, но и помогу понять животное и найти с ним общий язык #[br]Преподаватель группы #[i «Выходного дня»], #[i «Вечер»] и #[i «Индивидуальное обучение»]
+							.teacher__btn.btn.--secondary.--md #[span Записаться к Аделаиде] #[img(src="", alt="")] 
 
 	.installment
 		.case
-			.installment__title.h2 #[strong ]
+			.installment__title.h2 Учись СЕЙЧАС — #[strong ПЛАТИ #[br]ПОТОМ!]
 			.installment__wrap
 				.installment__content
 					.installment__text
-						h3
-						p
-					.installment__btn.btn.--primary.--md #[span ] #[img(src="", alt="")]
+						h3 Удобная рассрочка от банка
+						p Доступно на обучение и покупку стартового набора инструментов.
+					.installment__btn.btn.--primary.--md #[span Оформить рассрочку] #[img(src="", alt="")]
 
 				.installment__banks
 					.installment__logos
@@ -1000,58 +1635,62 @@ block content
 							img(src="", alt="")
 						.installment__logo
 							img(src="", alt="")
-					.installment__desc
+					.installment__desc При оформлении курса в рассрочку акции и скидки не действуют.
 
 
 	.offers
 		.case
-			.offers__title
+			.offers__title Сомневаетесь, стоит ли записываться на наши курсы? #[br]Хотите знать, подходит ли вам карьера грумера?
 			.offers__list
 				.offers__item.offer
 					.offer__wrap
-						.offer__img
-							img(src="", alt="")
+						.offer__card
+							.offer__name ПРОБНЫЙ УРОК ПО ГРУМИНГУ
+							.offer__img
+								img(src="", alt="")
 						.offer__content
-							.offer__title
+							.offer__title УСПЕЙ ЗАПИСАТЬСЯ
 							.offer__price
-								.offer__price-old
-								.offer__price-current
+								.offer__price-old 4 000 ₽ 
+								.offer__price-current 2 000 ₽
 							.offer__text
-								h3
+								h3 Вы научитесь:
 								ul
-									li
-									li
-									li
-									li
+									li Стричь шпица
+									li Узнаете об инструментах и косметике применяемых в груминге
+									li Погрузитесь в атмосферу и попробуете себя в груминге 
+									li Зададите интересующие вопросы ведущему специалисту о груминге, о том как проходит обучение и курсы
 							.offer__tags
-								.offer__tag
-								.offer__tag
-					.offer__btn.btn.--primary-outline.--md
+								.offer__tag ДЛИТЕЛЬНОСТЬ 3-4 ЧАСА
+								.offer__tag МАКСИМАЛЬНАЯ СКИДКА НА КУРС ДЕНЬ В ДЕНЬ
+					.offer__btn.btn.--primary-outline.--md Записаться на пробный урок
 				.offers__item.offer
 					.offer__wrap
-						.offer__img
-							img(src="", alt="")
+						.offer__card
+							.offer__name ТРЕБУЮТСЯ МОДЕЛИ #[br]#[strong В ШКОЛУ HAPPY PET]
+							.offer__img
+								img(src="", alt="")
 						.offer__content
-							.offer__title
+							.offer__title ПОЛНЫЙ КОМПЛЕКС УСЛУГ ВСЕГО
 							.offer__price
-								.offer__price-current
+								.offer__price-current 300 ₽
 							.offer__text
-								h3
+								h3 Что входит в услугу:
 								ul
-									li
-									li
+									li Комплекс: купание, стрижка, сушка, так же мы подстрижем когти, почистим уши, сделаем полную гигиену используя только профессиональную гипоаллергенную косметику
+									li Стрижку делаем с учётом всех пожеланий хозяина
 							.offer__tags
-								.offer__tag
-								.offer__tag
-					.offer__btn.btn.--primary.--md
+								.offer__tag ДЛИТЕЛЬНОСТЬ 3-4 ЧАСА
+								.offer__tag ЗАВИСИТ ОТ ПОРОДЫ И НАЛИЧИЯ КОЛТУНОВ
+					.offer__btn.btn.--primary.--md Узнать подробнее
 
 	.bp
 		.case
 			.bp__wrap
 				.bp__content
-					.bp__title
-					.bp__text
-					.bp__btn.btn.--primary.--md
+					.bp__title Идеальный план салонного бизнеса 
+					.bp__text Индивидуальная #[strong консультация эксперта по открытию салона,] организации собственного бизнеса без лишних затрат
+					.bp__btn.btn.--primary.--md Спросить у эксперта
 				.bp__imgs
 					.bp__img
 						img(src="", alt="")
@@ -1061,9 +1700,10 @@ block content
 	.accommodation
 		.case
 			.accommodation__head
-				.accommodation__title.h2 #[strong ]
+				.accommodation__title.h2 #[strong Комфортное проживание] #[br]для иногородних учеников
 				.accommodation__text
-					p
+					p #[strong Скидка на проживание] во время обучения от отелей-парнёров.
+					p Просто сообщите нам о своём выборе отеля, и мы подтвердим ваше обучение в академии груминга.
 			.accommodation__body
 				.accommodation__list
 					.accommodation__item.apartment
@@ -1071,212 +1711,247 @@ block content
 							img(src="", alt="")
 						.apartment__content
 							.apartment__head
-								.apartment__title
+								.apartment__title Апарт-отель «GRANI»
 								.apartment__toggle
 									img(src="", alt="")
 							.apartment__body
 								.apartment__text
-									p
+									p Современный апарт отель — 40 апартаментов с самым современным ремонтом и техникой. #[strong При бронировании через сайт отеля по промокоду HappyPet предоставляется скидка 20% на проживание.] Отель расположен в шаговой доступности от школы по адресу, ул. Большая Зеленина, дом 24, стр. 1
 								.apartment__data
 									.apartment__data-item
-										.apartment__data-key
-										.apartment__data-value #[a(href="")]
+										.apartment__data-key Сайт отеля: 
+										.apartment__data-value #[a(href="https://granihotel.ru") https://granihotel.ru]
 									.apartment__data-item
-										.apartment__data-key
-										.apartment__data-value #[a(href="tel:")]
+										.apartment__data-key Телефон:
+										.apartment__data-value #[a(href="tel:+7(812)566-66-36") +7(812)566-66-36]
 					.accommodation__item.apartment
 						.apartment__img
 							img(src="", alt="")
 						.apartment__content
 							.apartment__head
-								.apartment__title
+								.apartment__title 
 								.apartment__toggle
 									img(src="", alt="")
 							.apartment__body
 								.apartment__text
-									p
+									p Сеть апартаментов «Атмосфера». При бронировании по промокоду «Хэппи Пэт» мы #[strong предоставляем гостям скидку 10% на срок проживания от 3-х суток, и 15% на срок проживания от 7 суток.] Стоимость размещения на длительный срок обговаривается индивидуально.
 								.apartment__data
 									.apartment__data-item
-										.apartment__data-key
-										.apartment__data-value #[a(href="")]
+										.apartment__data-key Сайт отеля:
+										.apartment__data-value #[a(href="http://a-hotel.spb.ru/" target="_blank")  http://a-hotel.spb.ru/]
 									.apartment__data-item
-										.apartment__data-key
-										.apartment__data-value #[a(href="tel:")]
+										.apartment__data-key Телефон: 
+										.apartment__data-value #[a(href="tel:+7 (812) 921-15-40") +7 (812) 921-15-40], #[a(href="+7 (921) 411-20-20")  +7 (921) 411-20-20]
+									.apartment__data-item
+										.apartment__data-key Соцсети:  
+										.apartment__data-value #[a(href="https://vk.com/club11201267" target="_blank") ВКонтакте]
 					.accommodation__item.apartment
 						.apartment__img
 							img(src="", alt="")
 						.apartment__content
 							.apartment__head
-								.apartment__title
+								.apartment__title Хостел «Рор-Аrt»
 								.apartment__toggle
 									img(src="", alt="")
 							.apartment__body
 								.apartment__text
-									p
+									p Уютный и красочный хостел Поп-Арт расположен в 900 метрах от ст. метро Петроградская и Чкаловская. Хостел находится во дворе, что гарантирует тишину в номерах. К услугам гостей предоставляется автомобильная парковка.
 								.apartment__data
 									.apartment__data-item
-										.apartment__data-key
-										.apartment__data-value #[a(href="")]
+										.apartment__data-key Почта:
+										.apartment__data-value #[a(href="mailto:hostel.pop-art@inbox.ru" target="_blank")  hostel.pop-art@inbox.ru]
 									.apartment__data-item
-										.apartment__data-key
-										.apartment__data-value #[a(href="tel:")]
+										.apartment__data-key Телефон: 
+										.apartment__data-value #[a(href="tel:+7 812 640 84 43") +7 812 640 84 43], #[a(href="+7 921 963 07 89")  +7 921 963 07 89]
 					.accommodation__item.apartment
 						.apartment__img
 							img(src="", alt="")
 						.apartment__content
 							.apartment__head
-								.apartment__title
+								.apartment__title Отель «Золотой Век» 4*»  
 								.apartment__toggle
 									img(src="", alt="")
 							.apartment__body
 								.apartment__text
-									p
+									p Собираетесь с питомцем в Северную столицу, но сложно найти отель, принимающий домашних животных? «Золотой Век» 4*» в центре Санкт-Петербурга рады предложить комфортное размещение вам и Вашему питомцу. #[strong СКИДКА ДЛЯ НАШИХ УЧЕНИКОВ 20%.] Для применения скидки необходимо использовать промокод ILOVEMYPET, который действует только при бронировании напрямую. 
 								.apartment__data
 									.apartment__data-item
-										.apartment__data-key
-										.apartment__data-value #[a(href="")]
+										.apartment__data-key Сайт отеля:
+										.apartment__data-value #[a(href="http://goldenagehotel.ru/" target="_blank")  http://goldenagehotel.ru/]
 									.apartment__data-item
-										.apartment__data-key
-										.apartment__data-value #[a(href="tel:")]
+										.apartment__data-key Телефон: 
+										.apartment__data-value #[a(href="tel:+7 (812) 310-97-97") +7 (812) 310-97-97]
+									.apartment__data-item
+										.apartment__data-key Соцсети:  
+										.apartment__data-value #[a(href="https://api.whatsapp.com/send/?phone=%2B79216411611&text&type=phone_number&app_absent=0" target="_blank") WhatsApp]
 					.accommodation__item.apartment
 						.apartment__img
 							img(src="", alt="")
 						.apartment__content
 							.apartment__head
-								.apartment__title
+								.apartment__title «Гранд Отель Чайковский» 4*
 								.apartment__toggle
 									img(src="", alt="")
 							.apartment__body
 								.apartment__text
-									p
+									p СКИДКА ДЛЯ НАШИХ УЧЕНИКОВ 20%. Вашему четвероногому другу будет предоставлен комплимент от отеля, а для владельцев мы предлагаем специальную скидку на проживание. Для применения скидки необходимо использовать промокод ILOVEMYPET, который действует только при бронировании напрямую.
 								.apartment__data
 									.apartment__data-item
-										.apartment__data-key
-										.apartment__data-value #[a(href="")]
+										.apartment__data-key Сайт отеля:
+										.apartment__data-value #[a(href="http://tchotel.ru" target="_blank")  http://tchotel.ru]
 									.apartment__data-item
-										.apartment__data-key
-										.apartment__data-value #[a(href="tel:")]
+										.apartment__data-key Телефон: 
+										.apartment__data-value #[a(href="tel:+7 (812) 600-24-11") +7 (812) 600-24-11]
+									.apartment__data-item
+										.apartment__data-key Соцсети:  
+										.apartment__data-value #[a(href="https://api.whatsapp.com/send/?phone=%2B79216411611&text&type=phone_number&app_absent=0" target="_blank") WhatsApp]
 
 	.docs
 		.case
-			.docs__title.h2
+			.docs__title.h2 Документы
 			.docs__list
 				.docs__text
-					p
+					p Академия груминга «HAPPY PET» сертифицированна и имеет государственную образовательную лицензию. #[br]Регистрационный номер лицензии: #[br]No Л035–01271–78/00641799
 				.docs__item
 					.docs__item-icon
 						img(src="", alt="")
-					.docs__item-text
-					.docs__item-btn.--primary
+					.docs__item-text Сведения об образовательной организации
+					.docs__item-btn.--primary СМОТРЕТЬ
 				.docs__item
 					.docs__item-icon
 						img(src="", alt="")
-					.docs__item-text
-					.docs__item-btn.--secondary
+					.docs__item-text Договор стажировки
+					.docs__item-btn.--secondary СКАЧАТЬ
 				.docs__item
 					.docs__item-icon
 						img(src="", alt="")
-					.docs__item-text
-					.docs__item-btn.--primary
+					.docs__item-text Договор на обучение в академии груминга
+					.docs__item-btn.--primary СКАЧАТЬ
 				.docs__item
 					.docs__item-icon
 						img(src="", alt="")
-					.docs__item-text
-					.docs__item-btn.--secondary
+					.docs__item-text Правила посещения для моделей
+					.docs__item-btn.--secondary СМОТРЕТЬ
 
-		.docs__main-title
+		.docs__main-title Документы
 
 
 	.booking
 		.case
-			.booking__title.h2 #[strong ]
+			.booking__title.h2 #[strong Забронировать место] #[br]на курсе
 			.booking__list
 				.booking__item
 					.booking__card
 						.booking__img
 							img(src="", alt="")
-						.booking__title
-					.booking__subtitle
-					.booking__btn.btn.--secondary.--md
+						.booking__title ЛЮБИМАЯ РАБОТА ЖДЕТ
+					.booking__subtitle Оставить онлайн-заявку
+					.booking__btn.btn.--secondary.--md #[span Записаться на курс] #[img(src="", alt="")]
 				.booking__item
 					.booking__card
 						.booking__img
 							img(src="", alt="")
-						.booking__title
-					.booking__subtitle
+						.booking__title ПОЙДЁМ УЧИТЬСЯ
+					.booking__subtitle Позвонить или написать #[br]в мессенджер
 					.booking__socials
 
 	.org
 		.case
-			.org__title #[h1]
+			.org__title #[h1 Сведения об #[br]образовательной #[br]организации]
 			.org__text
-				h2
-				p
-				h2
-				p
+				h2 Основные сведения:
+				p Общество с ограниченной ответственностью «ХЭППИ» #[br]Место осуществления деятельности: 197110, город Санкт-Петербург, ул. Глухая Зеленина, д. 6, литера А, часть помещения 21-Н
+				h2 Структура и органы управления образовательной организацией
+				p Страница находится в разработке
 				blockquote
-					h2
+					h2 Документы
 					ul
-						li #[a(href="")]
-						li #[a(href="")]
-						li #[a(href="")]
-						li #[a(href="")]
-						li #[a(href="")]
-						li #[a(href="")]
-						li #[a(href="")]
-						li #[a(href="")]
+						li #[a(href="") Заключение СЭЗ]
+						li #[a(href="") Свидетельство о госрегистрации юрлица]
+						li #[a(href="") Свидетельство о постановке на учет]
+						li #[a(href="") Свидетельство ОГРН]
+						li #[a(href="") Устав]
+						li #[a(href="") Уведомление о предоставлении лицензии на осуществление образовательной деятельности]
+						li #[a(href="") Выписка из реестра лицензий]
+						li #[a(href="") Реестровая выписка]
 				blockquote
-					h2
+					h2 Образование
 					ul
-						li #[a(href="")]
-						li #[a(href="")]
-				h2
-				p
-				h2
-				p
+						li #[a(href="") Дополнительная общеобразовательная общеразвивающая программа «БАЗОВЫЙ КУРС ГРУММИНГА» (дополнительное образование для взрослых)]
+						li #[a(href="") Дополнительная профессиональная программа повышения квалификации «Основы Груминга. Груминг собак и кошек. Тримминг»]
+				h2 Руководство. Педагогический (научно-педагогический) состав
+				p Страница находится в разработке
+				h2 Материально-техническое обеспечение и оснащенность образовательного процесса
+				p В образовательной организации имеется вся необходимые материально-технические средства:
 				ul
-					li
-					li
-					li
-					li
-					li
-					li
-					li
-					li
-					li
-					li
-					li
-					li
-					li
-					li
-				h2
-				p
-				h2
-				p
-				h2
-				p
-				h2
-				p
-				h2
-				p
+					li Стол для груминга;
+					li Магнитно-маркерная доска;
+					li Триммер для стрижки животных;
+					li Ножевые блоки для машинок стандарт А5;
+					li Насадки для машинок стандарт А5;
+					li Ножницы: прямые, филировочные, изогнутые, шанкерные;
+					li Гребни различных размеров ;
+					li Сликеры с различной степенью жёсткости;
+					li Колтунорезы;
+					li Стриппинг;
+					li Камни и ножи для тримминга;
+					li Щётки;
+					li Скребницы;
+					li Фены;
+					li Компрессоры.
+				h2 Платные образовательные услуги
+				p Страница находится в разработке
+				h2 Финансово-хозяйственная деятельность
+				p Страница находится в разработке
+				h2 Вакантные места для приема (перевода) обучающихся
+				p Страница находится в разработке
+				h2 Доступная среда
+				p Страница находится в разработке
+				h2 Международное сотрудничество
+				p Страница находится в разработке
 
 	.rules
-		.rules__title #[h1 ]
+		.rules__title #[h1 Правила посещения #[br]для моделей]
 		.rules__text
-			h2
-			p
+			h2 Информация для моделей:
+			p #[strong Перед походом на бесплатную стрижку мыть питомца НЕ НУЖНО!]
+			p #[strong Что входит:] комплекс: купание, стрижка, сушка, так же мы подстрижем когти, почистим уши, сделаем полную гигиену используя только профессиональную гипоаллергенную косметику. Стрижку делаем с учётом всех пожеланий хозяина.
+			p #[strong Как проходит:] весь ПРОЦЕСС ПРОИСХОДИТ ПОД чутким РУКОВОДСТВОМ ОПЫТНОГО ПРЕПОДАВАТЕЛЯ. Ученики идут обучаться в академию груминга, т.к. очень любят животных. #[br]Во время процесса обучения, ученику требуется больше времени, поэтому процедура занимает 3-4 часа.
+			p #[strong Стоимость:] модельный взнос за косметику и расходные материалы #[strong 300₽]—породы до 10 кг, #[strong 500₽]—породы от 10кг
+			p #[strong Время посещения:] от 3 до 5 часов. Длительность зависит от породы, наличия колтунов и поведения питомца.
+			p #[strong Где вы находитесь:] г. Санкт-Петербург, Петроградский район— метро Чкаловская (в 8-10 минутах ходьбы от метро). ул. Глухая Зеленина, дом 6. ЖК «Классика»
+			p #[strong Рекомендация:] если Ваш питомец с характером (капризен, агрессивен, кусается) обдумайте посещение салона бесплатно в качестве  модели. Ученики из-за отсутствия опыта проводят процедуру качественно, но в 2 раза дольше. При желании сэкономить время, мы с радостью запишем Вашего питомца к опытному #[a(href="") мастеру нашего груминг салона], с опытом работы от 3-х лет.
+			h5 #[i Важно!] Отмена возможна за 24 часа до записи, чтобы мы нашли другую модель. 
+			h5 В ином случае вынуждены отказать вам в дальнейшем посещении салона в качестве модели и внести в чёрный список. Просим не подводить нас и наших учеников, и приходить вовремя.
+		.rulse__actions.r-actions
+			.r-actions__list
+				.r-actions__item
+					.r-actions__card
+						.r-actions__img
+							img(src="" alt="")
+						.r-actions__name требуются собаки и кошки различных пород в качестве моделей
+						.r-actions__desc Модельный взнос 300₽
+					.r-actions__title Записать питомца моделью
+					.r-actions__socials
+				.r-actions__item
+					.r-actions__card
+						.r-actions__img
+							img(src="" alt="")
+						.r-actions__name С любовью к хвостику
+					.r-actions__title Записаться в груминг салон
+					.r-actions__btn.btn.--secondary.--md  Записать питомца
 		.rules__socials
-			.rules__socials-title
+			.rules__socials-title Соцсети:
 			.rules__socials-list
 				.rules__socials-item
-					.rules__socials-key
+					.rules__socials-key Школа груминга:
 					.rules__socials-value
 						a.rules__socials-link(href="" target="_blank")
 							img(src="", alt="")
 						a.rules__socials-link(href="" target="_blank")
 							img(src="", alt="")
 				.rules__socials-item
-					.rules__socials-key
+					.rules__socials-key Реальные отзывы моделей и учеников:
 					.rules__socials-value
 						a.rules__socials-link(href="" target="_blank")
 							img(src="", alt="")
@@ -1286,318 +1961,422 @@ block content
 	.collections
 		.case
 			.collections__head
-				.collections__title.h2 #[strong ]
-				.collections__text
+				.collections__title.h2 Подбери #[strong идеальный #[br]обучающий курс ]
+				.collections__text Индивидуальные программы для любого уровня подготовки: курсы для новичков в груминге и для повышения квалификации. Подберите для себя идеальный вариант: интенсивный курс, с занятиями каждый день или обучение по выходным.
 			.collections__body
 				.collections__tags
-					.collections__tag
-					.collections__tag
+					.collections__tag Предоплата 50%
+					.collections__tag ВОЗВРАТ не позднее 14 дней до начала обучения 
 				.collections__list
 					.collections__item.collection
-						.collection__left
-							.collection__head
-								.collection__icon
-									img(src="", alt="")
-								.collection__title
-							.collection__body
-								.collection__text
-									p
-							.collection__more
-								.collection__more-text
-								.collection__more-icon
-									img(src="", alt="")
-						.collection__right
-							.collection__card
-								.collection__label
-								.collection__img
-									img(src="", alt="")
-							.collection__btns
-								.collection__btn.btn.--secondary.--md #[span ] #[img(src="", alt="")]
-								.collection__btn.btn.--primary.--md #[span ] #[img(src="", alt="")]
+						.collection__wrap
+							.collection__left
+								.collection__head
+									.collection__icon
+										img(src="", alt="")
+									.collection__title Базовый курс с нуля
+								
+								.collection__body
+									.collection__tags
+										.collection__tag без опыта
+										.collection__tag 60 академических часов 
+										.collection__tag 2-6 человек в группе
+									.collection__text
+										p Пройдя данную программу вы сможете успешно стажироваться и работать в салоне или частным мастером. Практика на самых популярных породах, которые стригутся в груминг салонах.
+								.collection__btn-more
+									.collection__btn-more-text ПОДРОБНЕЕ
+									.collection__btn-more-icon
+										img(src="", alt="")
+							.collection__right
+								.collection__card
+									.collection__label ОФЛАЙН
+									.collection__img
+										img(src="", alt="")
+								.collection__btns
+									.collection__btn.btn.--secondary.--md #[span Записаться на курс] #[img(src="", alt="")]
+									.collection__btn.btn.--primary.--md #[span Оформить рассрочку] #[img(src="", alt="")]
+						.collection__more
+							.collection__more-title Формы обучения
+							.collection__more-content
+								table
+									thead
+										tr
+											th Группа
+											th График
+											th Длительность
+									tbody
+										tr
+											td  Утренняя группа
+											td по будням (пн, ср, пт) 3 раза в неделю с 11:00 до 16:00
+											td 1 месяц
+										tr
+											td  Вечерняя группа
+											td по будням (пн, ср, пт) 3 раза в неделю с 18:00 до 22:00
+											td 1 месяц
+										tr
+											td  Группа «Выходного дня»
+											td по субботам и воскресеньям с 11:00 до 16:00
+											td 1 месяц
+										tr
+											td  «Экспресс»–группа
+											td ежедневно с 11:00 до 20:00 с понедельника по пятницу
+											td 5 дней
+										tr
+											td  «Интенсив»–группа
+											td интенсивное обучение по вторникам и четвергам с 11:00 до 20:00.
+											td 15 дней
+										tr
+											td Группа «2 через 2»
+											td занятия 2 через 2 по целому дню с 11:00 до 20:00, или с 11:00 до 16:00. Возможно обучение по вашему графику: 3/3 или 3/4 или по договорённости с вашим преподавателем
+											td от 2-х недель
+										tr
+											td Индивидуально
+											td график составляется индивидуально с учеником и преподавателем
+											td длительность обучения #[br]зависит от графика
 
 					.collections__item.collection
-						.collection__left
-							.collection__head
-								.collection__icon
-									img(src="", alt="")
-								.collection__title
-							.collection__body
-								.collection__text
-									p
-							.collection__more
-								.collection__more-text
-								.collection__more-icon
-									img(src="", alt="")
-						.collection__right
-							.collection__card
-								.collection__label
-								.collection__img
-									img(src="", alt="")
-							.collection__btns
-								.collection__btn.btn.--secondary.--md #[span ] #[img(src="", alt="")]
-								.collection__btn.btn.--primary.--md #[span ] #[img(src="", alt="")]
+						.collection__wrap
+							.collection__left
+								.collection__head
+									.collection__icon
+										img(src="", alt="")
+									.collection__title Полный курс+
+								.collection__body
+									.collection__tags
+										.collection__tag без опыта
+										.collection__tag 120 академических часов 
+										.collection__tag индивидуальная модель
+									.collection__text
+										p Курс для новичков позволяет с нуля обучиться профессии и избежать ошибок начинающего грумера.
+										p Полный курс+ включает в себя 120 академических часов. Усиленная практика на моделях помогает стать опытным мастером.
+								.collection__btn-more
+									.collection__btn-more-text  ПОДРОБНЕЕ
+									.collection__btn-more-icon
+										img(src="", alt="")
+							.collection__right
+								.collection__card
+									.collection__label ОФЛАЙН
+									.collection__img
+										img(src="", alt="")
+								.collection__btns
+									.collection__btn.btn.--secondary.--md #[span Записаться на курс] #[img(src="", alt="")]
+									.collection__btn.btn.--primary.--md #[span Оформить рассрочку] #[img(src="", alt="")]
+						.collection__more
+							.collection__more-title Формы обучения
+							.collection__more-content
+								table
+									thead
+										tr
+											th Группа
+											th График
+											th Длительность
+									tbody
+										tr
+											td  Утренняя группа
+											td по будням (пн, ср, пт) 3 раза в неделю с 11:00 до 16:00
+											td 2 месяца
+										tr
+											td  Вечерняя группа
+											td по будням (пн, ср, пт) 3 раза в неделю с 18:00 до 22:00
+											td 2 месяца
+										tr
+											td  Группа «Выходного дня»
+											td по субботам и воскресеньям с 11:00 до 16:00
+											td 2 месяца
+										tr
+											td  «Экспресс»–группа
+											td ежедневно с 11:00 до 20:00 с пн по пт, сб и вс выходные
+											td 12 дней #[br](2 выходных)
+										tr
+											td  «Интенсив»–группа
+											td интенсивное обучение по вторникам и четвергам с 11:00 до 20:00
+											td 30 дней
+										tr
+											td Группа «2 через 2»
+											td занятия 2 через 2 по целому дню с11:00 до 20:00 или с 11:00 до 16:00. Возможно обучение по вашему графику: 3/3 или 3/4 или по договорённости с вашим преподавателем
+											td от 3-х недель
+										tr
+											td Индивидуально
+											td по вашему графику
+											td  120 ак часов #[br]можно пройти от 12 дней #[br]до 2-х месяцев
+								
 
 					.collections__item.collection
-						.collection__left
-							.collection__head
-								.collection__icon
-									img(src="", alt="")
-								.collection__title
-							.collection__body
-								.collection__text
-									p
-							.collection__more
-								.collection__more-text
-								.collection__more-icon
-									img(src="", alt="")
-						.collection__right
-							.collection__card
-								.collection__label
-								.collection__img
-									img(src="", alt="")
-							.collection__btns
-								.collection__btn.btn.--secondary.--md #[span ] #[img(src="", alt="")]
-								.collection__btn.btn.--primary.--md #[span ] #[img(src="", alt="")]
+						.collection__wrap
+							.collection__left
+								.collection__head
+									.collection__icon
+										img(src="", alt="")
+									.collection__title Курс повышения квалификации
+								.collection__body
+									.collection__tags
+										.collection__tag 60 академических часов 
+										.collection__tag 2-6 человек в группе
+									.collection__text
+										p Курс направлен на повышение квалификации. Подходит для грумеров с опытом, которые прошли #[strong «Базовый курс с нуля»]. Он также доступен для выпускников других школ груминга.
+								.collection__btn-more
+									.collection__btn-more-text ПОДРОБНЕЕ
+									.collection__btn-more-icon
+										img(src="", alt="")
+							.collection__right
+								.collection__card
+									.collection__label ОФЛАЙН
+									.collection__img
+										img(src="", alt="")
+								.collection__btns
+									.collection__btn.btn.--secondary.--md #[span Записаться на курс] #[img(src="", alt="")]
+									.collection__btn.btn.--primary.--md #[span Оформить рассрочку] #[img(src="", alt="")]
+						.collection__more
+							.collection__more-title Формы обучения
+							.collection__more-content
+								ul
+									li Разбор ошибок по любой породе, по желанию каждого ученика с отработкой
+									li Отработка стрижки ножницами
+									li Стрижка пород с шелковистой длинной шерстью ножницами (под щенка) йорк, ши-тцу, мальтийская болонка (2 занятия)
+									li Стрижка йорка – корейский стиль
+									li Креатив – выстригание узоров, блеск-тату (2 занятия),ВОЗМОЖНО занятие по окраске шерсти
+									li Возможность заказа индивидуальной модели (любой, по возможности и наличию моделей) по желанию ученика для повторения, исправления ошибок, отработки разных стрижек.
+									li Возможность обучения на крупных породах по желанию ученика
+									li Во время обучения академия предоставляет косметику, материалы и расходники, качественные инструменты (машинки, ножницы, фены),фирменный фартук.
+								
 
 	.schedule
 		.case
-			.schedule__title.h2
+			.schedule__title.h3 Расписание
 			.schedule__list
 				.schedule__item.--sand
-					.schedule__date #[img(src="", alt="")] #[span ]
+					.schedule__date #[img(src="", alt="")] #[span С 04.09.2023г]
 					.schedule__groups
 						.schedule__group.scgroup
-							.scgroup__title
+							.scgroup__title  Утреннее обучение
 							.scgroup__list
 								.scgroup__item
-									.scgroup__key
-									.scgroup__value
+									.scgroup__key продолжительность:
+									.scgroup__value 60-120 ЧАСОВ НА ВЫБОР
 								.scgroup__item
-									.scgroup__key
-									.scgroup__value
+									.scgroup__key занятия:
+									.scgroup__value ПН, СР, ПТ
 								.scgroup__item
-									.scgroup__key
-									.scgroup__value
-							.scgroup__places
+									.scgroup__key длительность:
+									.scgroup__value с 11:00-16:00
+							.scgroup__places 3 места
 						.schedule__group.scgroup
-							.scgroup__title
+							.scgroup__title Вечернее обучение
 							.scgroup__list
 								.scgroup__item
-									.scgroup__key
-									.scgroup__value
+									.scgroup__key продолжительность:
+									.scgroup__value 60-120 ЧАСОВ НА ВЫБОР
 								.scgroup__item
-									.scgroup__key
-									.scgroup__value
+									.scgroup__key занятия:
+									.scgroup__value ПН, СР, ПТ
 								.scgroup__item
-									.scgroup__key
-									.scgroup__value
-							.scgroup__places
+									.scgroup__key длительность:
+									.scgroup__value с 18:00-22:00
+							.scgroup__places 2 места
 						.schedule__group.scgroup
-							.scgroup__title
+							.scgroup__title Экспресс-обучение
 							.scgroup__list
 								.scgroup__item
-									.scgroup__key
-									.scgroup__value
+									.scgroup__key продолжительность:
+									.scgroup__value 60-120 ЧАСОВ НА ВЫБОР
 								.scgroup__item
-									.scgroup__key
-									.scgroup__value
+									.scgroup__key занятия:
+									.scgroup__value ЕЖЕДНЕВНО
 								.scgroup__item
-									.scgroup__key
-									.scgroup__value
-							.scgroup__places
+									.scgroup__key длительность:
+									.scgroup__value с 11:00-20:00
+							.scgroup__places 2 места
 
 				.schedule__item.--blue
-					.schedule__date #[img(src="", alt="")] #[span ]
+					.schedule__date #[img(src="", alt="")] #[span С 11.09.2023г]
 					.schedule__groups
 						.schedule__group.scgroup
-							.scgroup__title
+							.scgroup__title Экспресс-обучение
 							.scgroup__list
 								.scgroup__item
-									.scgroup__key
-									.scgroup__value
+									.scgroup__key продолжительность:
+									.scgroup__value 60-120 ЧАСОВ НА ВЫБОР
 								.scgroup__item
-									.scgroup__key
-									.scgroup__value
+									.scgroup__key занятия:
+									.scgroup__value ЕЖЕДНЕВНО
 								.scgroup__item
-									.scgroup__key
-									.scgroup__value
-							.scgroup__places
+									.scgroup__key длительность:
+									.scgroup__value с 11:00-20:00
+							.scgroup__places 4 места
 
 				.schedule__item.--violet
-					.schedule__date #[img(src="", alt="")] #[span ]
+					.schedule__date #[img(src="", alt="")] #[span С 14.09.2023г]
 					.schedule__groups
 						.schedule__group.scgroup
-							.scgroup__title
+							.scgroup__title  Интенсив группа
 							.scgroup__list
 								.scgroup__item
-									.scgroup__key
-									.scgroup__value
+									.scgroup__key продолжительность:
+									.scgroup__value 60-120 ЧАСОВ НА ВЫБОР
 								.scgroup__item
-									.scgroup__key
-									.scgroup__value
+									.scgroup__key занятия:
+									.scgroup__value ВТ,ЧТ
 								.scgroup__item
-									.scgroup__key
-									.scgroup__value
-							.scgroup__places
+									.scgroup__key длительность:
+									.scgroup__value с 11:00-20:00
+							.scgroup__places 4 места
 						.schedule__group.scgroup
-							.scgroup__title
+							.scgroup__title группа «2 через 2»
 							.scgroup__list
 								.scgroup__item
-									.scgroup__key
-									.scgroup__value
+									.scgroup__key продолжительность:
+									.scgroup__value 60-120 ЧАСОВ НА ВЫБОР
 								.scgroup__item
-									.scgroup__key
-									.scgroup__value
+									.scgroup__key занятия:
+									.scgroup__value ПО ВАШЕМУ ГРАФИКУ
 								.scgroup__item
-									.scgroup__key
-									.scgroup__value
-							.scgroup__places
+									.scgroup__key длительность:
+									.scgroup__value С 11:00-16:00 ЛИБО С 16:00-20:00
+							.scgroup__places 2 места
 
 				.schedule__item.--green
-					.schedule__date #[img(src="", alt="")] #[span ]
+					.schedule__date #[img(src="", alt="")] #[span С 18.09.2023г]
 					.schedule__groups
 						.schedule__group.scgroup
-							.scgroup__title
+							.scgroup__title Экспресс-обучение
 							.scgroup__list
 								.scgroup__item
-									.scgroup__key
-									.scgroup__value
+									.scgroup__key продолжительность:
+									.scgroup__value 60-120 ЧАСОВ НА ВЫБОР
 								.scgroup__item
-									.scgroup__key
-									.scgroup__value
+									.scgroup__key занятия:
+									.scgroup__value ЕЖЕДНЕВНО
 								.scgroup__item
-									.scgroup__key
-									.scgroup__value
-							.scgroup__places
+									.scgroup__key длительность:
+									.scgroup__value с 11:00-20:00
+							.scgroup__places 4 места
 
 				.schedule__item.--yellow
-					.schedule__date #[img(src="", alt="")] #[span ]
+					.schedule__date #[img(src="", alt="")] #[span С 23.09.2023г]
 					.schedule__groups
 						.schedule__group.scgroup
-							.scgroup__title
+							.scgroup__title группа «Выходного дня»
 							.scgroup__list
 								.scgroup__item
-									.scgroup__key
-									.scgroup__value
+									.scgroup__key продолжительность:
+									.scgroup__value 60-120 ЧАСОВ НА ВЫБОР
 								.scgroup__item
-									.scgroup__key
-									.scgroup__value
+									.scgroup__key занятия:
+									.scgroup__value СБ,ВС
 								.scgroup__item
-									.scgroup__key
-									.scgroup__value
-							.scgroup__places
+									.scgroup__key длительность:
+									.scgroup__value С 11:00-16:00 ЛИБО С 16:00-21:00
+							.scgroup__places 4 места
 
 				.schedule__item.--pink
-					.schedule__date #[img(src="", alt="")] #[span ]
+					.schedule__date #[img(src="", alt="")] #[span С 24.09.2023г]
 					.schedule__groups
 						.schedule__group.scgroup
 							.scgroup__title
 							.scgroup__list
 								.scgroup__item
-									.scgroup__key
-									.scgroup__value
+									.scgroup__key продолжительность:
+									.scgroup__value 60-120 ЧАСОВ НА ВЫБОР
 								.scgroup__item
-									.scgroup__key
-									.scgroup__value
+									.scgroup__key занятия:
+									.scgroup__value ЕЖЕДНЕВНО
 								.scgroup__item
-									.scgroup__key
-									.scgroup__value
-							.scgroup__places
+									.scgroup__key длительность:
+									.scgroup__value с 11:00-20:00
+							.scgroup__places 4 места
 					
 				.schedule__item.--sky
-					.schedule__date #[img(src="", alt="")] #[span ]
+					.schedule__date #[img(src="", alt="")] #[span С 25.09.2023г]
 					.schedule__groups
 						.schedule__group.scgroup
-							.scgroup__title
+							.scgroup__title Экспресс-обучение
 							.scgroup__list
 								.scgroup__item
-									.scgroup__key
-									.scgroup__value
+									.scgroup__key продолжительность:
+									.scgroup__value 60-120 ЧАСОВ НА ВЫБОР
 								.scgroup__item
-									.scgroup__key
-									.scgroup__value
+									.scgroup__key занятия:
+									.scgroup__value ЕЖЕДНЕВНО
 								.scgroup__item
-									.scgroup__key
-									.scgroup__value
-							.scgroup__places
+									.scgroup__key длительность:
+									.scgroup__value с 11:00-20:00
+							.scgroup__places 2 места
 
-				.schedule__item.--sand
-					.schedule__date #[img(src="", alt="")] #[span ]
-					.schedule__groups
-						.schedule__group.scgroup
-							.scgroup__title
-							.scgroup__list
-								.scgroup__item
-									.scgroup__key
-									.scgroup__value
-								.scgroup__item
-									.scgroup__key
-									.scgroup__value
-								.scgroup__item
-									.scgroup__key
-									.scgroup__value
-							.scgroup__places
 
 			.schedule__alert
-				h3
+				h3 Важно!
 				ul
-					li
-					li
-					li
+					li Данные обучающие группы подходят для начинающих специалистов
+					li Для записи на курс повышения квалификации #[a href(="https://api.whatsapp.com/send/?phone=79602737733&text&type=phone_number&app_absent=0" target="_blank") WhatsApp]
+					li  Убедительная просьба, уточняйте наличие мест в #[a href(="https://api.whatsapp.com/send/?phone=79602737733&text&type=phone_number&app_absent=0" target="_blank") WhatsApp] ,так как запись ведется ежедневно, а сайт и расписание обновляются раз в неделю 
 
 			.schedule__btn-wrap
-				.schedule__btn.btn.--primary.--md
+				.schedule__btn.btn.--primary.--md Реальные отзывы учеников
 
 	.mcs
 		.case
-			.mcs__title.h2 #[strong ]
+			.mcs__title.h2 Мастер-классы #[br]#[strong  от профессионалов]
 			.mcs__list
 				.mcs__item
 					.mcs__left
 						.mcs__img
 							img(src="", alt="")
-						.mcs__btn.btn.--primary.--md
+						.mcs__btn.btn.--primary.--md Записаться
 					.mcs__right
-						.mcs__date
-						.mcs__title
-						.mcs__desc
+						.mcs__date 17 сентября в 11:00
+						.mcs__title «Йорк от Азии до классики»
+						.mcs__desc Мастер-класс Ирины Новохатской
 						.mcs__tags
-							.mcs__tag
+							.mcs__tag ДЛЯ НАЧИНАЮЩИХ ГРУМЕРОВ
 						.mcs__text
-							h3
+							h3 Программа: 
 							ul
-								li
+								li Стилистика, как правильно выбрать фасон стрижки для собаки
+								li Особенности правильного мытья и укладки шерсти к стрижке
+								li Разбор косметики и инструментов
+								li Быстрый каскад машинкой, техника плавных переходов
+								li Как подстричь азиатскую мордочку правильно
+								li Показательная стрижка йорка в классическом и азиатскои стиле
+								li Шикарные модели из питомника Лесанж
+								li Отработка на моделях по выбранной стрижки
+								li #[strong Подарки для всех участников мастер-класса]
+								li 
 						.mcs__price
-							.mcs__price-title
+							.mcs__price-title Стоимость: 
 							.mcs__price-list
 								.mcs__price-item
-									.mcs__price-key
-									.mcs__price-value
+									.mcs__price-key Теория+ показательная стрижка
+									.mcs__price-value  6000₽
 								.mcs__price-item
-									.mcs__price-key
-									.mcs__price-value
+									.mcs__price-key Теория+практика
+									.mcs__price-value 8000₽
 				.mcs__item
 					.mcs__left
 						.mcs__img
 							img(src="", alt="")
-						.mcs__btn.btn.--primary.--md
+						.mcs__btn.btn.--primary.--md Записаться
 					.mcs__right
-						.mcs__date
-						.mcs__title
-						.mcs__desc
+						.mcs__date 1 октября в 11:00
+						.mcs__title «Шпиц»
+						.mcs__desc Мастер-класс Ирины Новохатской
 						.mcs__text
-							h3
+							h3 Программа: 
 							ul
-								li
+								li SPA процедуры — озон, гидромассаж в груминге
+								li Пет стрижка шпица с породными линиями (как скрыть недостатки и подчеркнуть достоинства)
+								li Разбор косметики и инструментов
+								li Уход за проблемной шерстью(про алопецию)
+								li Показательная стрижка на модели с использованием спа ванны
+								li #[strong Подарки для всех участников мастер-класса]
 						.mcs__price
-							.mcs__price-title
+							.mcs__price-title Стоимость: 
 							.mcs__price-list
 								.mcs__price-item
-									.mcs__price-key
-									.mcs__price-value
+									.mcs__price-key Теория+ показательная стрижка
+									.mcs__price-value 6000₽
 								.mcs__price-item
-									.mcs__price-key
-									.mcs__price-value
+									.mcs__price-key Теория+практика
+									.mcs__price-value 8000₽
 
 
 		

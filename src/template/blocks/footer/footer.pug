@@ -5,34 +5,35 @@ footer.footer
 		.formse
 			.footer__top-inner
 				.footer__col
-					.footer__title
+					.footer__title Режим работы
 					.footer__contact
-						p 
+						p ежедневно с 11:00–20:00
+						p по записи до 22:00
 				.footer__col
-					.footer__title
+					.footer__title Почта
 					.footer__contact
-						p #[a(href="mailto:")]
+						p #[a(href="mailto:happypetspb@gmail.com") happypetspb@gmail.com]
 
 				.footer__col
-					.footer__title
+					.footer__title Соцсети
 					.footer__socials.socials
 		
 	.footer__mid
 		.formse
 			.footer__mid-inner
 				.footer__col
-					.footer__title
+					.footer__title Запись в груминг салон
 					.footer__contact
-						p #[a(href="tel:")]
+						p #[a(href="tel:+7 812 983-43-33") +7 812 983-43-33]
 				.footer__col
-					.footer__title
+					.footer__title Запись в академию груминга
 					.footer__contact
-						p #[a(href="tel:")]
-					.footer__wa #[a(href="")]
+						p #[a(href="tel:+7 960 273-77-33") +7 960 273-77-33]
+					.footer__wa #[a(href="") записаться через WhatsApp]
 				.footer__col
-					.footer__title
+					.footer__title По всем вопросам
 					.footer__contact
-						p #[a(href="tel:")]
+						p #[a(href="tel:+78126678333") +78126678333]
 
 	.footer__bot
 		.formse
@@ -42,60 +43,118 @@ footer.footer
 						img(src="", alt="")
 				.footer__col
 					.footer__info
-						p
-						p #[a(href="")]
-						p #[a(href="")]
-					.footer__desc
+						p © ООО «HappyPet» 2023. Все права защищены
+						p #[a(href="") Политика конфиденциальности]
+						p #[a(href="") Сведения об образовательной организации]
+					.footer__desc *Instagram-организация, деятельность которой запрещена на территории Российской Федерации
 				.footer__col
+					.footer__btn-action.btn.--primary.--md ПОСЕТИТЬ HAPPY PET
 
-	.modal.--with-header#modal-order
-		.modal__inner
-			.modal__content
-				.form
-					.form__content
-						.form__title
-						.form__desc
-						.form__wrap
-							.form__field.field.--primary.--md
-								.field__title
-								input.field__area(type="text")
-							.form__field.field.--primary.--md.--phone
-								.field__title
-								input.field__area(type="tel")
-							.form__select.select.--primary.--md
+.modal.--with-header#modal-order
+	.modal__inner
+		.modal__content
+			.form
+				.form__content
+					.form__title Оставить заявку
+					.form__desc Заполните форму, и мы свяжемся с вами в ближайшее время
+					.form__wrap
+						.form__field.field.--primary.--md
+							.field__title Ваше имя
+							input.field__area(type="text" placeholder="Имя")
+						.form__field.field.--primary.--md.--phone
+							.field__title Телефон
+							input.field__area(type="tel" placeholder="+7 (_ _ _) _ _ _-_ _-_ _")
+						.form__select.select.--primary.--md
+							.select__title
+								.select__wrap
+									.select__area
+										.select__placeholder Выберете категорию
+										.select__title
+										.select__icon
+									.select__drop
 								select.select__parse
 									option(value="") 1
 									option(value="") 2 
-								.select__area
-									.select__placeholder
-									.select__title
-									.select__icon
-								.select__drop
-							button.form__btn.btn.--secondary.--md
-							.form__policy.check
-								input.check__input(type="checkbox")
-								.check__box
-									img(src="", alt="")
-								.check__text #[a(href="") ]
-					.form__img
+						.form__area.area.--primary.--md
+							.area__title Сообщение
+							textarea.area__wrap(placeholder="Пожалуйста, введите ваше сообщение здесь…")
+						button.form__btn.btn.--secondary.--md Отправить
+						.form__policy.check
+							input.check__input(type="checkbox")
+							.check__box
+								img(src="", alt="")
+							.check__text Оставляя заявку вы соглашаетесь с #[a(href="") политикой конфиденциальности ]
+				.form__img
+					img(src="", alt="")
+	.modal__overlay
+
+.modal.--with-header#modal-hotel
+	.modal__inner
+		.modal__content
+			.form
+				.form__content
+					.form__title Забронировать зоогостиницу
+					.form__wrap
+						.form__col
+							.form__field.field.--primary.--md
+								.field__title Ваше имя
+								input.field__area(type="text" placeholder="Имя")
+						.form__col
+							.form__field.field.--primary.--md
+								.field__title Email
+								input.field__area(type="email" placeholder="example@email.com")
+						.form__col
+							.form__field.field.--primary.--md.--phone
+								.field__title Телефон
+								input.field__area(type="tel" placeholder="+7 (_ _ _) _ _ _-_ _-_ _")
+						.form__col
+							.form__select.select.--primary.--md
+								.select__title
+								.select__wrap
+									.select__area
+										.select__placeholder Питомец не выбран
+										.select__title
+										.select__icon
+									.select__drop
+								select.select__parse
+									option(value="") 1
+									option(value="") 2 
+						.form__col
+							.form__field.field.--primary.--md
+								.field__title Дата заезда
+								input.field__area(type="date" placeholder="01.01.2023г")
+						.form__col
+							.form__field.field.--primary.--md
+								.field__title Дата выезда
+								input.field__area(type="date" placeholder="12.01.2023г")
+						.form__area.area.--primary.--md
+							.area__title Сообщение
+							textarea.area__wrap(placeholder="Пожалуйста, введите ваше сообщение здесь…")
+						button.form__btn.btn.--secondary.--md Отправить
+						.form__policy.check
+							input.check__input(type="checkbox")
+							.check__box
+								img(src="", alt="")
+							.check__text Оставляя заявку вы соглашаетесь с #[a(href="") политикой конфиденциальности ]
+				.form__img
+					img(src="", alt="")
+	.modal__overlay
+
+
+.modal#modal-thanks
+	.modal__inner
+		.modal__content
+			.thanks
+				.thanks__close
+				.thanks__head
+					.thanks__logo
 						img(src="", alt="")
-		.modal__overlay
+					.thanks__img
+						img(src="", alt="")
+				.thanks__body
+					.thanks__name HAPPY!
+					.thanks__title Благодарим за заявку!
+					.thanks__desc Мы свяжемся с вами в ближайшее время.
+					.thanks__btn.btn.--black.--md Закрыть
 
-
-		.modal#modal-thanks
-			.modal__inner
-				.modal__content
-					.thanks
-						.thanks__close
-						.thanks__head
-							.thanks__logo
-								img(src="", alt="")
-							.thanks__img
-								img(src="", alt="")
-						.thanks__body
-							.thanks__name
-							.thanks__title
-							.thanks__desc
-							.thanks__btn.btn.--black.--md
-
-			.modal__overlay
+	.modal__overlay
