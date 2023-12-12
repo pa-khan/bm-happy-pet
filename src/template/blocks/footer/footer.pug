@@ -1,5 +1,101 @@
 include ../../pug/vars
 
 footer.footer
-	.case
+	.footer__top
+		.formse
+			.footer__top-inner
+				.footer__col
+					.footer__title
+					.footer__contact
+						p 
+				.footer__col
+					.footer__title
+					.footer__contact
+						p #[a(href="mailto:")]
+
+				.footer__col
+					.footer__title
+					.footer__socials.socials
 		
+	.footer__mid
+		.formse
+			.footer__mid-inner
+				.footer__col
+					.footer__title
+					.footer__contact
+						p #[a(href="tel:")]
+				.footer__col
+					.footer__title
+					.footer__contact
+						p #[a(href="tel:")]
+					.footer__wa #[a(href="")]
+				.footer__col
+					.footer__title
+					.footer__contact
+						p #[a(href="tel:")]
+
+	.footer__bot
+		.formse
+			.footer__bot-inner
+				.footer__col
+					.footer__logo
+						img(src="", alt="")
+				.footer__col
+					.footer__info
+						p
+						p #[a(href="")]
+						p #[a(href="")]
+					.footer__desc
+				.footer__col
+
+	.modal.--with-header#modal-order
+		.modal__inner
+			.modal__content
+				.form
+					.form__content
+						.form__title
+						.form__desc
+						.form__wrap
+							.form__field.field.--primary.--md
+								.field__title
+								input.field__area(type="text")
+							.form__field.field.--primary.--md.--phone
+								.field__title
+								input.field__area(type="tel")
+							.form__select.select.--primary.--md
+								select.select__parse
+									option(value="") 1
+									option(value="") 2 
+								.select__area
+									.select__placeholder
+									.select__title
+									.select__icon
+								.select__drop
+							button.form__btn.btn.--secondary.--md
+							.form__policy.check
+								input.check__input(type="checkbox")
+								.check__box
+									img(src="", alt="")
+								.check__text #[a(href="") ]
+					.form__img
+						img(src="", alt="")
+		.modal__overlay
+
+
+		.modal#modal-thanks
+			.modal__inner
+				.modal__content
+					.thanks
+						.thanks__close
+						.thanks__head
+							.thanks__logo
+								img(src="", alt="")
+							.thanks__img
+								img(src="", alt="")
+						.thanks__body
+							.thanks__name
+							.thanks__title
+							.thanks__desc
+							.thanks__btn.btn.--black.--md
+
+			.modal__overlay

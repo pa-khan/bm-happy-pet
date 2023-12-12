@@ -34,11 +34,11 @@ if (process.argv.length > 1) {
 				opn('localhost:3000/' + name + '.html');
 			}	
 			break;
-		case '-w':
-			new Watcher();
-			break;
 		case '-ww':
 			Watcher.compilePages();
+			break;
+		default:
+			new Watcher();
 			break;
 	}
 }
