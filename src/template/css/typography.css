@@ -1,3 +1,18 @@
+:root {
+  --color-text: #393A3A;
+  --color-text-30: rgb(57 58 58 / 0.3);
+  --color-primary: #FF8DA9;
+  --color-primary-20: rgba(255, 141, 169, 0.20);
+  --color-primary-40: rgba(255, 141, 169, 0.40);
+  --color-secondary: #6AD4C6;
+  --color-peach: #FFF6F9;
+  --color-pink: #FD0E8D;
+  --size-primary: 18px;
+  --font-primary: "Gotham Pro", sans-serif;
+  --round-primary: 24px;
+  --color-bg-2: #F2F3F7;
+}
+
 .tal {
   text-align-last: left;
 }

@@ -33,18 +33,19 @@ block content
 				.directions__item
 					.directions__item-info
 						.directions__item-name
-							.directions__item-title Записать питомца
-							.directions__item-name-label СКИДКА ПРИ ЗАПИСИ
+							.directions__item-title Академия груминга
+							.directions__item-label СКИДКА ПРИ ЗАПИСИ
 						.directions__item-text Обучим профессии грумера с возможностью пройти стажировку и работать в нашем салоне
-					a.directions__item-btn.btn.--primary.--md(href="") Забронировать курс
+						a.directions__item-btn.btn.--primary.--md(href="") Забронировать курс
+					.directions__item-img
 						img(src="uploads/direction-academy.jpg" alt="")
 
 	.we
 		.case
 			.we__wrap
-				.we__title #[strong Мы ]— эксперты в уходе за домашними питомцами из Санкт-Петербурга
+				.we__title.s-primary #[strong Мы ]— эксперты в уходе за домашними питомцами из Санкт-Петербурга
 				.we__content
-					.we__text Развиваем индустрию груминга с 2011 года 1000 счастливых питомцев ежемесячно,более 500 довольных учеников академии.
+					.we__text.t1 Развиваем индустрию груминга с 2011 года 1000 счастливых питомцев ежемесячно, более 500 довольных учеников академии.
 					.we__btn.btn.--primary-outline.--md О нас
 
 		.modal.--fullscreen#modal-about
@@ -89,25 +90,26 @@ block content
 
 	.shares
 		.case
-			.shares__slider.swiper
-				.shares__slider-wrap.swiper-wrapper
-					.shares__slider-item.shares__item.swiper-slide
-						img(src="uploads/share-care.jpg")
-					.shares__slider-item.shares__item.swiper-slide
-						img(src="uploads/share-shop.jpg")
-					.shares__slider-item.shares__item.swiper-slide
-						img(src="uploads/share-spa.jpg")
-					.shares__slider-item.shares__item.swiper-slide
-						img(src="uploads/share-mc.jpg")
-					.shares__slider-item.shares__item.swiper-slide
-						img(src="uploads/share-test.jpg")
-			.shares__controls
-				.shares__control.control.--prev
-					<svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.764648 2.05721L5.09122 6.26471L0.764648 10.4722L2.09664 11.7647L7.76465 6.26471L2.09664 0.764709L0.764648 2.05721Z" fill="currentColor"/></svg>
+			.shares__wrap
+				.shares__slider.swiper
+					.shares__slider-wrap.swiper-wrapper
+						.shares__slider-item.shares__item.swiper-slide
+							img(src="uploads/share-care.jpg")
+						.shares__slider-item.shares__item.swiper-slide
+							img(src="uploads/share-shop.jpg")
+						.shares__slider-item.shares__item.swiper-slide
+							img(src="uploads/share-spa.jpg")
+						.shares__slider-item.shares__item.swiper-slide
+							img(src="uploads/share-mc.jpg")
+						.shares__slider-item.shares__item.swiper-slide
+							img(src="uploads/share-test.jpg")
+				.shares__controls
+					.shares__control.control.--prev
+						<svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M11.9443 5.64404L16.8003 10.5L11.9443 15.356" stroke="currentColor" stroke-width="1.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/> <path d="M3.2002 10.5H16.6642" stroke="currentColor" stroke-width="1.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/> </svg>
 
-				.shares__control.control.--next
-					<svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.764648 2.05721L5.09122 6.26471L0.764648 10.4722L2.09664 11.7647L7.76465 6.26471L2.09664 0.764709L0.764648 2.05721Z" fill="currentColor"/></svg>
-
+					.shares__control.control.--next
+						<svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M11.9443 5.64404L16.8003 10.5L11.9443 15.356" stroke="currentColor" stroke-width="1.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/> <path d="M3.2002 10.5H16.6642" stroke="currentColor" stroke-width="1.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/> </svg>
+			.shares__pagination.dots
 	.pros
 		.case
 			.pros__list
@@ -131,12 +133,12 @@ block content
 	.gallery
 		.case
 			.gallery__head
-				.gallery__title.h2 Наши #[strong  пушистые гости]
+				.gallery__title.h2.s-primary Наши #[strong  пушистые #[br]гости]
 				.gallery__controls
 					.gallery__control.control.--prev
-						<svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.764648 2.05721L5.09122 6.26471L0.764648 10.4722L2.09664 11.7647L7.76465 6.26471L2.09664 0.764709L0.764648 2.05721Z" fill="currentColor"/></svg>
+						<svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M11.9443 5.64404L16.8003 10.5L11.9443 15.356" stroke="currentColor" stroke-width="1.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/> <path d="M3.2002 10.5H16.6642" stroke="currentColor" stroke-width="1.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/> </svg>
 					.gallery__control.control.--next
-						<svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.764648 2.05721L5.09122 6.26471L0.764648 10.4722L2.09664 11.7647L7.76465 6.26471L2.09664 0.764709L0.764648 2.05721Z" fill="currentColor"/></svg>
+						<svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M11.9443 5.64404L16.8003 10.5L11.9443 15.356" stroke="currentColor" stroke-width="1.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/> <path d="M3.2002 10.5H16.6642" stroke="currentColor" stroke-width="1.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/> </svg>
 			.gallery__body
 				.gallery__slider.swiper
 					.gallery__slider-wrap.swiper-wrapper
@@ -165,54 +167,53 @@ block content
 						.gallery__slider-item.gallery__item.swiper-slide
 							img(src="uploads/gallery-12.jpg" alt="")
 
-				.gallery__thumbs.dots
+				.gallery__pagination.dots
 
 
 	.shop
 		.case
 			.shop__head
-				.shop__title.h2 Магазин #[strong  товаров для груминга]
-				.shop__desc
-					p Откройте для себя полный ассортимент товаров, представленных в салоне Happy Pet.С нетерпением ждём вас в магазине по адресу: #[strong CПБ, ул Глухая Зеленина 6]
+				.shop__title.h2.s-secondary Магазин #[strong  товаров #[br]для груминга]
+				.shop__desc.t2
+					p Откройте для себя полный ассортимент товаров, представленных в салоне Happy Pet. С нетерпением ждём вас в магазине по адресу: #[strong CПБ, ул Глухая Зеленина 6]
 			.shop__body
 				.shop__list
 					.shop__item
-						.shop__item-title Косметика
+						.shop__item-title.h4 Косметика
 						.shop__item-img
 							img(src="uploads/shop-cosmetics.png" alt="")
 					.shop__item
-						.shop__item-title Инструменты по уходу и аксессуары
+						.shop__item-title.h4 Инструменты по уходу и аксессуары
 						.shop__item-img
 							img(src="uploads/shop-tools.png" alt="")
 					.shop__item
-						.shop__item-title Машинки для стрижки животных
+						.shop__item-title.h4 Машинки для стрижки животных
 						.shop__item-img
 							img(src="uploads/shop-razer.png" alt="")
 					.shop__item
-						.shop__item-title Лакомства
+						.shop__item-title.h4 Лакомства
 						.shop__item-img
 							img(src="uploads/shop-goodies.png" alt="")
 					.shop__item
-						.shop__item-title Ножницы
+						.shop__item-title.h4 Ножницы
 						.shop__item-img
 							img(src="uploads/shop-scissors.png" alt="")
 					.shop__item
-						.shop__item-title Ножи для машинок
+						.shop__item-title.h4 Ножи для машинок
 						.shop__item-img
 							img(src="uploads/shop-knives.png" alt="")
 					.shop__item
-						.shop__item-title Одежда для грумеров
+						.shop__item-title.h4 Одежда для грумеров
 						.shop__item-img
 							img(src="uploads/shop-clothes.png" alt="")
 					.shop__item
-						.shop__item-title Косметика Iv San Bernard
+						.shop__item-title.h4 Косметика Iv San Bernard
 						.shop__item-img
 							img(src="uploads/shop-iv-san-bernard.png" alt="")
 					.shop__item
-						.shop__item-title Одежда и обувь <br>для питомца
+						.shop__item-title.h4 Одежда и обувь <br>для питомца
 						.shop__item-img
 							img(src="uploads/shop-pet-clothes.png" alt="")
-			.shop__foot 
 				.shop__btn.btn.--secondary.--md Бесплатная консультация
 
 	.hotel
@@ -256,88 +257,97 @@ block content
 	.economy
 		.case
 			.economy__head
-				.economy__title.h2 Экономьте с нашими <br>#[strong  спецпредложениями]
-			.economy__body
-				.economy__list 
-					.economy__item.disc-first
-						.disc-first__title Скидка 10% на первое посещение груминг салона
-							.disc-first__outline
-								img(src="uploads/discount-first-title-outline.svg" alt="")
-						.disc-first__org
-							img(src="uploads/discount-first-org.svg" alt="")
-						.disc-first__img
-							img(src="uploads/discount-first-cat.png" alt="")
-						.disc-first__desc Условия акций уточняйте по телефону и в салоне Hаppy Pet
+				.economy__title.h2.s-primary Экономьте с нашими <br>#[strong  спецпредложениями]
+		.economy__body
+			.economy__list 
+				.economy__item.disc-first
+					.disc-first__title.h3
+						.disc-first__title-outline
+							img(src="uploads/discount-first-title-outline.svg" alt="")
+						.disc-first__title-value Скидка 10% на первое посещение груминг салона
+					.disc-first__org
+						img(src="uploads/discount-first-org.svg" alt="")
+					.disc-first__img
+						img(src="uploads/discount-first-cat.png" alt="")
+					.disc-first__desc Условия акций уточняйте по телефону и в салоне Hаppy Pet
 
-					.economy__item.disc-puppy
-						.disc-puppy__title
-							.disc-puppy__title-outline
-								img(src="uploads/discount-puppy-outline.svg" alt="")
-							.disc-puppy__title-value Щенкам до 6 месяцев скидка 10%
-						.disc-puppy__dog
-							img(src="uploads/discount-puppy.png" alt="")
-						.disc-puppy__decor
-							img(src="uploads/discount-puppy-decoration.svg" alt="")
+				.economy__item.disc-puppy
+					.disc-puppy__title.h3
+						.disc-puppy__title-outline
+							img(src="uploads/discount-puppy-outline.svg" alt="")
+						.disc-puppy__title-value Щенкам до 6 месяцев скидка 10%
+					.disc-puppy__dog
+						img(src="uploads/discount-puppy.png" alt="")
+					.disc-puppy__decor
+						img(src="uploads/discount-puppy-decoration.svg" alt="")
 
 
 	.faq
 		.case
-			.faq__title.h2 Отвечает <br>#[strong  на часто задаваемые вопросы]
+			.faq__title.h2.s-secondary Отвечает #[strong  на часто #[br]задаваемые #[br]вопросы]
 			.faq__list
-				.faq__item
+				.faq__item.--open
 					.faq__head
 						.faq__count 01
 						.faq__name Что такое груминг?
 						.faq__toggle
+							<svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg"> <path fill-rule="evenodd" clip-rule="evenodd" d="M12 10V1.16667C12 0.528889 11.5467 0 11 0C10.4533 0 10 0.528889 10 1.16667V10H1.16667C0.528889 10 0 10.4533 0 11C0 11.5467 0.528889 12 1.16667 12H10V19.8333C10 20.4711 10.4533 21 11 21C11.5467 21 12 20.4711 12 19.8333V12H19.8333C20.4711 12 21 11.5467 21 11C21 10.4533 20.4711 10 19.8333 10H12Z" fill="currentColor"/> </svg>
 					.faq__body
 						.faq__text Комплекс процедур по уходу за шерстью, кожей, когтями, ушами и глазами питомца. Может выполняться как в гигиенических целях, так и для улучшения внешнего вида домашнего животного .
-				.faq__item
+				.faq__item.--open
 					.faq__head
 						.faq__count 02
 						.faq__name В каком возрасте лучше всего начинать стричь питомца?
 						.faq__toggle
+							<svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg"> <path fill-rule="evenodd" clip-rule="evenodd" d="M12 10V1.16667C12 0.528889 11.5467 0 11 0C10.4533 0 10 0.528889 10 1.16667V10H1.16667C0.528889 10 0 10.4533 0 11C0 11.5467 0.528889 12 1.16667 12H10V19.8333C10 20.4711 10.4533 21 11 21C11.5467 21 12 20.4711 12 19.8333V12H19.8333C20.4711 12 21 11.5467 21 11C21 10.4533 20.4711 10 19.8333 10H12Z" fill="currentColor"/> </svg>
 					.faq__body
 						.faq__text Чем раньше ваш домашний любимец начнёт посещать грумера, тем легче будет ему и владельцу при дальнейших визитах. Рекомендуем приучать питомца к грумингу с 3-х месяцев.
-				.faq__item
+				.faq__item.--open
 					.faq__head
 						.faq__count 03
 						.faq__name Какие требования у вас к питомцам?
 						.faq__toggle
+							<svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg"> <path fill-rule="evenodd" clip-rule="evenodd" d="M12 10V1.16667C12 0.528889 11.5467 0 11 0C10.4533 0 10 0.528889 10 1.16667V10H1.16667C0.528889 10 0 10.4533 0 11C0 11.5467 0.528889 12 1.16667 12H10V19.8333C10 20.4711 10.4533 21 11 21C11.5467 21 12 20.4711 12 19.8333V12H19.8333C20.4711 12 21 11.5467 21 11C21 10.4533 20.4711 10 19.8333 10H12Z" fill="currentColor"/> </svg>
 					.faq__body
 						.faq__text Основным условие:  животное здорово, прекрасно себя чувствует и привито (не менее двух недель).
-				.faq__item
+				.faq__item.--open
 					.faq__head
 						.faq__count 04
 						.faq__name У меня несколько животных. Могу ли я привести их одновременно?
 						.faq__toggle
+							<svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg"> <path fill-rule="evenodd" clip-rule="evenodd" d="M12 10V1.16667C12 0.528889 11.5467 0 11 0C10.4533 0 10 0.528889 10 1.16667V10H1.16667C0.528889 10 0 10.4533 0 11C0 11.5467 0.528889 12 1.16667 12H10V19.8333C10 20.4711 10.4533 21 11 21C11.5467 21 12 20.4711 12 19.8333V12H19.8333C20.4711 12 21 11.5467 21 11C21 10.4533 20.4711 10 19.8333 10H12Z" fill="currentColor"/> </svg>
 					.faq__body
 						.faq__text Несомненно. Одновременно услуги оказывают несколько грумеров, поэтому мы с лёгкостью подберём для вас удобный вариант.
-				.faq__item
+				.faq__item.--open
 					.faq__head
 						.faq__count 05
 						.faq__name Какую косметику вы применяете в работе?
 						.faq__toggle
+							<svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg"> <path fill-rule="evenodd" clip-rule="evenodd" d="M12 10V1.16667C12 0.528889 11.5467 0 11 0C10.4533 0 10 0.528889 10 1.16667V10H1.16667C0.528889 10 0 10.4533 0 11C0 11.5467 0.528889 12 1.16667 12H10V19.8333C10 20.4711 10.4533 21 11 21C11.5467 21 12 20.4711 12 19.8333V12H19.8333C20.4711 12 21 11.5467 21 11C21 10.4533 20.4711 10 19.8333 10H12Z" fill="currentColor"/> </svg>
 					.faq__body
 						.faq__text В работе используем только качественную профессиональную груминг косметику. Мы являемся амбассадорами топовой Итальянской косметики #[strong Iv San Bernard.]
-				.faq__item
+				.faq__item.--open
 					.faq__head
 						.faq__count 06
 						.faq__name Переживаю за своего питомца и хочу присутствовать на процедурах, это возможно?
 						.faq__toggle
+							<svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg"> <path fill-rule="evenodd" clip-rule="evenodd" d="M12 10V1.16667C12 0.528889 11.5467 0 11 0C10.4533 0 10 0.528889 10 1.16667V10H1.16667C0.528889 10 0 10.4533 0 11C0 11.5467 0.528889 12 1.16667 12H10V19.8333C10 20.4711 10.4533 21 11 21C11.5467 21 12 20.4711 12 19.8333V12H19.8333C20.4711 12 21 11.5467 21 11C21 10.4533 20.4711 10 19.8333 10H12Z" fill="currentColor"/> </svg>
 					.faq__body
 						.faq__text Мы разделяем ваши переживания, да это возможно по предварительной записи. В случае с кошками присутствие хозяина обязательно, так же возможен вариант оплаты ассистента грумера.
-				.faq__item
+				.faq__item.--open
 					.faq__head
 						.faq__count 07
 						.faq__name Хочу записать питомца в ваш салон, но не могу определиться со стрижкой. Что делать?
 						.faq__toggle
+							<svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg"> <path fill-rule="evenodd" clip-rule="evenodd" d="M12 10V1.16667C12 0.528889 11.5467 0 11 0C10.4533 0 10 0.528889 10 1.16667V10H1.16667C0.528889 10 0 10.4533 0 11C0 11.5467 0.528889 12 1.16667 12H10V19.8333C10 20.4711 10.4533 21 11 21C11.5467 21 12 20.4711 12 19.8333V12H19.8333C20.4711 12 21 11.5467 21 11C21 10.4533 20.4711 10 19.8333 10H12Z" fill="currentColor"/> </svg>
 					.faq__body
 						.faq__text Наши мастера с удовольствием помогут с выбором. Принимая во внимание уникальные особенности вашего питомца, мы предложим вам несколько вариантов на выбор.
-				.faq__item
+				.faq__item.--open
 					.faq__head
 						.faq__count 08
 						.faq__name Что такое экспресс-линька?
 						.faq__toggle
+							<svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg"> <path fill-rule="evenodd" clip-rule="evenodd" d="M12 10V1.16667C12 0.528889 11.5467 0 11 0C10.4533 0 10 0.528889 10 1.16667V10H1.16667C0.528889 10 0 10.4533 0 11C0 11.5467 0.528889 12 1.16667 12H10V19.8333C10 20.4711 10.4533 21 11 21C11.5467 21 12 20.4711 12 19.8333V12H19.8333C20.4711 12 21 11.5467 21 11C21 10.4533 20.4711 10 19.8333 10H12Z" fill="currentColor"/> </svg>
 					.faq__body
 						.faq__text Это удаление старой, ненужной шерсти, с помощью вычёсывания отмерших волосков специальными инструментами. Чтобы освободить волосяные луковицы от излишков и дать рост новой здоровой шерсти, а так же избавиться от разбросанной шерсти по дому. #[strong Ухоженный питомец-довольный хозяин!]
 
@@ -349,37 +359,38 @@ block content
 						p Шёрстку — #[strong помоем,]
 						p Зубки — #[i почистим,]
 						p Коготки — #[u подстрижём]
-					.ca__text Все виды услуг для красоты вашего пушистого любимца
+					.ca__text.t2 Все виды услуг для красоты вашего пушистого любимца
 					.ca__address
 						p г. Санкт-Петербург,м.Чкаловская, ул Глухая Зеленина 6
 						p #[strong Вход с улицы: Груминг салон]
 						p #[strong Вход со двора: Академия груминга, зоогостиница]
 
-				.ca__img
-					img(src="uploads/ca-1.png" alt="")
-				.ca__form
-					.ca__field.field.--primary.--md
-						.field__title Ваше имя
-						input.field__area(type="text" placeholder="Имя")
-					.ca__field.field.--primary.--md.--phone
-						.field__title Телефон
-						input.field__area(type="tel" placeholder="+7 (_ _ _) _ _ _-_ _-_ _")
-					button.ca__btn.btn.--secondary.--md Отправить
-					.ca__policy.check
-						input.check__input(type="checkbox")
-						.check__box
-							img(src="_/uploa/" alt="")
-						.check__text Оставляя заявку вы соглашаетесь с #[a(href="" target="_blank")  политикой конфиденциальности]
+				.ca__inner
+					.ca__img
+						img(src="uploads/ca-1.png" alt="")
+					.ca__form
+						.ca__field.field.--primary.--md
+							.field__title.label Ваше имя
+							input.field__area(type="text" placeholder="Имя")
+						.ca__field.field.--primary.--md.--phone
+							.field__title.label Телефон
+							input.field__area(type="tel" placeholder="+7 (_ _ _) _ _ _-_ _-_ _")
+						button.ca__btn.btn.--secondary.--md Отправить
+						.ca__policy.check
+							input.check__input(type="checkbox")
+							.check__box
+								<svg width="15" height="11" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.4331 10.8533C5.09005 10.8533 4.76415 10.7161 4.52401 10.476L0.37307 6.32504C-0.124357 5.82761 -0.124357 5.00429 0.37307 4.50686C0.870498 4.00943 1.69382 4.00943 2.19125 4.50686L5.4331 7.74871L12.8088 0.37307C13.3062 -0.124357 14.1295 -0.124357 14.6269 0.37307C15.1244 0.870497 15.1244 1.69382 14.6269 2.19125L6.3422 10.476C6.10206 10.7161 5.77616 10.8533 5.4331 10.8533Z" fill="#FBF4F1"/></svg>
+							.check__text Оставляя заявку вы соглашаетесь с #[a(href="" target="_blank")  политикой конфиденциальности]
 
 	.reviews
 		.case
 			.reviews__head
-				.reviews__title.h2 #[strong Честные отзывы] <br>гостей салона
+				.reviews__title.h2.s-secondary #[strong Честные отзывы] <br>гостей салона
 				.reviews__controls 
-					.reviews__control.contro.--prev
-						<svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.764648 2.05721L5.09122 6.26471L0.764648 10.4722L2.09664 11.7647L7.76465 6.26471L2.09664 0.764709L0.764648 2.05721Z" fill="currentColor"/></svg>
-					.reviews__control.contro.--next
-						<svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.764648 2.05721L5.09122 6.26471L0.764648 10.4722L2.09664 11.7647L7.76465 6.26471L2.09664 0.764709L0.764648 2.05721Z" fill="currentColor"/></svg>
+					.reviews__control.control.--prev
+						<svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M11.9443 5.64404L16.8003 10.5L11.9443 15.356" stroke="currentColor" stroke-width="1.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/> <path d="M3.2002 10.5H16.6642" stroke="currentColor" stroke-width="1.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/> </svg>
+					.reviews__control.control.--next
+						<svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M11.9443 5.64404L16.8003 10.5L11.9443 15.356" stroke="currentColor" stroke-width="1.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/> <path d="M3.2002 10.5H16.6642" stroke="currentColor" stroke-width="1.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/> </svg>
 			.reviews__body
 				.reviews__slider.swiper
 					.reviews__list.swiper-wrapper
@@ -407,7 +418,9 @@ block content
 									p Постоянно хожу в этот салон со своим пёсиком. Шпиц Юки). Очень хорошие мастера. Мой малыш всегда вычесан, аккуратно подстрижен, коготочки подстижены, лапки, ушки. Просто чудо:) Главное он сам с удовольствием ходит на груминг. Сегодня забрала настоящего медвежонка. Так здорово подстригли! Спасибо🙏💕
 								.reviews__name Ольга
 								.reviews__desc и её прекрасный Шпиц Юки
-				.reviews__more #[a(href="" target="_blank") Читать больше отзывов]
+				.reviews__pagination.dots
+				.reviews__more-wrap
+					.reviews__more.btn.--transparent-primary.--md #[a(href="" target="_blank") Читать больше отзывов]
 
 	.contacts
 		.case
@@ -1471,9 +1484,9 @@ block content
 									li Заключение договора возможно дистанционно
 				.courses-shares__controls
 					.courses-shares__control.control.--prev
-						<svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.764648 2.05721L5.09122 6.26471L0.764648 10.4722L2.09664 11.7647L7.76465 6.26471L2.09664 0.764709L0.764648 2.05721Z" fill="currentColor"/></svg>
+						<svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M11.9443 5.64404L16.8003 10.5L11.9443 15.356" stroke="currentColor" stroke-width="1.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/> <path d="M3.2002 10.5H16.6642" stroke="currentColor" stroke-width="1.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/> </svg>
 					.courses-shares__control.control.--next
-						<svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.764648 2.05721L5.09122 6.26471L0.764648 10.4722L2.09664 11.7647L7.76465 6.26471L2.09664 0.764709L0.764648 2.05721Z" fill="currentColor"/></svg>
+						<svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M11.9443 5.64404L16.8003 10.5L11.9443 15.356" stroke="currentColor" stroke-width="1.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/> <path d="M3.2002 10.5H16.6642" stroke="currentColor" stroke-width="1.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/> </svg>
 
 			.courses-shares__btns
 				.courses-shares__btn.btn.--secondary.--md #[span Записаться на курс] #[img(src="uploads/student-cap.svg" alt="")]
@@ -1485,9 +1498,9 @@ block content
 				.academy-info__title.h2 Об #[strong академии] 
 				.academy-info__controls
 					.academy-info__control.control.--prev
-						<svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.764648 2.05721L5.09122 6.26471L0.764648 10.4722L2.09664 11.7647L7.76465 6.26471L2.09664 0.764709L0.764648 2.05721Z" fill="currentColor"/></svg>
+						<svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M11.9443 5.64404L16.8003 10.5L11.9443 15.356" stroke="currentColor" stroke-width="1.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/> <path d="M3.2002 10.5H16.6642" stroke="currentColor" stroke-width="1.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/> </svg>
 					.academy-info__control.control.--next
-						<svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.764648 2.05721L5.09122 6.26471L0.764648 10.4722L2.09664 11.7647L7.76465 6.26471L2.09664 0.764709L0.764648 2.05721Z" fill="currentColor"/></svg>
+						<svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M11.9443 5.64404L16.8003 10.5L11.9443 15.356" stroke="currentColor" stroke-width="1.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/> <path d="M3.2002 10.5H16.6642" stroke="currentColor" stroke-width="1.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/> </svg>
 				.academy-info__body
 					.academy-info__slider.swiper
 						.academy-info__slider-list.swiper-wrapper
@@ -1528,9 +1541,9 @@ block content
 					.why-edu__title Почему #[strong стоит #[br]идти учиться] #[strong ] #[br]в Happy Pet
 					.why-edu__controls
 						.why-edu__control.control.--prev
-							<svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.764648 2.05721L5.09122 6.26471L0.764648 10.4722L2.09664 11.7647L7.76465 6.26471L2.09664 0.764709L0.764648 2.05721Z" fill="currentColor"/></svg>
+							<svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M11.9443 5.64404L16.8003 10.5L11.9443 15.356" stroke="currentColor" stroke-width="1.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/> <path d="M3.2002 10.5H16.6642" stroke="currentColor" stroke-width="1.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/> </svg>
 						.why-edu__control.control.--next
-							<svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.764648 2.05721L5.09122 6.26471L0.764648 10.4722L2.09664 11.7647L7.76465 6.26471L2.09664 0.764709L0.764648 2.05721Z" fill="currentColor"/></svg>
+							<svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M11.9443 5.64404L16.8003 10.5L11.9443 15.356" stroke="currentColor" stroke-width="1.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/> <path d="M3.2002 10.5H16.6642" stroke="currentColor" stroke-width="1.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/> </svg>
 				.why-edu__right
 					.why-edu__slider.swiper
 						.why-edu__list.swiper-wrapper
