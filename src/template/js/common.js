@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			loop: true,
 			initialSlide: Math.floor(galleryItems.length / 2),
 			slidesPerView: 'auto',
-			spaceBetween: 30,
+			spaceBetween: 16,
 			navigation: {
 				nextEl: galleryControlNext,
 				prevEl: galleryControlPrev
@@ -56,7 +56,12 @@ document.addEventListener('DOMContentLoaded', () => {
 			pagination: {
 				el: galleryPagination,
 				clickable: true,
-			}
+			},
+			breakpoints: {
+				1025: {
+					spaceBetween: 30,
+				},
+			},
 		})
 	}
 
@@ -77,7 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 		new Swiper(reviewsSlider, {
 			slidesPerView: 1,
-			spaceBetween: 32,
+			spaceBetween: 16,
 			navigation: {
 				nextEl: reviewsControlNext,
 				prevEl: reviewsControlPrev
@@ -89,9 +94,11 @@ document.addEventListener('DOMContentLoaded', () => {
 			breakpoints: {
 				1025: {
 					slidesPerView: 1.5,
+					spaceBetween: 32,
 				},
 				1281: {
 					slidesPerView: 2,
+					spaceBetween: 32,
 				},
 			},
 		})
@@ -133,11 +140,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 		new Swiper(academyInfoslider, {
 			loop: true,
-			initialSlide: 1,
-			centeredSlides: true,
+
 			slidesPerView: 'auto',
-			spaceBetween: 30,
-			slidesOffsetBefore: 220,
+			spaceBetween: 16,
 			navigation: {
 				nextEl: academyInfoControlNext,
 				prevEl: academyInfoControlPrev
@@ -145,7 +150,15 @@ document.addEventListener('DOMContentLoaded', () => {
 			pagination: {
 				el: academyInfoPagination,
 				clickable: true,
-			}
+			},
+			breakpoints: {
+				1025: {
+					spaceBetween: 32,
+					slidesOffsetBefore: 220,
+					initialSlide: 1,
+					centeredSlides: true,
+				},
+			},
 		})
 	}
 
