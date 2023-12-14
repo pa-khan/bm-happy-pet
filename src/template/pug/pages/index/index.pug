@@ -26,7 +26,9 @@ block content
 							.directions__item-title Груминг салон
 							.directions__item-name-label
 						.directions__item-text Идеальный бутик для питомца на Петровской стороне: профессиональный уход, стильная одежда и многое другое
-						a.directions__item-btn.btn.--secondary.--md(href="") #[span Записать питомца]
+						a.directions__item-btn.btn.--secondary.--md(href="javascript:;" data-modal="modal-order")
+							p Записать питомца
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13.1722 12L8.22217 7.05L9.63617 5.636L16.0002 12L9.63617 18.364L8.22217 16.95L13.1722 12Z" fill="currentColor"/></svg> 
 					.directions__item-img
 						img(src="uploads/direction-groom.jpg" alt="")
 
@@ -36,7 +38,9 @@ block content
 							.directions__item-title Академия груминга
 							.directions__item-label СКИДКА ПРИ ЗАПИСИ
 						.directions__item-text Обучим профессии грумера с возможностью пройти стажировку и работать в нашем салоне
-						a.directions__item-btn.btn.--primary.--md(href="") Забронировать курс
+						a.directions__item-btn.btn.--primary.--md(href="javascript:;" data-modal="modal-academy")
+							p Забронировать курс
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13.1722 12L8.22217 7.05L9.63617 5.636L16.0002 12L9.63617 18.364L8.22217 16.95L13.1722 12Z" fill="currentColor"/></svg>
 					.directions__item-img
 						img(src="uploads/direction-academy.jpg" alt="")
 
@@ -46,46 +50,54 @@ block content
 				.we__title.s-primary #[strong Мы ]— эксперты в уходе за домашними питомцами из Санкт-Петербурга
 				.we__content
 					.we__text.t1 Развиваем индустрию груминга с 2011 года 1000 счастливых питомцев ежемесячно, более 500 довольных учеников академии.
-					.we__btn.btn.--primary-outline.--md О нас
+					a.we__btn.btn.--primary-outline.--md(href="javascript:;" data-modal="modal-about") О нас
 
 		.modal.--fullscreen#modal-about
 			.modal__inner
 				.modal__content
-					.about
-						.about__data
-							.about__left
-								.about__count
-									.about__count-current 01
-									.about__count-sep /
-									.about__count-total
-							.about__right
-								.about__title #[img(src="_/uploa/" alt="")] #[span О нас]
-								.about__desc Груминг центр Happy Pet— более 12 лет с любовью и заботой ухаживает за питомцами, преображая их.
-								.about__text
-									p Известный в Петербурге центр для животных HappyPet – комплексный бутик, в котором гармонично сочетаются груминг салон и академия, где профессионально обучают специалистов по уходу за домашними животными, магазин с первоклассными товарами для груминга и роскошный отель для домашних любимцев.
-									p Запишитесь сегодня и откройте для себя комплексный уход за домашними животными под одной крышей
-						.about__slider
-							.about__list
-								.about__item
-									.about__img
+					.we-more
+						.case
+							.we-more__close(data-modal-close="")
+								<svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M26.1578 8.81729L9 27" stroke="#393A3A" stroke-width="2.64542" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 9L26.1626 27.1781" stroke="#393A3A" stroke-width="2.64542" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/></svg>
+							.we-more__data
+								.we-more__left
+									.we-more__count
+										.we-more__count-current 01
+										.we-more__count-sep /
+										.we-more__count-total
+									.we-more__controls
+										.we-more__control.control.--prev
+											<svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M11.9443 5.64404L16.8003 10.5L11.9443 15.356" stroke="currentColor" stroke-width="1.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/> <path d="M3.2002 10.5H16.6642" stroke="currentColor" stroke-width="1.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/> </svg>
+										.we-more__control.control.--next
+											<svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M11.9443 5.64404L16.8003 10.5L11.9443 15.356" stroke="currentColor" stroke-width="1.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/> <path d="M3.2002 10.5H16.6642" stroke="currentColor" stroke-width="1.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/> </svg>
+								.we-more__right
+									.we-more__title #[img(src="uploads/like.svg" alt="")] #[span О нас]
+									.we-more__desc Груминг центр Happy Pet— более 12 лет с любовью и заботой ухаживает за питомцами, преображая их.
+									.we-more__text
+										p Известный в Петербурге центр для животных HappyPet – комплексный бутик, в котором гармонично сочетаются груминг салон и академия, где профессионально обучают специалистов по уходу за домашними животными, магазин с первоклассными товарами для груминга и роскошный отель для домашних любимцев.
+										p Запишитесь сегодня и откройте для себя комплексный уход за домашними животными под одной крышей
+						.we-more__slider.swiper
+							.we-more__list.swiper-wrapper
+								.we-more__item.swiper-slide
+									.we-more__img
 										img(src="uploads/about-groom.jpg" alt="")
-									.about__name Груминг салон
-								.about__item
-									.about__img
+									.we-more__name Груминг салон
+								.we-more__item.swiper-slide
+									.we-more__img
 										img(src="uploads/about-academy.jpg" alt="")
-									.about__name Академия груминга
-								.about__item
-									.about__img
+									.we-more__name Академия груминга
+								.we-more__item.swiper-slide
+									.we-more__img
 										img(src="uploads/about-staff.jpg" alt="")
-									.about__name Опытные мастера
-								.about__item
-									.about__img
+									.we-more__name Опытные мастера
+								.we-more__item.swiper-slide
+									.we-more__img
 										img(src="uploads/about-shop.jpg" alt="")
-									.about__name Магазин
-								.about__item
-									.about__img
+									.we-more__name Магазин
+								.we-more__item.swiper-slide
+									.we-more__img
 										img(src="uploads/about-hotel.jpg" alt="")
-									.about__name Зоогостиница
+									.we-more__name Зоогостиница
 			.modal__overlay
 
 	.shares
@@ -93,15 +105,15 @@ block content
 			.shares__wrap
 				.shares__slider.swiper
 					.shares__slider-wrap.swiper-wrapper
-						.shares__slider-item.shares__item.swiper-slide
+						.shares__slider-item.shares__item.swiper-slide(data-action="modalOrder")
 							img(src="uploads/share-care.jpg")
-						.shares__slider-item.shares__item.swiper-slide
+						.shares__slider-item.shares__item.swiper-slide(data-action="scrollShop")
 							img(src="uploads/share-shop.jpg")
-						.shares__slider-item.shares__item.swiper-slide
+						.shares__slider-item.shares__item.swiper-slide(data-action="modalServiceSpa")
 							img(src="uploads/share-spa.jpg")
-						.shares__slider-item.shares__item.swiper-slide
+						.shares__slider-item.shares__item.swiper-slide(data-action="scrollPrograms")
 							img(src="uploads/share-mc.jpg")
-						.shares__slider-item.shares__item.swiper-slide
+						.shares__slider-item.shares__item.swiper-slide(data-action="scrollOffers")
 							img(src="uploads/share-test.jpg")
 				.shares__controls
 					.shares__control.control.--prev
@@ -113,21 +125,28 @@ block content
 	.pros
 		.case
 			.pros__list
-				.pros__item
+				.pros__item(data-action="scrollInstallment")
 					img(src="uploads/pros-installment.jpg" alt="")
-				.pros__item
+				
+				.pros__item(data-action="modalServiceHotel")
 					img(src="uploads/pros-hotel.jpg" alt="")
-				.pros__item
+				
+				.pros__item(data-action="modalAcademy")
 					img(src="uploads/pros-online-edu.png" alt="")
-				.pros__item
+				
+				.pros__item(data-action="modalBiz")
 					img(src="uploads/pros-consult.jpg" alt="")
-				.pros__item
+				
+				.pros__item(data-action="scrollShop")
 					img(src="uploads/pros-tools.jpg" alt="")
-				.pros__item
+				
+				.pros__item(data-action="scrollAmbassador")
 					img(src="uploads/pros-ambassador.jpg" alt="")
-				.pros__item
+				
+				.pros__item(data-action="modalServiceSpa")
 					img(src="uploads/pros-spa.jpg" alt="")
-				.pros__item
+				
+				.pros__item(data-action="scrollService")
 					img(src="uploads/pros-coffee-gift.jpg" alt="")
 
 	.gallery
@@ -170,7 +189,7 @@ block content
 				.gallery__pagination.dots
 
 
-	.shop
+	.shop#shop
 		.case
 			.shop__head
 				.shop__title.h2.s-secondary Магазин #[strong  товаров #[br]для груминга]
@@ -214,7 +233,7 @@ block content
 						.shop__item-title.h4 Одежда и обувь <br>для питомца
 						.shop__item-img
 							img(src="uploads/shop-pet-clothes.png" alt="")
-				.shop__btn.btn.--secondary.--md Бесплатная консультация
+				a.shop__btn.btn.--secondary.--md(href="javascript:;" data-modal="modal-order") Бесплатная консультация
 
 	.hotel
 		.case
@@ -247,7 +266,7 @@ block content
 							.hotel__prop-icon
 								img(src="uploads/camera-smile.svg" alt="")
 							.hotel__prop-title Фото-видео с питомцем
-					.hotel__btn.btn.--primary.--md Отправить заявку
+					a.hotel__btn.btn.--primary.--md(href="javascript:;" data-modal="modal-hotel") Отправить заявку
 				.hotel__imgs
 					.hotel__img-decoration
 						img(src="uploads/hotel-decoration.svg" alt="")
@@ -700,611 +719,45 @@ block content
 			.services__tag УСЛУГИ ГРУМИНГ САЛОНА
 			.services__title.h2.s-secondary #[strong Доступные цены]  и более <br>300 постоянных клиентов
 			.services__list
-				.services__item.--violet.--left
+				a.services__item.--violet.--left(href="javascript:;" data-modal="modal-service-groom-cats")
 					.services__name.h3 Груминг кошек
 					.services__more
 						<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"> <path fill-rule="evenodd" clip-rule="evenodd" d="M1.12688 20.8737C0.736353 20.4832 0.736353 19.85 1.12688 19.4595L19.4602 1.12615C19.8507 0.73562 20.4839 0.73562 20.8744 1.12615C21.2649 1.51667 21.2649 2.14984 20.8744 2.54036L2.54109 20.8737C2.15057 21.2642 1.5174 21.2642 1.12688 20.8737Z" fill="currentColor"/> <path fill-rule="evenodd" clip-rule="evenodd" d="M2.66602 1.83333C2.66602 1.28105 3.11373 0.833334 3.66602 0.833334H20.166C20.7183 0.833334 21.166 1.28105 21.166 1.83333V18.3333C21.166 18.8856 20.7183 19.3333 20.166 19.3333C19.6137 19.3333 19.166 18.8856 19.166 18.3333V2.83333H3.66602C3.11373 2.83333 2.66602 2.38562 2.66602 1.83333Z" fill="currentColor"/> </svg>
 					.services__img
 						img(src="uploads/services-groom-cats.png" alt="")
-					.services__modal.modal.--fullscreen#modal-service-0
-						.modal__inner
-							.modal__content
-								.service
-									.service__head
-										.service__title #[span Груминг кошек]
-										.service__img
-											img(src="uploads/services-groom-cats.png" alt="")
-									.service__body
-										.service__text Уход за кошками включает в себя комплекс процедур: вычес (экспресс линька), обезжиривание шерсти, мытьё и сушка с дополнительным вычесом. Груминг кошек придаёт домашнему любимцу не только безупречный внешний вид, но и полезен для здоровья. #[br]В Happy Pet понимают, что каждая кошка уникальна, к каждому питомцу применяется индивидуальный подход.
-										.service__pricelist
-											.pricelist__title Стоимость
-											.pricelist__list
-												.pricelist__item
-													.pricelist__head
-														.pricelist__title Комплекс 
-														.pricelist__toggle
-															img(src="_/uploa/" alt="")
-														.pricelist__value от 2300 ₽
-													.pricelist__body
-														.pricelist__text
-															p Подробнее:  #[br]
-															p Гигиена, мытьё и стрижка ножницами #[br]#[strong Внимание!] Разбор колтунов - это дополнительная услуга - оплачивается отдельно.
-															p Подробнее: 
-															p Гигиена, мытьё и стрижка ножницами #[br]#[strong Внимание!] Разбор колтунов - это дополнительная услуга - оплачивается отдельно.
+					
 
-												.pricelist__item
-													.pricelist__head
-														.pricelist__title Стрижка под машинку
-														.pricelist__toggle
-															img(src="_/uploa/" alt="")
-														.pricelist__value от 2500₽
-													.pricelist__body
-														.pricelist__text
-															p Подробнее:  #[br]
-															p Гигиена, мытьё и стрижка ножницами #[br]#[strong Внимание!] Разбор колтунов - это дополнительная услуга - оплачивается отдельно.
-														.pricelist__img
-															img(src="_/uploa/" alt="")
-
-												.pricelist__item
-													.pricelist__head
-														.pricelist__title Вычес без мытья
-														.pricelist__toggle
-															img(src="_/uploa/" alt="")
-														.pricelist__value от 1500₽
-													.pricelist__body
-														.pricelist__text
-															p Подробнее:  #[br]
-															p Гигиена, мытьё и стрижка ножницами #[br]#[strong Внимание!] Разбор колтунов - это дополнительная услуга - оплачивается отдельно.
-														.pricelist__img
-															img(src="_/uploa/" alt="")
-
-												.pricelist__item
-													.pricelist__head
-														.pricelist__title Экспресс-линька
-														.pricelist__toggle
-															img(src="_/uploa/" alt="")
-														.pricelist__value от 2300 ₽
-													.pricelist__body
-														.pricelist__text
-															p Подробнее:  #[br]
-															p Гигиена, мытьё и стрижка ножницами #[br]#[strong Внимание!] Разбор колтунов - это дополнительная услуга - оплачивается отдельно.
-														.pricelist__img
-															img(src="_/uploa/" alt="")
-
-												.pricelist__item
-													.pricelist__head
-														.pricelist__title Стрижка когтей
-														.pricelist__toggle
-															img(src="_/uploa/" alt="")
-														.pricelist__value 300₽
-													.pricelist__body
-														.pricelist__text
-															p Подробнее:  #[br]
-															p Гигиена, мытьё и стрижка ножницами #[br]#[strong Внимание!] Разбор колтунов - это дополнительная услуга - оплачивается отдельно.
-														.pricelist__img
-															img(src="_/uploa/" alt="")
-						.modal__overlay
-
-				.services__item.--orange.--left
+				a.services__item.--orange.--left(href="javascript:;" data-modal="modal-service-groom-dogs")
 					.services__name.h3 Груминг собак
 					.services__more
 						<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"> <path fill-rule="evenodd" clip-rule="evenodd" d="M1.12688 20.8737C0.736353 20.4832 0.736353 19.85 1.12688 19.4595L19.4602 1.12615C19.8507 0.73562 20.4839 0.73562 20.8744 1.12615C21.2649 1.51667 21.2649 2.14984 20.8744 2.54036L2.54109 20.8737C2.15057 21.2642 1.5174 21.2642 1.12688 20.8737Z" fill="currentColor"/> <path fill-rule="evenodd" clip-rule="evenodd" d="M2.66602 1.83333C2.66602 1.28105 3.11373 0.833334 3.66602 0.833334H20.166C20.7183 0.833334 21.166 1.28105 21.166 1.83333V18.3333C21.166 18.8856 20.7183 19.3333 20.166 19.3333C19.6137 19.3333 19.166 18.8856 19.166 18.3333V2.83333H3.66602C3.11373 2.83333 2.66602 2.38562 2.66602 1.83333Z" fill="currentColor"/> </svg>
 					.services__img
 						img(src="uploads/services-groom-dogs.png" alt="")
-					.services__modal.modal.--fullscreen#modal-service-1
-						.modal__inner
-							.modal__content
-								.service
-									.service__head
-										.service__title #[span Груминг собак]
-										.service__img
-											img(src="uploads/services-groom-dogs.png" alt="")
-									.service__body
-										.service__text
-											p Груминг собак включает комплекс процедур, который выполняется в гигиенических и эстетических целях. #[br]Наши мастера рады предложить разнообразные услуги по уходу за вашими питомцами. Начиная от стрижки (гигиеническая, стрижка под машинку, стандартная для породы, модельная стрижка), до экспресс-линьки. #[br]Работаем со всеми породами и всеми типами шерсти.
-										.service__pricelist
-											.pricelist__title Стоимость
-											.pricelist__list
-												.pricelist__item
-													.pricelist__head
-														.pricelist__title Бадлингтон-терьер
-														.pricelist__toggle
-															img(src="_/uploa/" alt="")
-														.pricelist__value от 2300 ₽
-													.pricelist__body
-														.pricelist__text
-															p Подробнее:  #[br]
-															p Гигиена (стрижка когтей, чистка ушей, мытье, сушка) 2300 ₽
-															p Комплекс: гигиена + стрижка под машинку 2800 ₽
-															p Комплекс: гигиена + породная стрижка 3300 ₽
-														.pricelist__img
-															img(src="_/uploa/" alt="")
-												.pricelist__item
-													.pricelist__head
-														.pricelist__title Бишон Фризе
-														.pricelist__toggle
-															img(src="_/uploa/" alt="")
-														.pricelist__value от 2200 ₽
-													.pricelist__body
-														.pricelist__text
-															p Подробнее:  #[br]
-															p Гигиена, мытьё и стрижка ножницами #[br]#[strong Внимание!] Разбор колтунов - это дополнительная услуга - оплачивается отдельно.
-														.pricelist__img
-															img(src="_/uploa/" alt="")
-												.pricelist__item
-													.pricelist__head
-														.pricelist__title Болонка Мальтийская
-														.pricelist__toggle
-															img(src="_/uploa/" alt="")
-														.pricelist__value от 1400 ₽
-													.pricelist__body
-														.pricelist__text
-															p Подробнее:  #[br]
-															p Гигиена, мытьё и стрижка ножницами #[br]#[strong Внимание!] Разбор колтунов - это дополнительная услуга - оплачивается отдельно.
-														.pricelist__img
-															img(src="_/uploa/" alt="")
-												.pricelist__item
-													.pricelist__head
-														.pricelist__title Болонка Русская Цветная
-														.pricelist__toggle
-															img(src="_/uploa/" alt="")
-														.pricelist__value от 1700 ₽
-													.pricelist__body
-														.pricelist__text
-															p Подробнее:  #[br]
-															p Гигиена, мытьё и стрижка ножницами #[br]#[strong Внимание!] Разбор колтунов - это дополнительная услуга - оплачивается отдельно.
-														.pricelist__img
-															img(src="_/uploa/" alt="")
-												.pricelist__item
-													.pricelist__head
-														.pricelist__title Борзая
-														.pricelist__toggle
-															img(src="_/uploa/" alt="")
-														.pricelist__value от 4000 ₽
-													.pricelist__body
-														.pricelist__text
-															p Подробнее:  #[br]
-															p Гигиена, мытьё и стрижка ножницами #[br]#[strong Внимание!] Разбор колтунов - это дополнительная услуга - оплачивается отдельно.
-														.pricelist__img
-															img(src="_/uploa/" alt="")
-												.pricelist__item
-													.pricelist__head
-														.pricelist__title Вельш Терьер
-														.pricelist__toggle
-															img(src="_/uploa/" alt="")
-														.pricelist__value от 2100 ₽
-													.pricelist__body
-														.pricelist__text
-															p Подробнее:  #[br]
-															p Гигиена, мытьё и стрижка ножницами #[br]#[strong Внимание!] Разбор колтунов - это дополнительная услуга - оплачивается отдельно.
-														.pricelist__img
-															img(src="_/uploa/" alt="")
-												.pricelist__item
-													.pricelist__head
-														.pricelist__title Вест Хайленд уайт терьер
-														.pricelist__toggle
-															img(src="_/uploa/" alt="")
-														.pricelist__value от 1900 ₽
-													.pricelist__body
-														.pricelist__text
-															p Подробнее:  #[br]
-															p Гигиена, мытьё и стрижка ножницами #[br]#[strong Внимание!] Разбор колтунов - это дополнительная услуга - оплачивается отдельно.
-														.pricelist__img
-															img(src="_/uploa/" alt="")
-												.pricelist__item
-													.pricelist__head
-														.pricelist__title Гриффон Бельгийский
-														.pricelist__toggle
-															img(src="_/uploa/" alt="")
-														.pricelist__value от 1700 ₽
-													.pricelist__body
-														.pricelist__text
-															p Подробнее:  #[br]
-															p Гигиена, мытьё и стрижка ножницами #[br]#[strong Внимание!] Разбор колтунов - это дополнительная услуга - оплачивается отдельно.
-														.pricelist__img
-															img(src="_/uploa/" alt="")
-												.pricelist__item
-													.pricelist__head
-														.pricelist__title Джек-Рассел Терьер
-														.pricelist__toggle
-															img(src="_/uploa/" alt="")
-														.pricelist__value от 2000 ₽
-													.pricelist__body
-														.pricelist__text
-															p Подробнее:  #[br]
-															p Гигиена, мытьё и стрижка ножницами #[br]#[strong Внимание!] Разбор колтунов - это дополнительная услуга - оплачивается отдельно.
-														.pricelist__img
-															img(src="_/uploa/" alt="")
-												.pricelist__item
-													.pricelist__head
-														.pricelist__title Золотистый Ретривер
-														.pricelist__toggle
-															img(src="_/uploa/" alt="")
-														.pricelist__value от 2800 ₽
-													.pricelist__body
-														.pricelist__text
-															p Подробнее:  #[br]
-															p Гигиена, мытьё и стрижка ножницами #[br]#[strong Внимание!] Разбор колтунов - это дополнительная услуга - оплачивается отдельно.
-														.pricelist__img
-															img(src="_/uploa/" alt="")
-												.pricelist__item
-													.pricelist__head
-														.pricelist__title Ирландский Терьер
-														.pricelist__toggle
-															img(src="_/uploa/" alt="")
-														.pricelist__value от 1900 ₽
-													.pricelist__body
-														.pricelist__text
-															p Подробнее:  #[br]
-															p Гигиена, мытьё и стрижка ножницами #[br]#[strong Внимание!] Разбор колтунов - это дополнительная услуга - оплачивается отдельно.
-														.pricelist__img
-															img(src="_/uploa/" alt="")
+					
 												
-				.services__item.--sky.--left
+				a.services__item.--sky.--left(href="javascript:;" data-modal="modal-service-spa")
 					.services__name.h3  SPA и озонотерапия
 					.services__more
 						<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"> <path fill-rule="evenodd" clip-rule="evenodd" d="M1.12688 20.8737C0.736353 20.4832 0.736353 19.85 1.12688 19.4595L19.4602 1.12615C19.8507 0.73562 20.4839 0.73562 20.8744 1.12615C21.2649 1.51667 21.2649 2.14984 20.8744 2.54036L2.54109 20.8737C2.15057 21.2642 1.5174 21.2642 1.12688 20.8737Z" fill="currentColor"/> <path fill-rule="evenodd" clip-rule="evenodd" d="M2.66602 1.83333C2.66602 1.28105 3.11373 0.833334 3.66602 0.833334H20.166C20.7183 0.833334 21.166 1.28105 21.166 1.83333V18.3333C21.166 18.8856 20.7183 19.3333 20.166 19.3333C19.6137 19.3333 19.166 18.8856 19.166 18.3333V2.83333H3.66602C3.11373 2.83333 2.66602 2.38562 2.66602 1.83333Z" fill="currentColor"/> </svg>
 					.services__img
 						img(src="uploads/services-spa.png" alt="")
-					.services__modal.modal.--fullscreen#modal-service-2
-						.modal__inner
-							.modal__content
-								.service
-									.service__head
-										.service__title #[span SPA и озонотерапия]
-										.service__img
-											img(src="_/uploa/" alt="")
-									.service__body
-										.service__text
-											p #[strong Spa-процедуры и озонотерапия] для домашних животных популярные услуги, которые помогают поддержать здоровье и сохранить красоту шерсти питомца. 
-											p #[strong Spa для собак] — комплекс процедур для глубокого очищения шерсти и кожи домашнего любимца. Каждая собака, вне зависимости от породы, размера, возраста и характера, станет игривей после качественного ухода.
-											p #[strong Озонотерапия] приятная, расслабляющая процедура, которая успокаивает животных и совмещает в себе: гидромассаж и обогащение озоном. Эффективная процедура: озон уничтожает болезнетворные бактерии и грибки, идеально подойдёт для лечения алопеции. 
-										.service__pricelist
-											.pricelist__title Стоимость
-											.pricelist__list
-												.pricelist__item
-													.pricelist__head
-														.pricelist__title Восстанавливающая маска для шерсти
-														.pricelist__toggle
-															img(src="_/uploa/" alt="")
-														.pricelist__value от 500 ₽
-													.pricelist__body
-														.pricelist__text
-															p Подробнее:  #[br]
-															p Собака до 10 кг - 500 руб. Собака от 10 кг - 700 руб.
-														.pricelist__img
-															img(src="_/uploa/" alt="")
+					
 
-												.pricelist__item
-													.pricelist__head
-														.pricelist__title Питательная маска для шерсти
-														.pricelist__toggle
-															img(src="_/uploa/" alt="")
-														.pricelist__value от 500 ₽
-													.pricelist__body
-														.pricelist__text
-															p Подробнее:  #[br]
-															p Собака до 10 кг - 500 руб. Собака от 10 кг - 700 руб.
-														.pricelist__img
-															img(src="_/uploa/" alt="")
-
-												.pricelist__item
-													.pricelist__head
-														.pricelist__title Озоновая ванна
-														.pricelist__toggle
-															img(src="_/uploa/" alt="")
-														.pricelist__value от 800 ₽
-													.pricelist__body
-														.pricelist__text
-															p Подробнее:  #[br]
-															p Гигиена, мытьё и стрижка ножницами #[br]#[strong Внимание!] Разбор колтунов - это дополнительная услуга - оплачивается отдельно.
-														.pricelist__img
-															img(src="_/uploa/" alt="")
-
-				.services__item.--sand.--right
+				a.services__item.--sand.--right(href="javascript:;" data-modal="modal-service-other")
 					.services__name.h3 Прочие услуги
 					.services__more
 						<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"> <path fill-rule="evenodd" clip-rule="evenodd" d="M1.12688 20.8737C0.736353 20.4832 0.736353 19.85 1.12688 19.4595L19.4602 1.12615C19.8507 0.73562 20.4839 0.73562 20.8744 1.12615C21.2649 1.51667 21.2649 2.14984 20.8744 2.54036L2.54109 20.8737C2.15057 21.2642 1.5174 21.2642 1.12688 20.8737Z" fill="currentColor"/> <path fill-rule="evenodd" clip-rule="evenodd" d="M2.66602 1.83333C2.66602 1.28105 3.11373 0.833334 3.66602 0.833334H20.166C20.7183 0.833334 21.166 1.28105 21.166 1.83333V18.3333C21.166 18.8856 20.7183 19.3333 20.166 19.3333C19.6137 19.3333 19.166 18.8856 19.166 18.3333V2.83333H3.66602C3.11373 2.83333 2.66602 2.38562 2.66602 1.83333Z" fill="currentColor"/> </svg>
 					.services__img
 						img(src="uploads/services-other.png" alt="")
-					.services__modal.modal.--fullscreen#modal-service-3
-						.modal__inner
-							.modal__content
-								.service
-									.service__head
-										.service__title #[span Прочие услуги]
-										.service__img
-											img(src="_/uploa/" alt="")
-									.service__body
-										.service__text
-											p Ощутите премиальный уход за домашними животными в груминг салоне Happy Pet, где комфорт и стиль вашего питомца являются нашими главным приоритетом.
-											p Наша команда экспертов позаботится о том, чтобы ваш пушистый друг чувствовал себя прекрасно.
-										.service__pricelist
-											.pricelist__title Стоимость
-											.pricelist__list
-												.pricelist__item
-													.pricelist__head
-														.pricelist__title Озоновая ванна
-														.pricelist__toggle
-															img(src="_/uploa/" alt="")
-														.pricelist__value от 800 ₽
-													.pricelist__body
-														.pricelist__text
-															p Подробнее:  #[br]
-															p Гигиена, мытьё и стрижка ножницами #[br]#[strong Внимание!] Разбор колтунов - это дополнительная услуга - оплачивается отдельно.
-														.pricelist__img
-															img(src="_/uploa/" alt="")
-												.pricelist__item
-													.pricelist__head
-														.pricelist__title Восстанавливающая маска для шерсти
-														.pricelist__toggle
-															img(src="_/uploa/" alt="")
-														.pricelist__value от 500 ₽
-													.pricelist__body
-														.pricelist__text
-															p Подробнее:  #[br]
-															p Гигиена, мытьё и стрижка ножницами #[br]#[strong Внимание!] Разбор колтунов - это дополнительная услуга - оплачивается отдельно.
-														.pricelist__img
-															img(src="_/uploa/" alt="")
-												.pricelist__item
-													.pricelist__head
-														.pricelist__title Питательная маска для шерсти
-														.pricelist__toggle
-															img(src="_/uploa/" alt="")
-														.pricelist__value от 500 ₽
-													.pricelist__body
-														.pricelist__text
-															p Подробнее:  #[br]
-															p Гигиена, мытьё и стрижка ножницами #[br]#[strong Внимание!] Разбор колтунов - это дополнительная услуга - оплачивается отдельно.
-														.pricelist__img
-															img(src="_/uploa/" alt="")
-												.pricelist__item
-													.pricelist__head
-														.pricelist__title Удаление колтунов у собак и кошек
-														.pricelist__toggle
-															img(src="_/uploa/" alt="")
-														.pricelist__value от 500 ₽
-													.pricelist__body
-														.pricelist__text
-															p Подробнее:  #[br]
-															p Гигиена, мытьё и стрижка ножницами #[br]#[strong Внимание!] Разбор колтунов - это дополнительная услуга - оплачивается отдельно.
-														.pricelist__img
-															img(src="_/uploa/" alt="")
-												.pricelist__item
-													.pricelist__head
-														.pricelist__title Стрижка когтей у собак и кошек
-														.pricelist__toggle
-															img(src="_/uploa/" alt="")
-														.pricelist__value от 400 ₽
-													.pricelist__body
-														.pricelist__text
-															p Подробнее:  #[br]
-															p Гигиена, мытьё и стрижка ножницами #[br]#[strong Внимание!] Разбор колтунов - это дополнительная услуга - оплачивается отдельно.
-														.pricelist__img
-															img(src="_/uploa/" alt="")
-												.pricelist__item
-													.pricelist__head
-														.pricelist__title Чистка ушей
-														.pricelist__toggle
-															img(src="_/uploa/" alt="")
-														.pricelist__value от 300 ₽
-													.pricelist__body
-														.pricelist__text
-															p Подробнее:  #[br]
-															p Гигиена, мытьё и стрижка ножницами #[br]#[strong Внимание!] Разбор колтунов - это дополнительная услуга - оплачивается отдельно.
-														.pricelist__img
-															img(src="_/uploa/" alt="")
-												.pricelist__item
-													.pricelist__head
-														.pricelist__title Чистка зубов (механическая)
-														.pricelist__toggle
-															img(src="_/uploa/" alt="")
-														.pricelist__value от 500 ₽
-													.pricelist__body
-														.pricelist__text
-															p Подробнее:  #[br]
-															p Гигиена, мытьё и стрижка ножницами #[br]#[strong Внимание!] Разбор колтунов - это дополнительная услуга - оплачивается отдельно.
-														.pricelist__img
-															img(src="_/uploa/" alt="")
-												.pricelist__item
-													.pricelist__head
-														.pricelist__title Чистка параанальных желез
-														.pricelist__toggle
-															img(src="_/uploa/" alt="")
-														.pricelist__value от 400 ₽
-													.pricelist__body
-														.pricelist__text
-															p Подробнее:  #[br]
-															p Гигиена, мытьё и стрижка ножницами #[br]#[strong Внимание!] Разбор колтунов - это дополнительная услуга - оплачивается отдельно.
-														.pricelist__img
-															img(src="_/uploa/" alt="")
-												.pricelist__item
-													.pricelist__head
-														.pricelist__title Окрашивание 1 элемента
-														.pricelist__toggle
-															img(src="_/uploa/" alt="")
-														.pricelist__value от 700 ₽
-													.pricelist__body
-														.pricelist__text
-															p Подробнее:  #[br]
-															p Гигиена, мытьё и стрижка ножницами #[br]#[strong Внимание!] Разбор колтунов - это дополнительная услуга - оплачивается отдельно.
-														.pricelist__img
-															img(src="_/uploa/" alt="")
-												.pricelist__item
-													.pricelist__head
-														.pricelist__title Блеск-Тату
-														.pricelist__toggle
-															img(src="_/uploa/" alt="")
-														.pricelist__value от 300 ₽
-													.pricelist__body
-														.pricelist__text
-															p Подробнее:  #[br]
-															p Гигиена, мытьё и стрижка ножницами #[br]#[strong Внимание!] Разбор колтунов - это дополнительная услуга - оплачивается отдельно.
-														.pricelist__img
-															img(src="_/uploa/" alt="")
-												.pricelist__item
-													.pricelist__head
-														.pricelist__title Стрижка 1 элемента
-														.pricelist__toggle
-															img(src="_/uploa/" alt="")
-														.pricelist__value 500 ₽
-													.pricelist__body
-														.pricelist__text
-															p Подробнее:  #[br]
-															p Гигиена, мытьё и стрижка ножницами #[br]#[strong Внимание!] Разбор колтунов - это дополнительная услуга - оплачивается отдельно.
-														.pricelist__img
-															img(src="_/uploa/" alt="")
-												.pricelist__item
-													.pricelist__head
-														.pricelist__title Вычес колтунов
-														.pricelist__toggle
-															img(src="_/uploa/" alt="")
-														.pricelist__value от 300 ₽
-													.pricelist__body
-														.pricelist__text
-															p Подробнее:  #[br]
-															p Гигиена, мытьё и стрижка ножницами #[br]#[strong Внимание!] Разбор колтунов - это дополнительная услуга - оплачивается отдельно.
-														.pricelist__img
-															img(src="_/uploa/" alt="")
+					
 												
-				.services__item.--blue.--right.--large
+				a.services__item.--blue.--right.--large(href="javascript:;" data-modal="modal-service-hotel")
 					.services__name.h3 Зоогостиница
 					.services__more
 						<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"> <path fill-rule="evenodd" clip-rule="evenodd" d="M1.12688 20.8737C0.736353 20.4832 0.736353 19.85 1.12688 19.4595L19.4602 1.12615C19.8507 0.73562 20.4839 0.73562 20.8744 1.12615C21.2649 1.51667 21.2649 2.14984 20.8744 2.54036L2.54109 20.8737C2.15057 21.2642 1.5174 21.2642 1.12688 20.8737Z" fill="currentColor"/> <path fill-rule="evenodd" clip-rule="evenodd" d="M2.66602 1.83333C2.66602 1.28105 3.11373 0.833334 3.66602 0.833334H20.166C20.7183 0.833334 21.166 1.28105 21.166 1.83333V18.3333C21.166 18.8856 20.7183 19.3333 20.166 19.3333C19.6137 19.3333 19.166 18.8856 19.166 18.3333V2.83333H3.66602C3.11373 2.83333 2.66602 2.38562 2.66602 1.83333Z" fill="currentColor"/> </svg>
 					.services__img
 						img(src="uploads/services-hotels.png" alt="")
-					.services__modal.modal.--fullscreen#modal-service-4
-						.modal__inner
-							.modal__content
-								.service
-									.service__head
-										.service__title #[span Зоогостиница]
-										.service__img
-											img(src="uploads/services-hotels.png" alt="")
-									.service__body
-										.service__text Собираетесь в путешествие, но не знаете с кем оставить питомца? Ваше идеальное решение — гостиница для домашних животных. Для нас важно, что бы ваши питомцы были в безопасности и чувствовали себя комфортно находясь у нас в гостях.Наша зоогостиница соответствует всем стандартам качества: без клеток, других питомцев. Животным предоставляется первоклассный уход, они находятся под постоянным наблюдением доброжелательного и ответственного персонала.
-										.service__tags
-											.service__tag
-												.service__tags-icon
-													img(src="_/uploa/" alt="")
-												.service__tags-value Питание и прогулки
-											.service__tag
-												.service__tags-icon
-													img(src="_/uploa/" alt="")
-												.service__tags-value Комфортабельное проживание
-											.service__tag
-												.service__tags-icon
-													img(src="_/uploa/" alt="")
-												.service__tags-value Дезинфекция 
-											.service__tag
-												.service__tags-icon
-													img(src="_/uploa/" alt="")
-												.service__tags-value Услуги груминга
-											.service__tag
-												.service__tags-icon
-													img(src="_/uploa/" alt="")
-												.service__tags-value Постоянная отчётность
-											.service__tag
-												.service__tags-icon
-													img(src="_/uploa/" alt="")
-												.service__tags-value Фото-видео с питомцем
-										.service__pricelist
-											.pricelist__title Стоимость
-											.pricelist__list
-												.pricelist__item
-													.pricelist__head
-														.pricelist__title Кошки
-														.pricelist__toggle
-															img(src="_/uploa/" alt="")
-														.pricelist__value 400 ₽ сутки
-													.pricelist__body
-														.pricelist__text
-															p Подробнее:  #[br]
-															p Гигиена, мытьё и стрижка ножницами #[br]#[strong Внимание!] Разбор колтунов - это дополнительная услуга - оплачивается отдельно.
-														.pricelist__img
-															img(src="_/uploa/" alt="")
-
-												.pricelist__item
-													.pricelist__head
-														.pricelist__title Собаки мелкие до 5 кг
-														.pricelist__toggle
-															img(src="_/uploa/" alt="")
-														.pricelist__value 500 ₽ сутки
-													.pricelist__body
-														.pricelist__text
-															p Подробнее:  #[br]
-															p Гигиена, мытьё и стрижка ножницами #[br]#[strong Внимание!] Разбор колтунов - это дополнительная услуга - оплачивается отдельно.
-														.pricelist__img
-															img(src="_/uploa/" alt="")
-
-												.pricelist__item
-													.pricelist__head
-														.pricelist__title Собаки средние до 10 кг
-														.pricelist__toggle
-															img(src="_/uploa/" alt="")
-														.pricelist__value 800 ₽ сутки
-													.pricelist__body
-														.pricelist__text
-															p Подробнее:  #[br]
-															p Гигиена, мытьё и стрижка ножницами #[br]#[strong Внимание!] Разбор колтунов - это дополнительная услуга - оплачивается отдельно.
-														.pricelist__img
-															img(src="_/uploa/" alt="")
-
-												.pricelist__item
-													.pricelist__head
-														.pricelist__title Собаки крупные
-														.pricelist__toggle
-															img(src="_/uploa/" alt="")
-														.pricelist__value по договорённости
-													.pricelist__body
-														.pricelist__text
-															p Подробнее:  #[br]
-															p Гигиена, мытьё и стрижка ножницами #[br]#[strong Внимание!] Разбор колтунов - это дополнительная услуга - оплачивается отдельно.
-														.pricelist__img
-															img(src="_/uploa/" alt="")
-										.service__alert В стоимость проживания не входит питание и наполнитель, корм и наполнитель предоставляет владелец или оплачивает его стоимость отдельно.
-										.service__pricelist
-											.pricelist__title Стоимость
-											.pricelist__list
-												.pricelist__item
-													.pricelist__head
-														.pricelist__title Проживание более 10 дней
-														.pricelist__toggle
-															img(src="_/uploa/" alt="")
-														.pricelist__value 10% от стоимости
-													.pricelist__body
-														.pricelist__text
-															p Подробнее:  #[br]
-															p Гигиена, мытьё и стрижка ножницами #[br]#[strong Внимание!] Разбор колтунов - это дополнительная услуга - оплачивается отдельно.
-														.pricelist__img
-															img(src="_/uploa/" alt="")
-												.pricelist__item
-													.pricelist__head
-														.pricelist__title Содержание более 60 дней
-														.pricelist__toggle
-															img(src="_/uploa/" alt="")
-														.pricelist__value договорная
-													.pricelist__body
-														.pricelist__text
-															p Подробнее:  #[br]
-															p Гигиена, мытьё и стрижка ножницами #[br]#[strong Внимание!] Разбор колтунов - это дополнительная услуга - оплачивается отдельно.
-														.pricelist__img
-															img(src="_/uploa/" alt="")
-												.pricelist__item
-													.pricelist__head
-														.pricelist__title Более двух питомцев одного хозяина
-														.pricelist__toggle
-															img(src="_/uploa/" alt="")
-														.pricelist__value договорная
-													.pricelist__body
-														.pricelist__text
-															p Подробнее:  #[br]
-															p Гигиена, мытьё и стрижка ножницами #[br]#[strong Внимание!] Разбор колтунов - это дополнительная услуга - оплачивается отдельно.
-														.pricelist__img
-															img(src="_/uploa/" alt="")
-										.service__alert 
-											p Трансфер по городу — 500-1000 ₽
-											p Фото и видео отчет по договоренности
+					
 						
 
 	.certs
@@ -1356,11 +809,11 @@ block content
 					img(src="uploads/logo.svg" alt="")
 				.ozone__text
 					p Озоновые ванны улучшают общее состояние здоровья питомца и помогают: выводить токсины из организма, ускоряют заживление ран за счёт увеличения снабжения тканей кислородом, улучшают состояние кожи, кровообращение, уменьшая зуд и успокаивают раздражения.
-				a.ozone__btn.btn.--primary.--md Записаться
+				a.ozone__btn.btn.--primary.--md(href="javascript:;" data-modal="modal-order") Записаться
 			.ozone__img
 				img(src="uploads/ozone-right.jpg" alt="")
 
-	.ambassador
+	.ambassador#ambassador
 		.ambassador__img
 			img(src="uploads/iv-san-bernard.jpg" alt="")
 		.ambassador__content
@@ -1369,7 +822,7 @@ block content
 				p Мы являемся амбассадором бренда #[strong Iv San Bernard], топовой европейской косметики для собак и кошек, и у нас всегда есть доступ к самым свежим новинкам.
 				p #[i Будьте в тренде с Iv San Bernard]
 
-	.service
+	.service#service
 		.case
 			.service__title.h2.s-secondary Наша отличительная черта: #[br]#[strong безупречный сервис #[br]и искренняя забота о клиентах]
 			.service__desc Ощутите непревзойдённый комфорт в Happy Pet
@@ -1430,7 +883,7 @@ block content
 				.ac-mc__img
 					img(src="uploads/ac-mc.jpg" alt="")
 
-	.programs
+	.programs#programs
 		.case
 			.programs__head
 				.programs__title.h2.s-secondary #[strong Большой выбор #[br]обучающих программ ] #[br]в академии
@@ -1439,13 +892,13 @@ block content
 				.programs__list
 					a.programs__item.--pink(href="")
 						.programs__more
-							img(src="uploads/arrow-top-right.svg" alt="")
+							<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"> <path fill-rule="evenodd" clip-rule="evenodd" d="M1.12688 20.8737C0.736353 20.4832 0.736353 19.85 1.12688 19.4595L19.4602 1.12615C19.8507 0.73562 20.4839 0.73562 20.8744 1.12615C21.2649 1.51667 21.2649 2.14984 20.8744 2.54036L2.54109 20.8737C2.15057 21.2642 1.5174 21.2642 1.12688 20.8737Z" fill="currentColor"/> <path fill-rule="evenodd" clip-rule="evenodd" d="M2.66602 1.83333C2.66602 1.28105 3.11373 0.833334 3.66602 0.833334H20.166C20.7183 0.833334 21.166 1.28105 21.166 1.83333V18.3333C21.166 18.8856 20.7183 19.3333 20.166 19.3333C19.6137 19.3333 19.166 18.8856 19.166 18.3333V2.83333H3.66602C3.11373 2.83333 2.66602 2.38562 2.66602 1.83333Z" fill="currentColor"/> </svg>
 						.programs__name.h3 Курсы
 						.programs__img
 							img(src="uploads/programs-courses.png" alt="")
 					a.programs__item.--sky(href="")
 						.programs__more
-							img(src="uploads/arrow-top-right.svg" alt="")
+							<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"> <path fill-rule="evenodd" clip-rule="evenodd" d="M1.12688 20.8737C0.736353 20.4832 0.736353 19.85 1.12688 19.4595L19.4602 1.12615C19.8507 0.73562 20.4839 0.73562 20.8744 1.12615C21.2649 1.51667 21.2649 2.14984 20.8744 2.54036L2.54109 20.8737C2.15057 21.2642 1.5174 21.2642 1.12688 20.8737Z" fill="currentColor"/> <path fill-rule="evenodd" clip-rule="evenodd" d="M2.66602 1.83333C2.66602 1.28105 3.11373 0.833334 3.66602 0.833334H20.166C20.7183 0.833334 21.166 1.28105 21.166 1.83333V18.3333C21.166 18.8856 20.7183 19.3333 20.166 19.3333C19.6137 19.3333 19.166 18.8856 19.166 18.3333V2.83333H3.66602C3.11373 2.83333 2.66602 2.38562 2.66602 1.83333Z" fill="currentColor"/> </svg>
 						.programs__name.h3 Мастер-классы
 						.programs__img
 							img(src="uploads/programs-mc.png" alt="")
@@ -1519,8 +972,8 @@ block content
 						<svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M11.9443 5.64404L16.8003 10.5L11.9443 15.356" stroke="currentColor" stroke-width="1.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/> <path d="M3.2002 10.5H16.6642" stroke="currentColor" stroke-width="1.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/> </svg>
 
 			.courses-shares__btns
-				.courses-shares__btn.btn.--secondary.--md #[span Записаться на курс] #[img(src="uploads/student-cap.svg" alt="")]
-				.courses-shares__btn.btn.--primary.--md #[span Оформить рассрочку] #[img(src="uploads/whatsapp-white.svg" alt="")]
+				a.courses-shares__btn.btn.--secondary.--md(href="javascript:;" data-modal="modal-academy") #[span Записаться на курс] #[img(src="uploads/student-cap.svg" alt="")]
+				a.courses-shares__btn.btn.--primary.--md(href="") #[span Оформить рассрочку] #[img(src="uploads/whatsapp-white.svg" alt="")]
 
 	.academy-info
 		.case
@@ -1679,7 +1132,7 @@ block content
 							.teacher__name.h3 Новохатская Ирина
 							.teacher__text
 								p Ирина — #[strong ведущий специалист школы и профессиональный грумер] #[br]В профессии более 12 лет. Призёр многочисленных междунородных конкурсов России, мастер по пуделям, опытный преподаватель, методолог и автор обучающих программ.Преподаватель курсов #[i «Утро»], #[i «Интенсив»], #[i «2/2»], а также программ и мастер классов повышения квалификации.
-							.teacher__btn.btn.--secondary.--md
+							a.teacher__btn.btn.--secondary.--md(href="javascript:;" data-modal="modal-academy") 
 								p Записаться к Ирине
 								<svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.764648 2.05721L5.09122 6.26471L0.764648 10.4722L2.09664 11.7647L7.76465 6.26471L2.09664 0.764709L0.764648 2.05721Z" fill="currentColor"/></svg>
 
@@ -1690,7 +1143,7 @@ block content
 							.teacher__name.h3 Демьянова Кристина
 							.teacher__text
 								p Кристина — #[strong профессиональный грумер] #[br]Путь в груминг начался с моего щенка вест-хайленд-уайт-терьера. Подготовка питомца к выставкам требовали тщательного изучения и самоотдачи. В итоге сменила офисный гардероб на костюм грумера, шаг, о котором я не жалею! Мне нравится общение с питомцами и их владельцами, наслаждаюсь результатами и ценю эмоциональную обратную связь. #[br]Преподаватель курса #[i «Экспресс-обучение»], а так же мастер в тримминге.
-							.teacher__btn.btn.--secondary.--md
+							a.teacher__btn.btn.--secondary.--md(href="javascript:;" data-modal="modal-academy") 
 								p Записаться к Кристине
 								<svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.764648 2.05721L5.09122 6.26471L0.764648 10.4722L2.09664 11.7647L7.76465 6.26471L2.09664 0.764709L0.764648 2.05721Z" fill="currentColor"/></svg>
 
@@ -1701,11 +1154,11 @@ block content
 							.teacher__name.h3 Пивоварова Аделаида
 							.teacher__text
 								p Аделаида — #[strong преподаватель в школе и грумер в HAPPYPET] #[br]Педагог с большим опытом, грумер-универсал, специалист по работе с пуделями и мастер по бишонам.Я не только научу вас стрижке и триммингу, но и помогу понять животное и найти с ним общий язык #[br]Преподаватель группы #[i «Выходного дня»], #[i «Вечер»] и #[i «Индивидуальное обучение»]
-							.teacher__btn.btn.--secondary.--md
+							a.teacher__btn.btn.--secondary.--md(href="javascript:;" data-modal="modal-academy") 
 								p Записаться к Аделаиде
 								<svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.764648 2.05721L5.09122 6.26471L0.764648 10.4722L2.09664 11.7647L7.76465 6.26471L2.09664 0.764709L0.764648 2.05721Z" fill="currentColor"/></svg> 
 
-	.installment
+	.installment#installment
 		.case
 			.installment__title.h2.s-primary Учись сейчас — #[strong плати #[br]потом!]
 			.installment__wrap
@@ -1732,7 +1185,7 @@ block content
 					.installment__desc При оформлении курса в рассрочку акции и скидки не действуют.
 
 
-	.offers
+	.offers#offers
 		.case
 			.offers__title.h3 Сомневаетесь, стоит ли записываться на наши курсы? #[br]Хотите знать, подходит ли вам карьера грумера?
 			.offers__list
@@ -1757,7 +1210,7 @@ block content
 							.offer__tags
 								.offer__tag ДЛИТЕЛЬНОСТЬ 3-4 ЧАСА
 								.offer__tag МАКСИМАЛЬНАЯ СКИДКА НА КУРС ДЕНЬ В ДЕНЬ
-					.offer__btn.btn.--primary-outline.--md Записаться на пробный урок
+					.offer__btn.btn.--primary-outline.--md(href="javascript:;" data-modal="modal-academy") Записаться на пробный урок
 				.offers__item.offer
 					.offer__wrap
 						.offer__card
@@ -1776,7 +1229,7 @@ block content
 							.offer__tags
 								.offer__tag ДЛИТЕЛЬНОСТЬ 3-4 ЧАСА
 								.offer__tag ЗАВИСИТ ОТ ПОРОДЫ И НАЛИЧИЯ КОЛТУНОВ
-					.offer__btn.btn.--primary-outline.--md Узнать подробнее
+					.offer__btn.btn.--primary-outline.--md(href="javascript:;" data-modal="modal-order") Узнать подробнее
 
 	.bp
 		.case
@@ -1784,7 +1237,7 @@ block content
 				.bp__content
 					.bp__title.h2 Идеальный план салонного бизнеса 
 					.bp__text Индивидуальная #[strong консультация эксперта по открытию салона,] организации собственного бизнеса без лишних затрат
-					.bp__btn.btn.--pink.--md Спросить у эксперта
+					a.bp__btn.btn.--pink.--md(href="javascript:;" data-modal="modal-biz")  Спросить у эксперта
 				.bp__imgs
 					.bp__img
 						img(src="uploads/bp-dog.png" alt="")
@@ -1945,7 +1398,7 @@ block content
 							img(src="uploads/booking-dog.png" alt="")
 						.booking__name ЛЮБИМАЯ РАБОТА ЖДЕТ
 					.booking__subtitle.h3 Оставить онлайн-заявку
-					.booking__btn.btn.--secondary.--md #[span Записаться на курс] #[img(src="uploads/student-cap.svg" alt="")]
+					a.booking__btn.btn.--secondary.--md(href="javascript:;" data-modal="modal-academy")  #[span Записаться на курс] #[img(src="uploads/student-cap.svg" alt="")]
 				.booking__item
 					.booking__card
 						.booking__img
@@ -2112,8 +1565,8 @@ block content
 									.collection__img
 										img(src="uploads/collection-base.jpg" alt="")
 								.collection__btns
-									.collection__btn.btn.--secondary.--md #[span Записаться на курс] #[img(src="uploads/student-cap.svg" alt="")]
-									.collection__btn.btn.--primary.--md #[span Оформить рассрочку] #[img(src="uploads/whatsapp-white.svg" alt="")]
+									a.collection__btn.btn.--secondary.--md(href="javascript:;" data-modal="modal-academy")  #[span Записаться на курс] #[img(src="uploads/student-cap.svg" alt="")]
+									a.collection__btn.btn.--primary.--md(href="") #[span Оформить рассрочку] #[img(src="uploads/whatsapp-white.svg" alt="")]
 						.collection__more
 							.collection__more-title.h4 Формы обучения
 							.collection__more-content
@@ -2178,8 +1631,8 @@ block content
 									.collection__img
 										img(src="uploads/collection-full.jpg" alt="")
 								.collection__btns
-									.collection__btn.btn.--secondary.--md #[span Записаться на курс] #[img(src="uploads/student-cap.svg" alt="")]
-									.collection__btn.btn.--primary.--md #[span Оформить рассрочку] #[img(src="uploads/whatsapp-white.svg" alt="")]
+									a.collection__btn.btn.--secondary.--md(href="javascript:;" data-modal="modal-academy")  #[span Записаться на курс] #[img(src="uploads/student-cap.svg" alt="")]
+									a.collection__btn.btn.--primary.--md(href="") #[span Оформить рассрочку] #[img(src="uploads/whatsapp-white.svg" alt="")]
 						.collection__more
 							.collection__more-title.h4 Формы обучения
 							.collection__more-content
@@ -2243,8 +1696,8 @@ block content
 									.collection__img
 										img(src="uploads/collection-up.jpg" alt="")
 								.collection__btns
-									.collection__btn.btn.--secondary.--md #[span Записаться на курс] #[img(src="uploads/student-cap.svg" alt="")]
-									.collection__btn.btn.--primary.--md #[span Оформить рассрочку] #[img(src="uploads/whatsapp-white.svg" alt="")]
+									a.collection__btn.btn.--secondary.--md(href="javascript:;" data-modal="modal-academy")  #[span Записаться на курс] #[img(src="uploads/student-cap.svg" alt="")]
+									a.collection__btn.btn.--primary.--md(href="") #[span Оформить рассрочку] #[img(src="uploads/whatsapp-white.svg" alt="")]
 						.collection__more
 							.collection__more-title.h4 Программа обучения
 							.collection__more-content.checks
@@ -2440,7 +1893,7 @@ block content
 					.mcs__left
 						.mcs__img
 							img(src="uploads/mc-york.jpg" alt="")
-						.mcs__btn.btn.--primary.--md Записаться
+						.mcs__btn.btn.--primary.--md(href="javascript:;" data-modal="modal-academy") Записаться
 					.mcs__right
 						.mcs__date.c-secondary 17 сентября в 11:00
 						.mcs__name.h3 «Йорк от Азии до классики»
@@ -2472,7 +1925,7 @@ block content
 					.mcs__left
 						.mcs__img
 							img(src="uploads/mc-spitc.jpg" alt="")
-						.mcs__btn.btn.--primary.--md Записаться
+						.mcs__btn.btn.--primary.--md(href="javascript:;" data-modal="modal-academy") Записаться
 					.mcs__right
 						.mcs__date.c-primary 1 октября в 11:00
 						.mcs__name.h3 «Шпиц»

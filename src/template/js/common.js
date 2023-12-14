@@ -7,10 +7,15 @@ var nav = document.querySelector('.nav')
 var ham = document.querySelector('.ham')
 
 document.addEventListener('DOMContentLoaded', ()=>{
-	
+	const modal = new Modal()
+
 	ham.addEventListener('click', ()=>{
+		if (modal.current) {
+			modal.closeModal()
+			return false
+		}
+
 		toggleNav()
-		toggleOverflow()
 	})
 
 	let checks = document.querySelectorAll('.check');
@@ -18,6 +23,52 @@ document.addEventListener('DOMContentLoaded', ()=>{
 	checks?.forEach((check)=>{
 		new Check(check);
 	});
+
+	let selects = document.querySelectorAll('.select')
+	selects?.forEach(select=>{
+		new Select(select)
+	})
+
+	let fields = document.querySelectorAll('.field')
+	fields?.forEach(field=>{
+		field._input = field.querySelector('input')
+		if (field.classList.contains('--phone')) {
+			IMask(field._input, {
+				mask: '+{7} (900) 00-00'
+			})
+		}
+	})
+
+	const weMore = document.querySelector('.we-more')
+	if (weMore) {
+		const weMoreCountCurrent = document.querySelector('.we-more__count-current')
+		const weMoreCountTotal = document.querySelector('.we-more__count-total')
+		const weMoreControlPrev = document.querySelector('.we-more__control.--prev');
+		const weMoreControlNext = document.querySelector('.we-more__control.--next');
+		const weMoreSlider = document.querySelector('.we-more__slider');
+		const weMoreItems = document.querySelectorAll('.we-more__item')
+
+		weMoreCountTotal.innerText = weMoreItems.length < 10 ? "0" + weMoreItems.length : weMoreItems.length
+
+		const weMoreSwiper = new Swiper(weMoreSlider, {
+			loop: true,
+			slidesPerView: 'auto',
+			spaceBetween: 30,
+			slidesOffsetBefore: -100,
+			navigation: {
+				nextEl: weMoreControlNext,
+                prevEl: weMoreControlPrev
+			},
+		})
+
+		weMoreSwiper.on('slideChange', ()=>{
+			setCountCurrent()
+		})
+
+		function setCountCurrent() {
+			weMoreCountCurrent.innerText = weMoreSwiper.activeIndex < 10 ? '0' + (weMoreSwiper.activeIndex + 1) : (weMoreSwiper.activeIndex + 1)
+		}
+	}
 
 	const sharesSlider = document.querySelector('.shares__slider');
 	if (sharesSlider) {
@@ -46,9 +97,10 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
 		new Swiper(gallerySlider, {
 			loop: true,
-			initialSlide: Math.floor(galleryItems.length / 2),
+			centeredSlides: true,
 			slidesPerView: 'auto',
 			spaceBetween: 30,
+			slidesOffsetBefore: 220,
 			navigation: {
 				nextEl: galleryControlNext,
                 prevEl: galleryControlPrev
@@ -164,6 +216,50 @@ document.addEventListener('DOMContentLoaded', ()=>{
 			}
 		})
 	}
+
+	const actions = document.querySelectorAll('[data-action]')
+	actions?.forEach(action=>{
+		action.addEventListener('click', ()=>{
+			switch (action.dataset.action) {
+				case "modalOrder":
+					const modalOrder = document.getElementById('modal-order')
+					modal.setCurrentModal(modalOrder)
+					break;
+				case "modalAcademy":
+					const modalAcademy = document.getElementById('modal-academy')
+					modal.setCurrentModal(modalAcademy)
+					break;
+				case "modalBiz":
+					const modalBiz = document.getElementById('modal-biz')
+					modal.setCurrentModal(modalBiz)
+					break;
+				case "modalServiceSpa":
+					const modalServiceSpa = document.getElementById('modal-service-spa')
+					modal.setCurrentModal(modalServiceSpa)
+					break;
+				case "modalServiceHotel":
+					const modalServiceHotel = document.getElementById('modal-hotel')
+					modal.setCurrentModal(modalServiceHotel)
+					break;
+				case "scrollInstallment":
+					document.location.href = '/#installment'; break;
+				case "scrollShop":
+					document.location.href = '/#shop'; break;
+					break;
+				case "scrollPrograms":
+					document.location.href = '/#programs'; break;
+					break;
+				case "scrollAmbassador":
+					document.location.href = '/#ambassador'; break;
+					break;
+				case "scrollOffers":
+					document.location.href = '/#offers'; break;
+					break;
+				case "scrollService":
+					document.location.href = '/#service'; break;
+			}
+		})
+	})
 	
 });
 
@@ -250,15 +346,23 @@ _defineProperty(Check, "classChecked", '--checked');
 _defineProperty(Check, "classError", '--error');
 
 
+function disableOverflow() {
+	html.classList.remove('overflow-disable')
+	body.classList.remove('overflow-disable')
+	wrap.classList.remove('overflow-disable')
+}
+
+function enableOverflow() {
+	html.classList.add('overflow-disable')
+	body.classList.add('overflow-disable')
+	wrap.classList.add('overflow-disable')
+}
+
 function toggleOverflow() {
 	if (document.body.classList.contains('overflow-disable')) {
-		html.classList.remove('overflow-disable')
-		body.classList.remove('overflow-disable')
-		wrap.classList.remove('overflow-disable')
+		disableOverflow()
 	} else {
-		html.classList.add('overflow-disable')
-		body.classList.add('overflow-disable')
-		wrap.classList.add('overflow-disable')
+		enableOverflow()
 	}
 }
 
@@ -267,9 +371,103 @@ function toggleNav() {
 		header.classList.remove('--open')
 		nav.classList.remove('--show')
 		ham.classList.remove('--x')
+		disableOverflow()
 	} else {
 		header.classList.add('--open')
 		nav.classList.add('--show')
 		ham.classList.add('--x')
+		enableOverflow()
+	}
+}
+
+class Select {
+	element = null
+	parse = null
+	list = null
+	options = null
+	value = null
+	placeholder = null
+	constructor(element) {
+		this.element = element
+		this.parse = this.element.querySelector('.select__parse')
+		this.value = this.element.querySelector('.select__value')
+		this.placeholder = this.element.querySelector('.select__placeholder')
+		this.list = this.element.querySelector('.select__list')
+		this.options = this.element.querySelectorAll('option')
+
+		this.options.forEach((option)=>{
+			this.createItem(option.innerText, option.value)
+		})
+
+		this.element.addEventListener('click', ()=>{
+			this.element.classList.toggle('--open')
+		})
+	}
+
+	createItem(title, value) {
+		if (!title || !value) return false
+		var div = document.createElement('div')
+		div.className = 'select__item'
+		div.innerText = title
+		this.list.append(div)
+		div.addEventListener('click', ()=>{
+			this.parse.value = value
+			this.value.innerText = title
+			this.element.classList.add('--filled')
+		})
+	}
+}
+
+
+class Modal {
+	current = null
+	openBtns = null
+	closeBtns = null
+	constructor() {
+		this.openBtns = document.querySelectorAll('[data-modal]')
+		this.closeBtns = document.querySelectorAll('[data-modal-close]')
+
+		this.openBtns?.forEach(btn=>{
+			btn.addEventListener('click', ()=>{
+				if (header.classList.contains('--open')) {
+					toggleNav()
+				}
+				const modalName = btn.dataset.modal
+				const modal = document.getElementById(modalName)
+
+				this.setCurrentModal(modal)
+			})
+		})
+
+		this.closeBtns?.forEach(btn=>{
+			btn.addEventListener('click', ()=>{
+				this.closeModal()
+			})
+		})
+	}
+
+	closeModal() {
+		if (this.current) {
+			if (this.current.classList.contains('--with-header')) {
+				ham.classList.remove('--x')
+			}
+			this.current.classList.remove('--show')
+			this.current = null
+			disableOverflow()
+		}
+	}
+
+	openModal(modal) {
+		this.current = modal
+		this.current.classList.add('--show')
+		if (this.current.classList.contains('--with-header')) {
+			ham.classList.add('--x')
+		}
+	}
+
+	setCurrentModal(modal) {
+		this.closeModal()
+		this.openModal(modal)
+		enableOverflow()
 	}
 }

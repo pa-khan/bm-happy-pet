@@ -97,10 +97,6 @@ svg {
   display: block;
 }
 
-img, svg, path, circle, rect, line {
-  transition: 0.3s;
-}
-
 .wrap {
   display: flex;
   flex-direction: column;
