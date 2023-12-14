@@ -2,7 +2,17 @@ var html = document.querySelector('html'),
 		body = document.querySelector('body'),
 		wrap = document.querySelector('.wrap');
 
+var header = document.querySelector('.header')
+var nav = document.querySelector('.nav')
+var ham = document.querySelector('.ham')
+
 document.addEventListener('DOMContentLoaded', ()=>{
+	
+	ham.addEventListener('click', ()=>{
+		toggleNav()
+		toggleOverflow()
+	})
+
 	let checks = document.querySelectorAll('.check');
 	 
 	checks?.forEach((check)=>{
@@ -52,7 +62,6 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
 	var faqs = document.querySelectorAll('.faq__item');
 	faqs?.forEach(function(faq){
-		console.log(1);
 		faq._toggleButton = faq.querySelector('.faq__toggle');
 
 		faq._toggleButton.addEventListener('click', ()=>{
@@ -65,7 +74,6 @@ document.addEventListener('DOMContentLoaded', ()=>{
 		const reviewsControlPrev = document.querySelector('.reviews__control.--prev');
 		const reviewsControlNext = document.querySelector('.reviews__control.--next');
 		const reviewsPagination = document.querySelector('.reviews__pagination');
-		const reviewsItems = document.querySelectorAll('.reviews__item');
 
 		new Swiper(reviewsSlider, {
 			slidesPerView: 2,
@@ -80,6 +88,83 @@ document.addEventListener('DOMContentLoaded', ()=>{
 			}
 		})
 	}
+
+	const map = document.getElementById('map')
+
+	if (map) {
+		const position = map.dataset.position.split(', ').map(coord => Number(coord))
+
+		ymaps.ready(function () {
+			const ya = new ymaps.Map('map', {
+				center: position,
+				zoom: 15,
+				controls: []
+			 });
+
+			 const placemark = new ymaps.Placemark(
+				position,
+				{},
+				{
+				  iconLayout: 'default#image',
+				  iconImageHref: 'uploads/map-placemark.svg',
+				  iconImageSize: [51, 69],
+				  iconImageOffset: [-25, -35]
+				}
+			  );
+
+			  ya.behaviors.disable('scrollZoom')
+			  ya.geoObjects.add(placemark)
+		})
+	}
+
+	const academyInfoslider = document.querySelector('.academy-info__slider');
+	if (academyInfoslider) {
+		const academyInfoControlPrev = document.querySelector('.academy-info__control.--prev');
+		const academyInfoControlNext = document.querySelector('.academy-info__control.--next');
+		const academyInfoPagination = document.querySelector('.academy-info__pagination');
+
+		new Swiper(academyInfoslider, {
+			loop: true,
+			initialSlide: 1,
+			centeredSlides: true,
+			slidesPerView: 'auto',
+			spaceBetween: 30,
+			slidesOffsetBefore: 220,
+			navigation: {
+				nextEl: academyInfoControlNext,
+                prevEl: academyInfoControlPrev
+			},
+			pagination: {
+			    el: academyInfoPagination,
+				clickable: true,
+			}
+		})
+	}
+	
+	const whyEduSlider = document.querySelector('.why-edu__slider');
+	if (whyEduSlider) {
+		const whyEduControlPrev = document.querySelector('.why-edu__control.--prev');
+		const whyEduControlNext = document.querySelector('.why-edu__control.--next');
+		const whyEduPagination = document.querySelector('.why-edu__pagination');
+
+		new Swiper(whyEduSlider, {
+			loop: true,
+			slidesPerView:  2,
+			spaceBetween: 12,
+			grid: {
+				rows: 2,
+			},
+			navigation: {
+				nextEl: whyEduControlNext,
+                prevEl: whyEduControlPrev
+			},
+			pagination: {
+			    el: whyEduPagination,
+				clickable: true,
+			}
+		})
+	}
+	
 });
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
@@ -163,3 +248,28 @@ class Check {
 _defineProperty(Check, "classChecked", '--checked');
 
 _defineProperty(Check, "classError", '--error');
+
+
+function toggleOverflow() {
+	if (document.body.classList.contains('overflow-disable')) {
+		html.classList.remove('overflow-disable')
+		body.classList.remove('overflow-disable')
+		wrap.classList.remove('overflow-disable')
+	} else {
+		html.classList.add('overflow-disable')
+		body.classList.add('overflow-disable')
+		wrap.classList.add('overflow-disable')
+	}
+}
+
+function toggleNav() {
+	if (header.classList.contains('--open')) {
+		header.classList.remove('--open')
+		nav.classList.remove('--show')
+		ham.classList.remove('--x')
+	} else {
+		header.classList.add('--open')
+		nav.classList.add('--show')
+		ham.classList.add('--x')
+	}
+}
