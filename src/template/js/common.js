@@ -6,10 +6,10 @@ var header = document.querySelector('.header')
 var nav = document.querySelector('.nav')
 var ham = document.querySelector('.ham')
 
-document.addEventListener('DOMContentLoaded', ()=>{
+document.addEventListener('DOMContentLoaded', () => {
 	const modal = new Modal()
 
-	ham.addEventListener('click', ()=>{
+	ham.addEventListener('click', () => {
 		if (modal.current) {
 			modal.closeModal()
 			return false
@@ -25,12 +25,12 @@ document.addEventListener('DOMContentLoaded', ()=>{
 	});
 
 	let selects = document.querySelectorAll('.select')
-	selects?.forEach(select=>{
+	selects?.forEach(select => {
 		new Select(select)
 	})
 
 	let fields = document.querySelectorAll('.field')
-	fields?.forEach(field=>{
+	fields?.forEach(field => {
 		field._input = field.querySelector('input')
 		if (field.classList.contains('--phone')) {
 			IMask(field._input, {
@@ -57,11 +57,11 @@ document.addEventListener('DOMContentLoaded', ()=>{
 			slidesOffsetBefore: -100,
 			navigation: {
 				nextEl: weMoreControlNext,
-                prevEl: weMoreControlPrev
+				prevEl: weMoreControlPrev
 			},
 		})
 
-		weMoreSwiper.on('slideChange', ()=>{
+		weMoreSwiper.on('slideChange', () => {
 			setCountCurrent()
 		})
 
@@ -97,10 +97,8 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
 		new Swiper(gallerySlider, {
 			loop: true,
-			centeredSlides: true,
 			slidesPerView: 'auto',
-			spaceBetween: 30,
-			slidesOffsetBefore: 220,
+			spaceBetween: 16,
 			navigation: {
 				nextEl: galleryControlNext,
 				prevEl: galleryControlPrev
@@ -110,12 +108,10 @@ document.addEventListener('DOMContentLoaded', ()=>{
 				clickable: true,
 			},
 			breakpoints: {
-				768: {
-					centeredSlides: false,
-				},
 				1025: {
 					spaceBetween: 30,
-					centeredSlides: false,
+					centeredSlides: true,
+					slidesOffsetBefore: 220,
 				},
 			},
 		})
@@ -196,7 +192,6 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
 		new Swiper(academyInfoslider, {
 			loop: true,
-
 			slidesPerView: 'auto',
 			spaceBetween: 16,
 			navigation: {
@@ -248,8 +243,8 @@ document.addEventListener('DOMContentLoaded', ()=>{
 	}
 
 	const actions = document.querySelectorAll('[data-action]')
-	actions?.forEach(action=>{
-		action.addEventListener('click', ()=>{
+	actions?.forEach(action => {
+		action.addEventListener('click', () => {
 			switch (action.dataset.action) {
 				case "modalOrder":
 					const modalOrder = document.getElementById('modal-order')
@@ -290,7 +285,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
 			}
 		})
 	})
-	
+
 });
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
@@ -425,11 +420,11 @@ class Select {
 		this.list = this.element.querySelector('.select__list')
 		this.options = this.element.querySelectorAll('option')
 
-		this.options.forEach((option)=>{
+		this.options.forEach((option) => {
 			this.createItem(option.innerText, option.value)
 		})
 
-		this.element.addEventListener('click', ()=>{
+		this.element.addEventListener('click', () => {
 			this.element.classList.toggle('--open')
 		})
 	}
@@ -440,7 +435,7 @@ class Select {
 		div.className = 'select__item'
 		div.innerText = title
 		this.list.append(div)
-		div.addEventListener('click', ()=>{
+		div.addEventListener('click', () => {
 			this.parse.value = value
 			this.value.innerText = title
 			this.element.classList.add('--filled')
@@ -457,8 +452,8 @@ class Modal {
 		this.openBtns = document.querySelectorAll('[data-modal]')
 		this.closeBtns = document.querySelectorAll('[data-modal-close]')
 
-		this.openBtns?.forEach(btn=>{
-			btn.addEventListener('click', ()=>{
+		this.openBtns?.forEach(btn => {
+			btn.addEventListener('click', () => {
 				if (header.classList.contains('--open')) {
 					toggleNav()
 				}
@@ -469,8 +464,8 @@ class Modal {
 			})
 		})
 
-		this.closeBtns?.forEach(btn=>{
-			btn.addEventListener('click', ()=>{
+		this.closeBtns?.forEach(btn => {
+			btn.addEventListener('click', () => {
 				this.closeModal()
 			})
 		})

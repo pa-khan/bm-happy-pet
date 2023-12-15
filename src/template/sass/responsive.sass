@@ -1157,9 +1157,9 @@
 		&__contact
 			font-size: 22px
 		&__socials
-			//.socials
-			&__list
-				justify-content: flex-start
+			.socials
+				&__list
+					justify-content: flex-start
 		&__mid-inner
 			gap: 24px
 			padding-bottom: 42px
@@ -1171,16 +1171,16 @@
 			&.--center
 				text-align: left
 		&__bot
-			//.footer
-			&__col
-				width: 100% !important
-				min-width: 100% !important
-				&:nth-of-type(1)
-					order: 1
-				&:nth-of-type(2)
-					order: 3
-				&:nth-of-type(3)
-					order: 2
+			.footer
+				&__col
+					width: 100% !important
+					min-width: 100% !important
+					&:nth-of-type(1)
+						order: 1
+					&:nth-of-type(2)
+						order: 3
+					&:nth-of-type(3)
+						order: 2
 		&__bot-inner
 			gap: 24px
 			flex-direction: column
@@ -1205,6 +1205,19 @@
 
 	.t2
 		font-size: 16px
+
+	.t3
+		h2
+			font-size: 20px
+			margin-top: 24px
+		h5
+			font-size: 18px
+		p
+			font-size: 16px
+		ul
+			li
+				font-size: 16px
+				margin-left: 0
 
 	.header
 		border-bottom: none
@@ -1662,9 +1675,11 @@
 			margin-right: 0
 
 	.certs
+		margin-bottom: 60px
 		&__title
 			margin-bottom: 32px
 		&__item
+			height: 402px
 			padding-top: 16px
 		&__icon
 			width: 48px
@@ -1675,3 +1690,579 @@
 			margin-top: 5px
 		&__symbol
 			font-size: 38px
+		&__tag
+			margin-bottom: 10px
+		&__inner
+			height: 164px
+		&__text
+			gap: 4px 8px
+			max-width: 225px
+			margin-left: auto
+			margin-right: auto
+			display: grid
+			justify-items: center
+			grid-template-columns: repeat(2, 1fr)
+			p
+				&:nth-child(1)
+					grid-column: 1/3
+				&:nth-child(n+2)
+					font-size: 12px
+					font-weight: 400
+					padding: 8px 16px
+					background: #FFFEFE
+					border-radius: 28px
+					width: max-content
+
+	.ozone
+		padding-left: 15px
+		padding-right: 15px
+		margin-bottom: 60px
+		&__title
+			margin-bottom: 32px
+		&__content
+			gap: 24px
+			padding: 42px 16px
+		&__logo
+			max-width: 80px
+		&__text
+			font-size: 16px
+		&__btn
+			max-width: 100%
+
+	.ambassador
+		padding-left: 15px
+		padding-right: 15px
+		margin-bottom: 60px
+		grid-template-columns: auto
+		&__img
+			height: 460px
+			border-radius: var(--round-primary) var(--round-primary) 0 0
+		&__content
+			padding: 42px 16px
+			text-align: center
+			border-radius: 0 0 var(--round-primary) var(--round-primary)
+		&__tag
+			font-size: 14px
+			padding: 8px 32px
+		&__text
+			i
+				font-size: 18px
+
+	.service
+		margin-bottom: 60px
+		&__title
+			margin-bottom: 12px
+			br
+				display: none
+		&__desc
+			font-size: 18px
+			margin-bottom: 32px
+		&__list
+			gap: 12px
+			grid-template-columns: auto
+		&__img
+			height: 300px
+		&__content
+			padding: 16px 12px
+			height: 214px
+		&__tag
+			margin-bottom: 10px
+		&__text
+			font-size: 16px
+			p
+				margin-bottom: 8px
+			&.--lg
+				font-size: 18px
+				padding: 0 10px
+
+	.academy
+		gap: 12px
+		padding-left: 15px
+		padding-right: 15px
+		margin-bottom: 60px
+		grid-template-columns: auto
+		&__col
+			&.--large
+				min-height: 380px
+				grid-row: auto
+				grid-column: auto
+
+	.ac-book
+		padding: 16px 16px 42px
+		&__img
+			max-width: 240px
+			margin-bottom: 24px
+
+	.ac-info
+		padding: 42px 12px 0
+		&__title
+			line-height: 1.1
+		&__desc
+			font-size: 15px
+		&__list
+			gap: 0
+			bottom: -30px
+		&__item
+			width: 116px
+			height: 162px
+			font-size: 14px
+			padding: 12px 0
+			border-radius: 12px
+			var
+				font-size: 40px
+			i
+				top: 0
+				font-size: 12px
+			&:nth-child(2)
+				z-index: 2
+				background: #F6B1DE
+
+	.ac-courses
+		min-height: 318px
+		padding: 42px 12px 0
+		&__title
+			font-size: 24px
+			margin-bottom: 20px
+		&__desc
+			font-size: 18px
+		&__img
+			width: 125px
+			height: 150px
+
+	.ac-pay
+		padding: 20px 16px 26px
+		&__title
+			padding-right: 16px
+		&__partners
+			z-index: 0
+			font-size: 8px
+			padding: 8px 80px 8px 10px
+			max-width: 170px
+			margin-top: 80px
+			margin-right: auto
+		&__img
+			width: 235px
+
+	.ac-mc
+		min-height: 370px
+
+	.programs
+		margin-bottom: 60px
+		&__head
+			gap: 12px
+			margin-bottom: 32px
+		&__list
+			gap: 12px
+			grid-template-columns: auto
+		&__name
+			font-size: 24px
+		&__more
+			top: 40px
+			right: 24px
+
+	.courses-shares
+		&__title
+			text-align: left
+		&__subtitle
+			font-size: 20px
+		&__btns
+			flex-direction: column
+
+	.co-share
+		&__title
+			width: 80px
+			height: 80px
+			font-size: 10px
+			right: auto
+			left: -34px
+		&__list
+			gap: 42px
+			grid-template-columns: auto
+		&__item
+			padding-bottom: 32px
+			border-bottom: 1px solid rgba(57, 58, 58, 0.1)
+			border-right: none
+			padding-left: 0
+			padding-right: 0
+			&:last-child
+				padding-bottom: 0
+				border-bottom: none
+		&__text
+			margin-bottom: 24px
+			min-height: auto
+		&__prices
+			gap: 24px
+			max-width: 210px
+			margin-left: auto
+			margin-right: auto
+		&__desc
+			margin-top: 80px
+			&.checks
+				ul
+					gap: 4px
+					li
+						&:before
+							display: none
+
+	.co-share-price
+		&__new, &__old
+			font-size: 48px
+			line-height: 1.1
+
+	.checks
+		ul
+			gap: 14px
+
+	.academy-info
+		margin-top: 60px
+		--wrap-height: 378px
+		&__head
+			margin-bottom: 32px
+		&__text
+			font-size: 18px
+		&__slider
+			&-item
+				width: 300px
+				height: 378px
+		&__pagination
+			margin-top: 26px
+
+	.why-edu
+		margin-top: 60px
+		margin-bottom: 60px
+		&__left
+			--width: 100%
+		&__wrap
+			gap: 32px
+		&__title
+			font-size: 40px
+		&__slider
+			height: 1320px
+		&__item
+			flex-direction: column
+		&__img
+			--width: 100%
+			height: 378px
+		&__content
+			padding: 24px
+		&__name
+			font-size: 24px
+			margin-bottom: 24px
+		&__pagination
+			margin-top: 26px
+
+	.teachers
+		margin-bottom: 60px
+		&__head
+			gap: 12px
+			margin-bottom: 32px
+
+	.teacher
+		gap: 20px
+		&__content
+			gap: 20px
+		&__img
+			--width: 100%
+		&__name
+			font-size: 24px
+		&__btn
+			width: 100%
+
+	.installment
+		margin-bottom: 60px
+		&__title
+			margin-bottom: 32px
+		&__text
+			h3
+				font-size: 26px
+				padding-right: 150px
+		&__banks
+			padding: 12px
+			border-radius: 12px
+		&__logos
+			gap: 16px
+		&__desc
+			font-size: 10px
+
+	.offers
+		margin-bottom: 60px
+		&__title
+			margin-bottom: 32px
+
+	.offer
+		&__wrap
+			gap: 12px
+		&__card
+			padding: 12px
+			min-height: 278px
+		&__content
+			padding: 24px 20px 28px
+		&__name
+			font-size: 20px
+			// padding: 10px 52px
+		&__title
+			font-size: 18px
+		&__price
+			gap: 0
+			font-size: 36px
+			margin-bottom: 12px
+			flex-direction: column
+		&__text
+			h3
+				font-size: 20px
+		&__tag
+			font-size: 10px
+		&__btn
+			width: 100%
+			margin: 32px auto 0
+
+	.bp
+		margin-bottom: 60px
+		&__wrap
+			gap: 18px
+		&__content
+			padding: 16px
+		&__btn
+			width: 100%
+		&__img
+			width: 400px
+			margin-left: -32px
+		&__decoration
+			top: 10px
+			width: 390px
+
+	.apartaments
+		margin-bottom: 60px
+		&__head
+			gap: 12px
+			margin-bottom: 32px
+		&__list
+			gap: 12px
+			grid-template-columns: auto
+
+	.apartment
+		&__img
+			height: 270px
+			aspect-ratio: 0
+		&__toggle
+			max-width: 16px
+		&__data
+			&-value
+				font-size: 16px
+
+	.docs
+		margin-bottom: 60px
+		&__title
+			margin-bottom: 12px
+		&__list
+			gap: 12px
+		&__text
+			font-size: 16px
+			margin-bottom: 22px
+		&__item
+			width: 100%
+			min-height: 300px
+			&.--lg
+				min-height: 300px
+
+	.booking
+		margin-bottom: 60px
+		&__title
+			margin-bottom: 32px
+		&__subtitle
+			font-size: 20px
+		&__list
+			gap: 12px
+			grid-template-columns: auto
+		&__item
+			padding: 20px 20px 24px
+			&:first-child
+				.booking
+					&__img
+						width: 100px
+					&__name
+						font-size: 30px
+						padding-left: 100px
+			&:last-child
+				.booking
+					&__img
+						width: 90px
+					&__name
+						font-size: 36px
+						padding: 32px 24px
+		&__card
+			height: 130px
+		&__btn
+			width: 100%
+
+	.org
+		&__title
+			margin-bottom: 32px
+
+	.rules
+		&__title
+			margin-bottom: 32px
+		&__socials
+			&-title
+				font-size: 20px
+			&-key
+				font-size: 18px
+				max-width: 240px
+				width: 100%
+
+	.r-actions
+		&__list
+			gap: 12px
+		&__item
+			padding: 20px 20px 24px
+			&:first-child
+				.r-actions
+					&__card
+						padding-top: 16px
+						padding-right: 12px
+						padding-left: 60px
+					&__img
+						z-index: -1
+						width: 100px
+					&__name
+						font-size: 20px
+			&:last-child
+				.r-actions
+					&__img
+						width: 90px
+					&__name
+						font-size: 30px
+						padding-left: 16px
+						padding-right: 78px
+						padding-top: 0
+		&__card
+			height: 130px
+		&__subtitle
+			font-size: 20px
+		&__btn
+			max-width: 100%
+
+	.socials
+		&__item
+			&.--lg
+				--size: 40px
+				svg
+					width: 24px
+
+	.collections
+		margin-bottom: 60px
+		&__head
+			gap: 12px
+			margin-bottom: 32px
+		&__tags
+			justify-content: center
+			text-align: center
+		&__tag
+			font-size: 15px
+			padding: 8px 32px
+
+	.collection
+		&__head
+			gap: 12px
+			margin-bottom: 16px
+		&__wrap
+			gap: 32px
+		&__body
+			gap: 16px
+		&__tags
+			gap: 8px
+		&__tag
+			font-size: 14px
+			padding: 4px 20px
+		&__btn-more
+			width: 100%
+			justify-content: space-between
+		&__btn-more-text
+			padding: 10px 0
+		&__btn
+			&.--md
+				padding: 2px 16px 0 16px
+		&__card
+			height: 190px
+			margin-bottom: 16px
+		&__label
+			font-size: 10px
+			padding: 6px 12px
+		&__more
+			padding-top: 32px
+			&-content
+				table
+					thead
+						display: none
+					tr
+						padding-bottom: 26px
+						display: block
+						&:last-child
+							padding-bottom: 0
+					td
+						padding: 0 !important
+						width: auto !important
+						margin-bottom: 4px
+						border-top: none
+						display: block
+						&:last-child
+							text-align: left
+				ul
+					li
+						font-size: 16px
+
+	.schedule
+		&__title
+			margin-bottom: 32px
+		&__list
+			gap: 0
+		&__groups
+			gap: 24px
+			flex-direction: column
+		&__title
+			font-size: 20px
+		&__alert
+			margin-top: 24px
+			h3
+				margin-bottom: 16px
+			ul
+				li
+					font-size: 16px
+		&__btn-wrap
+			margin-top: 32px
+		&__btn
+			width: 100%
+
+	.scgroup
+		&__title
+			font-size: 20px
+
+	.mcs
+		&__title
+			margin-bottom: 32px
+		&__item
+			padding-bottom: 0
+			border-bottom: none
+		&__img
+			width: 100%
+			height: 330px
+			margin-bottom: 12px
+			aspect-ratio: 0
+		&__date
+			font-size: 22px
+		&__name
+			font-size: 24px
+		&__tag
+			width: 100%
+			padding: 4px 12px 2px
+			text-align: center
+		&__price
+			margin-top: 24px
+			&-title
+				margin-bottom: 10px
+			&-key
+				width: 225px
+
+	.footer
+		padding-top: 40px
+		padding-bottom: 40px
