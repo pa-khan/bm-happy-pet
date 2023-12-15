@@ -1,6 +1,6 @@
 var html = document.querySelector('html'),
-		body = document.querySelector('body'),
-		wrap = document.querySelector('.wrap');
+	body = document.querySelector('body'),
+	wrap = document.querySelector('.wrap');
 
 var header = document.querySelector('.header')
 var nav = document.querySelector('.nav')
@@ -19,8 +19,8 @@ document.addEventListener('DOMContentLoaded', ()=>{
 	})
 
 	let checks = document.querySelectorAll('.check');
-	 
-	checks?.forEach((check)=>{
+
+	checks?.forEach((check) => {
 		new Check(check);
 	});
 
@@ -79,10 +79,10 @@ document.addEventListener('DOMContentLoaded', ()=>{
 		new Swiper(sharesSlider, {
 			navigation: {
 				nextEl: sharesControlNext,
-                prevEl: sharesControlPrev
+				prevEl: sharesControlPrev
 			},
 			pagination: {
-			    el: sharesPagination,
+				el: sharesPagination,
 				clickable: true,
 			}
 		})
@@ -103,23 +103,32 @@ document.addEventListener('DOMContentLoaded', ()=>{
 			slidesOffsetBefore: 220,
 			navigation: {
 				nextEl: galleryControlNext,
-                prevEl: galleryControlPrev
+				prevEl: galleryControlPrev
 			},
 			pagination: {
-			    el: galleryPagination,
+				el: galleryPagination,
 				clickable: true,
-			}
+			},
+			breakpoints: {
+				768: {
+					centeredSlides: false,
+				},
+				1025: {
+					spaceBetween: 30,
+					centeredSlides: false,
+				},
+			},
 		})
 	}
 
 	var faqs = document.querySelectorAll('.faq__item');
-	faqs?.forEach(function(faq){
+	faqs?.forEach(function (faq) {
 		faq._toggleButton = faq.querySelector('.faq__toggle');
 
-		faq._toggleButton.addEventListener('click', ()=>{
+		faq._toggleButton.addEventListener('click', () => {
 			faq.classList.toggle('--open');
 		})
-	} )
+	})
 
 	const reviewsSlider = document.querySelector('.reviews__slider');
 	if (reviewsSlider) {
@@ -128,16 +137,26 @@ document.addEventListener('DOMContentLoaded', ()=>{
 		const reviewsPagination = document.querySelector('.reviews__pagination');
 
 		new Swiper(reviewsSlider, {
-			slidesPerView: 2,
-			spaceBetween: 32,
+			slidesPerView: 1,
+			spaceBetween: 16,
 			navigation: {
 				nextEl: reviewsControlNext,
-                prevEl: reviewsControlPrev
+				prevEl: reviewsControlPrev
 			},
 			pagination: {
-			    el: reviewsPagination,
+				el: reviewsPagination,
 				clickable: true,
-			}
+			},
+			breakpoints: {
+				1025: {
+					slidesPerView: 1.5,
+					spaceBetween: 32,
+				},
+				1281: {
+					slidesPerView: 2,
+					spaceBetween: 32,
+				},
+			},
 		})
 	}
 
@@ -151,21 +170,21 @@ document.addEventListener('DOMContentLoaded', ()=>{
 				center: position,
 				zoom: 15,
 				controls: []
-			 });
+			});
 
-			 const placemark = new ymaps.Placemark(
+			const placemark = new ymaps.Placemark(
 				position,
 				{},
 				{
-				  iconLayout: 'default#image',
-				  iconImageHref: 'uploads/map-placemark.svg',
-				  iconImageSize: [51, 69],
-				  iconImageOffset: [-25, -35]
+					iconLayout: 'default#image',
+					iconImageHref: 'uploads/map-placemark.svg',
+					iconImageSize: [51, 69],
+					iconImageOffset: [-25, -35]
 				}
-			  );
+			);
 
-			  ya.behaviors.disable('scrollZoom')
-			  ya.geoObjects.add(placemark)
+			ya.behaviors.disable('scrollZoom')
+			ya.geoObjects.add(placemark)
 		})
 	}
 
@@ -177,22 +196,28 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
 		new Swiper(academyInfoslider, {
 			loop: true,
-			initialSlide: 1,
-			centeredSlides: true,
+
 			slidesPerView: 'auto',
-			spaceBetween: 30,
-			slidesOffsetBefore: 220,
+			spaceBetween: 16,
 			navigation: {
 				nextEl: academyInfoControlNext,
-                prevEl: academyInfoControlPrev
+				prevEl: academyInfoControlPrev
 			},
 			pagination: {
-			    el: academyInfoPagination,
+				el: academyInfoPagination,
 				clickable: true,
-			}
+			},
+			breakpoints: {
+				1025: {
+					spaceBetween: 32,
+					slidesOffsetBefore: 220,
+					initialSlide: 1,
+					centeredSlides: true,
+				},
+			},
 		})
 	}
-	
+
 	const whyEduSlider = document.querySelector('.why-edu__slider');
 	if (whyEduSlider) {
 		const whyEduControlPrev = document.querySelector('.why-edu__control.--prev');
@@ -201,19 +226,24 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
 		new Swiper(whyEduSlider, {
 			loop: true,
-			slidesPerView:  2,
+			slidesPerView: 1,
 			spaceBetween: 12,
 			grid: {
 				rows: 2,
 			},
 			navigation: {
 				nextEl: whyEduControlNext,
-                prevEl: whyEduControlPrev
+				prevEl: whyEduControlPrev
 			},
 			pagination: {
-			    el: whyEduPagination,
+				el: whyEduPagination,
 				clickable: true,
-			}
+			},
+			breakpoints: {
+				1281: {
+					slidesPerView: 2,
+				},
+			},
 		})
 	}
 
@@ -266,78 +296,78 @@ document.addEventListener('DOMContentLoaded', ()=>{
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 class Check {
-  static addError(element, message) {
-    element.classList.add('--error');
+	static addError(element, message) {
+		element.classList.add('--error');
 
-    if (message) {
-      element.querySelector('.check__message').innerText = message;
-    }
-  }
+		if (message) {
+			element.querySelector('.check__message').innerText = message;
+		}
+	}
 
-  constructor(element) {
-    this.element = element;
-    this.input = this.element.querySelector('.check__input');
-    this.type = this.input.type;
-    this.checkChecked();
-    this.doToggle();
-    this.onClick();
-  }
+	constructor(element) {
+		this.element = element;
+		this.input = this.element.querySelector('.check__input');
+		this.type = this.input.type;
+		this.checkChecked();
+		this.doToggle();
+		this.onClick();
+	}
 
-  onClick() {
-    this.element.addEventListener('click', () => {
-      this.element.classList.remove('--error');
+	onClick() {
+		this.element.addEventListener('click', () => {
+			this.element.classList.remove('--error');
 
-      if (this.type == 'checkbox') {
-        this.element.classList.toggle(Check.classChecked);
-        this.checked = this.input.getAttribute('checked');
+			if (this.type == 'checkbox') {
+				this.element.classList.toggle(Check.classChecked);
+				this.checked = this.input.getAttribute('checked');
 
-        if (this.checked) {
-          this.input.removeAttribute('checked');
-        } else {
-          this.input.setAttribute('checked', 'checked');
-        }
+				if (this.checked) {
+					this.input.removeAttribute('checked');
+				} else {
+					this.input.setAttribute('checked', 'checked');
+				}
 
-        this.doToggle();
-      } else if (this.type == 'radio') {
-        if (this.element.closest(Check.classChecked)) {
-          return false;
-        }
+				this.doToggle();
+			} else if (this.type == 'radio') {
+				if (this.element.closest(Check.classChecked)) {
+					return false;
+				}
 
-        this.name = this.input.name;
-        let parent = this.element.closest('.checks') ? this.element.closest('.checks') : this.element.closest('form') ? this.element.closest('form') : document.body;
-        let radios = parent.querySelectorAll('.check input[type="radio"][name="' + this.name + '"]');
-        radios.forEach(radio => {
-          radio.removeAttribute('checked');
-          radio.closest('.check').classList.remove(Check.classChecked);
-        });
-        this.element.classList.add(Check.classChecked);
-        this.input.setAttribute('checked', 'checked');
-      }
-    });
-  }
+				this.name = this.input.name;
+				let parent = this.element.closest('.checks') ? this.element.closest('.checks') : this.element.closest('form') ? this.element.closest('form') : document.body;
+				let radios = parent.querySelectorAll('.check input[type="radio"][name="' + this.name + '"]');
+				radios.forEach(radio => {
+					radio.removeAttribute('checked');
+					radio.closest('.check').classList.remove(Check.classChecked);
+				});
+				this.element.classList.add(Check.classChecked);
+				this.input.setAttribute('checked', 'checked');
+			}
+		});
+	}
 
-  doToggle() {
-    if (this.element.classList.contains('--toggle')) {
-      let dataTextTrue = this.element.getAttribute('data-true'),
-          dataTextFalse = this.element.getAttribute('data-false');
+	doToggle() {
+		if (this.element.classList.contains('--toggle')) {
+			let dataTextTrue = this.element.getAttribute('data-true'),
+				dataTextFalse = this.element.getAttribute('data-false');
 
-      if (dataTextTrue && dataTextFalse) {
-        this.checkValue = this.element.querySelector('.check__value');
+			if (dataTextTrue && dataTextFalse) {
+				this.checkValue = this.element.querySelector('.check__value');
 
-        if (this.element.classList.contains(Check.classChecked)) {
-          this.checkValue.innerText = dataTextTrue;
-        } else {
-          this.checkValue.innerText = dataTextFalse;
-        }
-      }
-    }
-  }
+				if (this.element.classList.contains(Check.classChecked)) {
+					this.checkValue.innerText = dataTextTrue;
+				} else {
+					this.checkValue.innerText = dataTextFalse;
+				}
+			}
+		}
+	}
 
-  checkChecked() {
-    if (this.input.getAttribute('checked')) {
-      this.element.classList.add(Check.classChecked);
-    }
-  }
+	checkChecked() {
+		if (this.input.getAttribute('checked')) {
+			this.element.classList.add(Check.classChecked);
+		}
+	}
 
 }
 

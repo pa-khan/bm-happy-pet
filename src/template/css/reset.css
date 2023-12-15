@@ -22,6 +22,9 @@
 
 html, body {
   min-height: 100vh;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -67,6 +70,10 @@ input, textarea, button {
   font-family: inherit;
 }
 
+input:-webkit-autofill {
+  transition: all 5000s ease-in-out 0s;
+}
+
 var {
   font-style: normal;
 }
@@ -91,6 +98,10 @@ img {
   display: block;
   max-width: 100% !important;
   max-height: 100% !important;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
 }
 
 svg {
