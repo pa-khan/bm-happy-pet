@@ -11,6 +11,10 @@
     font-size: 22px;
   }
 
+  .nav__links {
+    font-size: 60px;
+  }
+
   .directions__item-title {
     font-size: 30px;
     min-height: 72px;
@@ -670,6 +674,17 @@
   .footer__contact {
     font-size: 24px;
   }
+
+  .form {
+    gap: 32px;
+    grid-template-columns: 1fr 450px;
+  }
+  .form__title {
+    font-size: 48px;
+  }
+  .form__img {
+    width: 100%;
+  }
 }
 @media screen and (max-width: 1024px) {
   .t1 {
@@ -699,6 +714,19 @@
   .breadcrumb__sep {
     margin-left: 12px;
     margin-right: 12px;
+  }
+
+  .nav {
+    top: 111px;
+  }
+  .nav__links {
+    font-size: 40px;
+  }
+  .nav__links ul {
+    gap: 32px;
+  }
+  .nav__address p {
+    font-size: 15px;
   }
 
   .first-section {
@@ -1482,6 +1510,20 @@
     display: flex;
     justify-content: center;
   }
+
+  .form {
+    grid-template-columns: auto;
+  }
+  .form__title {
+    font-size: 40px;
+    margin-bottom: 12px;
+  }
+  .form__wrap {
+    margin-top: 32px;
+  }
+  .form__img {
+    height: 500px;
+  }
 }
 @media screen and (max-width: 767px) {
   .btn.--md {
@@ -1541,9 +1583,36 @@
     width: 24px;
     height: 2px;
   }
+  .header__ham.--x div:nth-of-type(1) {
+    top: 4px;
+  }
 
   .breadcrumb__item {
     font-size: 10px;
+  }
+
+  .nav {
+    top: 93px;
+  }
+  .nav__links {
+    font-size: 32px;
+    padding-top: 32px;
+  }
+  .nav__links ul {
+    gap: 24px;
+  }
+  .nav__btn {
+    max-width: 100%;
+  }
+  .nav__footer {
+    padding-top: 32px;
+    flex-direction: column;
+  }
+  .nav__address {
+    order: 3;
+  }
+  .nav__phones {
+    text-align: center;
   }
 
   .name__wrap {
@@ -1802,6 +1871,17 @@
   }
   .check__text {
     font-size: 14px;
+  }
+
+  .select__area {
+    font-size: 16px;
+  }
+  .select__item {
+    font-size: 16px;
+  }
+
+  .area__wrap {
+    font-size: 16px;
   }
 
   .reviews {
@@ -2854,5 +2934,34 @@
   .footer {
     padding-top: 40px;
     padding-bottom: 40px;
+  }
+
+  .form {
+    padding: 40px 10px 24px;
+    margin-bottom: 320px;
+    background: #FFF1F4;
+    border-radius: var(--round-primary);
+  }
+  .form__title {
+    font-size: 32px;
+    margin-bottom: 8px;
+  }
+  .form__desc {
+    font-size: 16px;
+  }
+  .form__btn {
+    width: 100%;
+  }
+  .form__right {
+    z-index: -1;
+    bottom: 0;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+  }
+  .form__img {
+    height: 380px;
+    border-radius: 0;
   }
 }

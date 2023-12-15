@@ -8,6 +8,10 @@
 	.t2
 		font-size: 22px
 
+	.nav
+		&__links
+			font-size: 60px
+
 	.directions
 		&__item
 			&-title
@@ -528,6 +532,14 @@
 		&__contact
 			font-size: 24px
 
+	.form
+		gap: 32px
+		grid-template-columns: 1fr 450px
+		&__title
+			font-size: 48px
+		&__img
+			width: 100%
+
 @media screen and (max-width: 1024px)
 	.t1
 		font-size: 18px
@@ -552,6 +564,16 @@
 		&__sep
 			margin-left: 12px
 			margin-right: 12px
+
+	.nav
+		top: 111px
+		&__links
+			font-size: 40px
+			ul
+				gap: 32px
+		&__address
+			p
+				font-size: 15px
 
 	.first-section
 		padding-top: 140px
@@ -1189,6 +1211,16 @@
 			display: flex
 			justify-content: center
 
+	.form
+		grid-template-columns: auto
+		&__title
+			font-size: 40px
+			margin-bottom: 12px
+		&__wrap
+			margin-top: 32px
+		&__img
+			height: 500px
+
 @media screen and (max-width: 767px)
 	.btn
 		&.--md
@@ -1235,10 +1267,31 @@
 			div
 				width: 24px
 				height: 2px
+			&.--x
+				div
+					&:nth-of-type(1)
+						top: 4px
 
 	.breadcrumb
 		&__item
 			font-size: 10px
+
+	.nav
+		top: 93px
+		&__links
+			font-size: 32px
+			padding-top: 32px
+			ul
+				gap: 24px
+		&__btn
+			max-width: 100%
+		&__footer
+			padding-top: 32px
+			flex-direction: column
+		&__address
+			order: 3
+		&__phones
+			text-align: center
 
 	.name
 		&__wrap
@@ -1442,6 +1495,16 @@
 			--size: 20px
 		&__text
 			font-size: 14px
+
+	.select
+		&__area
+			font-size: 16px
+		&__item
+			font-size: 16px
+
+	.area
+		&__wrap
+			font-size: 16px
 
 	.reviews
 		margin-top: 60px
@@ -2266,3 +2329,26 @@
 	.footer
 		padding-top: 40px
 		padding-bottom: 40px
+
+	.form
+		padding: 40px 10px 24px
+		margin-bottom: 320px
+		background: #FFF1F4
+		border-radius: var(--round-primary)
+		&__title
+			font-size: 32px
+			margin-bottom: 8px
+		&__desc
+			font-size: 16px
+		&__btn
+			width: 100%
+		&__right
+			z-index: -1
+			bottom: 0
+			width: 100%
+			left: 50%
+			transform: translateX(-50%)
+			position: absolute
+		&__img
+			height: 380px
+			border-radius: 0
