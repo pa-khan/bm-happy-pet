@@ -46,6 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 		new Swiper(gallerySlider, {
 			loop: true,
+			centeredSlides: true,
 			initialSlide: Math.floor(galleryItems.length / 2),
 			slidesPerView: 'auto',
 			spaceBetween: 16,
@@ -58,8 +59,12 @@ document.addEventListener('DOMContentLoaded', () => {
 				clickable: true,
 			},
 			breakpoints: {
+				768: {
+					centeredSlides: false,
+				},
 				1025: {
 					spaceBetween: 30,
+					centeredSlides: false,
 				},
 			},
 		})
